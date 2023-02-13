@@ -1,3 +1,9 @@
+/**
+ *
+ *  This is the Contact Page
+ *
+ */
+
 // React/Next Imports
 import { useEffect } from "react";
 import { useRouter } from "next/router";

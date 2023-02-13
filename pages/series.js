@@ -1,3 +1,9 @@
+/**
+ *
+ *  This is the Series Page
+ *
+ */
+
 // React/Next Imports
 import { useEffect } from "react";
 import { useRouter } from "next/router";
