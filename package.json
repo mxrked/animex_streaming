@@ -1,7 +1,7 @@
 {
   "name": "animex-streaming",
   "version": "0.1.0",
-  "homepage": "PUT_SITE_URL_HERE",
+  "homepage": "https://sparkling-dragon-f3af91.netlify.app/",
   "private": true,
   "scripts": {
     "dev": "next dev",
