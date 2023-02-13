@@ -6,9 +6,9 @@
 
 import mongoose from "mongoose";
 
-import { connection } from "../../db/connection";
+import { connection } from "../../lib/connection";
 
-import Account from "../../db/schema";
+import Account from "../../lib/schema";
 
 export default async function handler(req, res) {
   connection();
