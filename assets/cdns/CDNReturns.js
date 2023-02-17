@@ -5,7 +5,7 @@
  */
 
 const SERVER =
-  "https://raw.githubusercontent.com/mxrked/animex_streaming_CDN/main/";
+  "https://raw.githubusercontent.com/mxrked/animex_streaming_CDN/master/";
 
 function CDNBGReturn(bgSub, bgSubFile, fileExt) {
   let bgSrc;
