@@ -4,6 +4,7 @@
  *
  */
 
+import { useEffect } from "react";
 import { useRouter } from "next/router";
 
 import { FaCaretDown, FaSearch } from "react-icons/fa";
@@ -14,7 +15,6 @@ import { LOGO_LARGE_RED, LOGO_LARGE_ORANGE } from "@/assets/cdns/CDNIcons";
 import ExitAndRoute from "@/assets/functions/routing/ExitAndRoute";
 
 import styles from "../../../../styles/modules/Nav/Nav.module.css";
-import { useEffect } from "react";
 
 export const DesktopNav = () => {
   const router = useRouter();
