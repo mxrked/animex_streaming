@@ -11,6 +11,7 @@ import { useRouter } from "next/router";
 // Library Imports
 
 // Data/Functions/Images Imports
+import ManipPageLink from "@/assets/functions/dom/manip/ManipPageLink";
 
 // Component Imports
 import { PageHead } from "@/assets/components/global/PageHead";
@@ -21,6 +22,11 @@ import "../assets/styles/modules/News/News.module.css";
 
 export default function News() {
   const router = useRouter();
+
+  // Disabling Page Links
+  useEffect(() => {
+    ManipPageLink("disable", "multiple", ".news-link");
+  }, []);
 
   return (
     <div id="page" className="page overrides_News full-second">
