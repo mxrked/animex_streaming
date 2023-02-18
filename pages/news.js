@@ -15,10 +15,10 @@ import { useRouter } from "next/router";
 // Component Imports
 
 // Style Imports
-// import "../assets/styles/modules/Info/Info.module.css";
+// import "../assets/styles/modules/News/News.module.css";
 
-export default function Info() {
+export default function News() {
   const router = useRouter();
 
-  return <div id="page" className="page overrides_Info full-second"></div>;
+  return <div id="page" className="page overrides_News full-second"></div>;
 }
