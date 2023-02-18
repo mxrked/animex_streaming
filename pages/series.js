@@ -29,7 +29,9 @@ export default function Series() {
         url="https://sparkling-dragon-f3af91.netlify.app/series/"
       />
 
-      <main id="pageCnt" className="page-cnt full-second"></main>
+      <main id="pageCnt" className="page-cnt full-second">
+        Series
+      </main>
     </div>
   );
 }

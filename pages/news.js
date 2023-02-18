@@ -29,7 +29,9 @@ export default function News() {
         url="https://sparkling-dragon-f3af91.netlify.app/news/"
       />
 
-      <main id="pageCnt" className="page-cnt full-second"></main>
+      <main id="pageCnt" className="page-cnt full-second">
+        News
+      </main>
     </div>
   );
 }

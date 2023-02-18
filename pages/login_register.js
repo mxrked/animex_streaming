@@ -29,7 +29,9 @@ export default function Login_Register() {
         url="https://sparkling-dragon-f3af91.netlify.app/login_register/"
       />
 
-      <main id="pageCnt" className="page-cnt full-second"></main>
+      <main id="pageCnt" className="page-cnt full-second">
+        Login Register
+      </main>
     </div>
   );
 }

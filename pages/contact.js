@@ -29,7 +29,9 @@ export default function Contact() {
         url="https://sparkling-dragon-f3af91.netlify.app/contact/"
       />
 
-      <main id="pageCnt" className="page-cnt full-second"></main>
+      <main id="pageCnt" className="page-cnt full-second">
+        Contact
+      </main>
     </div>
   );
 }

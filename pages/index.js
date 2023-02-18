@@ -29,7 +29,9 @@ export default function Home() {
         url="https://sparkling-dragon-f3af91.netlify.app/"
       />
 
-      <main id="pageCnt" className="page-cnt full-second"></main>
+      <main id="pageCnt" className="page-cnt full-second">
+        Index
+      </main>
     </div>
   );
 }
