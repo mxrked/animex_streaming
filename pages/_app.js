@@ -131,7 +131,7 @@ function MyApp({ Component, pageProps }) {
         page.style.visibility = "visible";
       });
     }, 500);
-  }, []);
+  }, [router]);
 
   return <Component {...pageProps} />;
 }
