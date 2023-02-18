@@ -16,6 +16,7 @@ import ManipPageLink from "@/assets/functions/dom/manip/ManipPageLink";
 // Component Imports
 import { PageHead } from "@/assets/components/global/PageHead";
 import { DesktopNav } from "@/assets/components/global/Nav/Desktop/DesktopNav";
+import { MobileNav } from "@/assets/components/global/Nav/Mobile/MobileNav";
 
 // Style Imports
 import "../assets/styles/modules/Index/Index.module.css";
@@ -38,6 +39,7 @@ export default function Home() {
 
       <main id="pageCnt" className="page-cnt full-second">
         <DesktopNav />
+        <MobileNav />
       </main>
     </div>
   );
