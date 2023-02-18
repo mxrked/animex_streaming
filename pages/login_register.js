@@ -16,7 +16,7 @@ import { useRouter } from "next/router";
 import { PageHead } from "@/assets/components/global/PageHead";
 
 // Style Imports
-// import "../assets/styles/modules/Login_Register/Login_Register.module.css";
+import "../assets/styles/modules/Login_Register/Login_Register.module.css";
 
 export default function Login_Register() {
   const router = useRouter();

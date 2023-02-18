@@ -16,7 +16,7 @@ import { useRouter } from "next/router";
 import { PageHead } from "@/assets/components/global/PageHead";
 
 // Style Imports
-// import "../assets/styles/modules/News/News.module.css";
+import "../assets/styles/modules/News/News.module.css";
 
 export default function News() {
   const router = useRouter();

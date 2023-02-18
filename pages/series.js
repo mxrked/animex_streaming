@@ -16,7 +16,7 @@ import { useRouter } from "next/router";
 import { PageHead } from "@/assets/components/global/PageHead";
 
 // Style Imports
-// import "../assets/styles/modules/Series/Series.module.css";
+import "../assets/styles/modules/Series/Series.module.css";
 
 export default function Series() {
   const router = useRouter();
