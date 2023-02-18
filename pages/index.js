@@ -14,6 +14,7 @@ import { useRouter } from "next/router";
 
 // Component Imports
 import { PageHead } from "@/assets/components/global/PageHead";
+import { DesktopNav } from "@/assets/components/global/Nav/Desktop/DesktopNav";
 
 // Style Imports
 import "../assets/styles/modules/Index/Index.module.css";
@@ -30,7 +31,7 @@ export default function Home() {
       />
 
       <main id="pageCnt" className="page-cnt full-second">
-        Index
+        <DesktopNav />
       </main>
     </div>
   );
