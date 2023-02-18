@@ -141,6 +141,11 @@ select {
   background-color: transparent;
 }
 
+.page {
+  opacity: 0;
+  visibility: hidden;
+}
+
 .scale {
   scale: 1.07;
 }
