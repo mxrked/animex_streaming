@@ -11,8 +11,17 @@ export default function CloseSearch() {
 
   RemoveStorageVariable("session", "Search Opened");
 
+  SEARCH.style.pointerEvents = "none";
+
   SEARCH.style.opacity = 0;
   SEARCH.style.visibility = "hidden";
+
+  // Resetting the search
+  document.getElementById("searchIpt").value = "";
+
+  document.querySelectorAll(".search-link").forEach((link) => {
+    link.style.display = "flex";
+  });
 
   setTimeout(() => {
     document.body.style.overflowY = "auto";
