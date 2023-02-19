@@ -16,6 +16,7 @@ import ManipPageLink from "@/assets/functions/dom/manip/ManipPageLink";
 // Component Imports
 import { PageHead } from "@/assets/components/global/PageHead";
 import { DesktopNav } from "@/assets/components/global/Nav/Desktop/DesktopNav";
+import { DesktopNavMegaMenu } from "@/assets/components/global/Nav/Desktop/DesktopNavMegaMenu";
 import { MobileNav } from "@/assets/components/global/Nav/Mobile/MobileNav";
 
 // Style Imports
