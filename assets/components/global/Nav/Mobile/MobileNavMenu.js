@@ -52,7 +52,6 @@ export const MobileNavMenu = () => {
             </li>
           </ul>
         </div>
-
         <div className={`${styles.browse_section}`}>
           <ul>
             <li
@@ -160,6 +159,8 @@ export const MobileNavMenu = () => {
             </li>
           </ul>
         </div>
+        {/** This is used to make the menu expand past the pages current height limit */}
+        <div className={styles.blank} />
       </div>
     </div>
   );
