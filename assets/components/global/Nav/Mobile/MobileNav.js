@@ -113,6 +113,9 @@ export const MobileNav = () => {
                   <button
                     id="toggleSearch"
                     className={`${styles.toggle_search} half-second`}
+                    onClick={() => {
+                      ToggleSearch();
+                    }}
                   >
                     <FaSearch className={`${styles.icon}`} />
                   </button>
