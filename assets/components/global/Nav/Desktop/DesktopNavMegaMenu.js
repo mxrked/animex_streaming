@@ -129,6 +129,7 @@ export const DesktopNavMegaMenu = () => {
               <span>Vinland Saga</span>
             </li>
             <li className="half-second">&nbsp;</li>
+            <li className="half-second">&nbsp;</li>
           </ul>
         </div>
         <div className={`${styles.desktop_nav_mega_menu_inner_set}`}>
@@ -194,6 +195,7 @@ export const DesktopNavMegaMenu = () => {
             >
               <span>Horror</span>
             </li>
+            <li className="half-second">&nbsp;</li>
           </ul>
         </div>
       </div>
