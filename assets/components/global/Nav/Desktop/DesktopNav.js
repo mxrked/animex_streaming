@@ -26,9 +26,6 @@ export const DesktopNav = () => {
     newsRouted,
     loginRegisterRouted = false;
 
-  // Adding hover effects
-  useEffect(() => {}, []);
-
   return (
     <nav id="desktopNav" className={`${styles.desktop_nav} desktop-nav`}>
       <div className={`${styles.desktop_nav_inner}`}>
@@ -44,57 +41,59 @@ export const DesktopNav = () => {
                     ExitAndRoute(router, "/", indexRouted);
                   }}
                   onMouseEnter={(e) => {
-                    document.querySelector(".red-logo").style.opacity = 0;
-                    document.querySelector(".red-logo").style.visibility =
+                    document.querySelector(".d-red-logo").style.opacity = 0;
+                    document.querySelector(".d-red-logo").style.visibility =
                       "hidden";
-                    document.querySelector(".orange-logo").style.opacity = 1;
-                    document.querySelector(".orange-logo").style.visibility =
+                    document.querySelector(".d-orange-logo").style.opacity = 1;
+                    document.querySelector(".d-orange-logo").style.visibility =
                       "visible";
 
                     e.currentTarget.querySelector(
-                      ".orange-logo"
+                      ".d-orange-logo"
                     ).style.transform = "rotate(45deg)";
                     e.currentTarget.querySelector(
-                      ".orange-logo"
+                      ".d-orange-logo"
                     ).style.scale = 0.9;
 
-                    e.currentTarget.querySelector(".red-logo").style.transform =
-                      "rotate(45deg)";
                     e.currentTarget.querySelector(
-                      ".red-logo"
+                      ".d-red-logo"
+                    ).style.transform = "rotate(45deg)";
+                    e.currentTarget.querySelector(
+                      ".d-red-logo"
                     ).style.scale = 0.9;
                   }}
                   onMouseLeave={(e) => {
-                    document.querySelector(".red-logo").style.opacity = 1;
-                    document.querySelector(".red-logo").style.visibility =
+                    document.querySelector(".d-red-logo").style.opacity = 1;
+                    document.querySelector(".d-red-logo").style.visibility =
                       "visible";
-                    document.querySelector(".orange-logo").style.opacity = 0;
-                    document.querySelector(".orange-logo").style.visibility =
+                    document.querySelector(".d-orange-logo").style.opacity = 0;
+                    document.querySelector(".d-orange-logo").style.visibility =
                       "hidden";
 
                     e.currentTarget.querySelector(
-                      ".orange-logo"
+                      ".d-orange-logo"
                     ).style.transform = "rotate(0)";
                     e.currentTarget.querySelector(
-                      ".orange-logo"
+                      ".d-orange-logo"
                     ).style.scale = 0.8;
 
-                    e.currentTarget.querySelector(".red-logo").style.transform =
-                      "rotate(0)";
                     e.currentTarget.querySelector(
-                      ".red-logo"
+                      ".d-red-logo"
+                    ).style.transform = "rotate(0)";
+                    e.currentTarget.querySelector(
+                      ".d-red-logo"
                     ).style.scale = 0.8;
                   }}
                 >
                   <div className={styles.imgs}>
                     <img
                       data-src={LOGO_LARGE_RED}
-                      className={`${styles.red_logo} lazyload red-logo half-second`}
+                      className={`${styles.red_logo} lazyload d-red-logo half-second`}
                       alt="Animex Streaming logo."
                     />
                     <img
                       data-src={LOGO_LARGE_ORANGE}
-                      className={`${styles.orange_logo} lazyload orange-logo half-second`}
+                      className={`${styles.orange_logo} lazyload d-orange-logo half-second`}
                       alt="Animex Streaming logo."
                     />
                   </div>
