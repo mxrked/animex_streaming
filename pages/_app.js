@@ -68,10 +68,11 @@ function MyApp({ Component, pageProps }) {
       if (!sessionStorage.getItem("Search Opened")) {
         if (!sessionStorage.getItem("Modal Opened")) {
           document.body.style.overflowY = "auto";
+          document.body.style.pointerEvents = "auto";
         }
       }
     }
-  }, []);
+  }, [router]);
 
   //? DATA
   //! Session/Local Storage Clearing
