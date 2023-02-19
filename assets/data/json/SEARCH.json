@@ -1,0 +1,65 @@
+[
+  {
+    "searchItemID": "search_1",
+    "searchItemName": "Attack On Titan",
+    "searchItemImg": "https://raw.githubusercontent.com/mxrked/animex_streaming_CDN/master/bgs/aot/bg-3.webp",
+    "searchItemLink": "/series#Attack_On_Titan",
+    "searchItemLinkType": "series-link"
+  },
+  {
+    "searchItemID": "search_2",
+    "searchItemName": "Chainsaw Man",
+    "searchItemImg": "https://raw.githubusercontent.com/mxrked/animex_streaming_CDN/master/bgs/csm/bg-2.webp",
+    "searchItemLink": "/series#Chainsaw_Man",
+    "searchItemLinkType": "series-link"
+  },
+  {
+    "searchItemID": "search_3",
+    "searchItemName": "Demon Slayer",
+    "searchItemImg": "https://raw.githubusercontent.com/mxrked/animex_streaming_CDN/master/bgs/demon-slayer/bg-1.webp",
+    "searchItemLink": "/series#Demon_Slayer",
+    "searchItemLinkType": "series-link"
+  },
+  {
+    "searchItemID": "search_4",
+    "searchItemName": "Jojo's Bizarre Adventure",
+    "searchItemImg": "https://raw.githubusercontent.com/mxrked/animex_streaming_CDN/master/bgs/jojo/bg-2.webp",
+    "searchItemLink": "/series#Jojos_Bizarre_Adventure",
+    "searchItemLinkType": "series-link"
+  },
+  {
+    "searchItemID": "search_5",
+    "searchItemName": "My Hero Academia",
+    "searchItemImg": "https://raw.githubusercontent.com/mxrked/animex_streaming_CDN/master/bgs/mha/bg-1.webp",
+    "searchItemLink": "/series#My_Hero_Academia",
+    "searchItemLinkType": "series-link"
+  },
+  {
+    "searchItemID": "search_6",
+    "searchItemName": "Mob Psycho 100",
+    "searchItemImg": "https://raw.githubusercontent.com/mxrked/animex_streaming_CDN/master/bgs/mob-psycho/bg-2.webp",
+    "searchItemLink": "/series#Mob_Psycho_100",
+    "searchItemLinkType": "series-link"
+  },
+  {
+    "searchItemID": "search_7",
+    "searchItemName": "One Punch Man",
+    "searchItemImg": "https://raw.githubusercontent.com/mxrked/animex_streaming_CDN/master/bgs/opm/bg-1.webp",
+    "searchItemLink": "/series#One_Punch_Man",
+    "searchItemLinkType": "series-link"
+  },
+  {
+    "searchItemID": "search_8",
+    "searchItemName": "Spy X Family",
+    "searchItemImg": "https://raw.githubusercontent.com/mxrked/animex_streaming_CDN/master/bgs/sxf/bg-2.webp",
+    "searchItemLink": "/series#Spy_X_Family",
+    "searchItemLinkType": "series-link"
+  },
+  {
+    "searchItemID": "search_9",
+    "searchItemName": "Vinland Saga",
+    "searchItemImg": "https://raw.githubusercontent.com/mxrked/animex_streaming_CDN/master/bgs/vinland-saga/bg-2.webp",
+    "searchItemLink": "/series#Vinland_Saga",
+    "searchItemLinkType": "series-link"
+  }
+]
