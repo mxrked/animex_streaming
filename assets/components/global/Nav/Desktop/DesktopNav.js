@@ -21,10 +21,20 @@ export const DesktopNav = () => {
 
   // Checkers
   let indexRouted,
-    seriesRouted,
     contactRouted,
     newsRouted,
     loginRegisterRouted = false;
+
+  // Hiding mega menu on resize
+  useEffect(() => {
+    window.addEventListener("resize", () => {
+      if (document.getElementById("desktopNavMegaMenuCB").checked) {
+        document.getElementById("desktopNavMegaMenuCB").checked = false;
+      }
+
+      document.getElementById("desktopNavMegaMenu").style.display = "none";
+    });
+  }, []);
 
   return (
     <nav id="desktopNav" className={`${styles.desktop_nav} desktop-nav`}>
@@ -134,7 +144,36 @@ export const DesktopNav = () => {
                       });
                     }}
                   >
-                    <input type="checkbox" />
+                    <input
+                      id="desktopNavMegaMenuCB"
+                      type="checkbox"
+                      onChange={(e) => {
+                        const MEGA_MENU =
+                          document.getElementById("desktopNavMegaMenu");
+
+                        if (e.currentTarget.checked) {
+                          MEGA_MENU.style.display = "block";
+                        } else {
+                          MEGA_MENU.style.display = "none";
+                        }
+                      }}
+                      onBlur={() => {
+                        setTimeout(() => {
+                          if (
+                            document.getElementById("desktopNavMegaMenuCB")
+                              .checked
+                          ) {
+                            document.getElementById(
+                              "desktopNavMegaMenuCB"
+                            ).checked = false;
+                          }
+
+                          document.getElementById(
+                            "desktopNavMegaMenu"
+                          ).style.display = "none";
+                        }, 300);
+                      }}
+                    />
                     <span className="half-second">Browse</span>
                     <FaCaretDown className={`${styles.icon} half-second`} />
                   </li>
