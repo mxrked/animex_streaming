@@ -18,6 +18,8 @@ export default function ToggleMobileNav() {
 
   document.getElementById("mobileNav").style.pointerEvents = "auto";
 
+  MENU.style.overflowY = "auto";
+
   TOGGLER.style.display = "none";
   CLOSER.style.display = "block";
   MENU.style.pointerEvents = "auto";
