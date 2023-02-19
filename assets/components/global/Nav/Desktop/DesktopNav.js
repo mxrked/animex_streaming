@@ -15,6 +15,7 @@ import { LOGO_LARGE_RED, LOGO_LARGE_ORANGE } from "@/assets/cdns/CDNIcons";
 import ExitAndRoute from "@/assets/functions/routing/ExitAndRoute";
 
 import styles from "../../../../styles/modules/Nav/Nav.module.css";
+import ToggleSearch from "@/assets/functions/dom/togglers/ToggleSearch";
 
 export const DesktopNav = () => {
   const router = useRouter();
@@ -239,6 +240,9 @@ export const DesktopNav = () => {
                   <button
                     id="toggleSearch"
                     className={`${styles.toggle_search} half-second`}
+                    onClick={() => {
+                      ToggleSearch();
+                    }}
                   >
                     <FaSearch className={`${styles.icon}`} />
                   </button>
