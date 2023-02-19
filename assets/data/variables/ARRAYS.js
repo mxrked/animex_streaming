@@ -44,6 +44,25 @@ const SERIES_KWS = [
   "spy x family",
   "spy family",
 ];
+const ATTACK_ON_TITAN_KWS = ["aot", "attack on titan"];
+const CHAINSAW_MAN_KWS = ["chainsaw man", "chainsaw-man", "csm"];
+const DEMON_SLAYER_KWS = ["demon-slayer", "demon slayer", "ds"];
+const JOJO_KWS = [
+  "jojos bizarre adventure",
+  "jojo's bizarre adventure",
+  "jjba",
+];
+const MY_HERO_ACADEMIA_KWS = ["my hero academia", "mha"];
+const MOB_PSYCHO_KWS = ["mob psycho 100", "mob psycho", "mp100"];
+const ONE_PUNCH_MAN_KWS = ["one punch man", "one-punch man", "opm"];
+const SPY_X_FAMILY_KWS = [
+  "spy-x-family",
+  "spy x family",
+  "spy family",
+  "spy-family",
+  "sxf",
+];
+const VINLAND_SAGA_KWS = ["vinland saga", "vinland", "vs"];
 const CONTACT_KWS = [
   "contact",
   "support",
@@ -65,4 +84,19 @@ const LOGIN_REGISTER_KWS = [
   "create a account",
 ];
 
-export { SITE_KWS, SERIES_KWS, CONTACT_KWS, NEWS_KWS, LOGIN_REGISTER_KWS };
+export {
+  SITE_KWS,
+  SERIES_KWS,
+  CONTACT_KWS,
+  NEWS_KWS,
+  LOGIN_REGISTER_KWS,
+  ATTACK_ON_TITAN_KWS,
+  CHAINSAW_MAN_KWS,
+  DEMON_SLAYER_KWS,
+  JOJO_KWS,
+  MY_HERO_ACADEMIA_KWS,
+  MOB_PSYCHO_KWS,
+  ONE_PUNCH_MAN_KWS,
+  SPY_X_FAMILY_KWS,
+  VINLAND_SAGA_KWS,
+};
