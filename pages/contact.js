@@ -24,7 +24,21 @@ import { Search } from "@/assets/components/global/Nav/Both/Search";
 // Style Imports
 import "../assets/styles/modules/Contact/Contact.module.css";
 
-export default function Contact() {
+// Adding some json data to be used later
+export const getStaticProps = async () => {
+  const SEARCH_RES = await fetch(
+    "https://raw.githubusercontent.com/mxrked/animex_streaming_CDN/master/files/data/SEARCH.json"
+  );
+  const SEARCH_RES_DATA = await SEARCH_RES.json();
+
+  return {
+    props: {
+      display_search_data: SEARCH_RES_DATA,
+    },
+  };
+};
+
+export default function Contact({ display_search_data }) {
   const router = useRouter();
 
   // Disabling Page Links
@@ -46,7 +60,7 @@ export default function Contact() {
         url="https://sparkling-dragon-f3af91.netlify.app/contact/"
       />
 
-      <Search />
+      <Search searchData={display_search_data} />
 
       <main id="pageCnt" className="page-cnt full-second">
         <DesktopNav />
