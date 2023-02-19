@@ -31,6 +31,12 @@ export default function Series() {
     ManipPageLink("disable", "multiple", ".series-link");
   }, []);
 
+  // Enabling interactivity
+  useEffect(() => {
+    document.body.style.overflowY = "auto";
+    document.body.style.pointerEvents = "auto";
+  }, []);
+
   return (
     <div id="page" className="page overrides_Series full-second">
       <PageHead

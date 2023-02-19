@@ -31,6 +31,12 @@ export default function News() {
     ManipPageLink("disable", "multiple", ".news-link");
   }, []);
 
+  // Enabling interactivity
+  useEffect(() => {
+    document.body.style.overflowY = "auto";
+    document.body.style.pointerEvents = "auto";
+  }, []);
+
   return (
     <div id="page" className="page overrides_News full-second">
       <PageHead

@@ -31,6 +31,12 @@ export default function Contact() {
     ManipPageLink("disable", "multiple", ".contact-link");
   }, []);
 
+  // Enabling interactivity
+  useEffect(() => {
+    document.body.style.overflowY = "auto";
+    document.body.style.pointerEvents = "auto";
+  }, []);
+
   return (
     <div id="page" className="page overrides_Contact full-second">
       <PageHead
