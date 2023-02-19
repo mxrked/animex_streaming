@@ -314,6 +314,7 @@
 
 .mobile_nav {
   display: none;
+  width: 100%;
   background-color: #222831;
 }
 
@@ -537,7 +538,7 @@
 .mobile_nav_menu {
   position: absolute;
   width: 100%;
-  height: calc(100vh - 60px);
+  height: 100%;
   background-color: #232222;
   display: none;
 }
@@ -673,6 +674,10 @@
   opacity: 0;
   z-index: 10;
   cursor: pointer;
+}
+
+.mobile_nav_menu .mobile_nav_menu_cnt .blank {
+  min-height: 120px;
 }
 
 @media all and (max-width: 1995px) {
@@ -815,12 +820,18 @@
     margin-top: 5px;
     margin-bottom: 5px;
   }
+  .mobile_nav_menu {
+    top: 60px;
+  }
   .mobile_nav_menu .mobile_nav_menu_cnt .browse_section ul li,
   .mobile_nav_menu .mobile_nav_menu_cnt .general_section ul li {
     font-size: 18px;
   }
   .mobile_nav_menu .mobile_nav_menu_cnt .browse_section ul .genre_links div {
     font-size: 16px;
+  }
+  .mobile_nav_menu .mobile_nav_menu_cnt .blank {
+    min-height: 60px;
   }
 }
 
