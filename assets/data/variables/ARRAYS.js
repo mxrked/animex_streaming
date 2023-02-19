@@ -1,4 +1,6 @@
 // This file is used to hold some arrays
+
+//! Meta Keywords
 const SITE_KWS = [
   "animex streaming",
   "animex",
@@ -44,25 +46,6 @@ const SERIES_KWS = [
   "spy x family",
   "spy family",
 ];
-const ATTACK_ON_TITAN_KWS = ["aot", "attack on titan"];
-const CHAINSAW_MAN_KWS = ["chainsaw man", "chainsaw-man", "csm"];
-const DEMON_SLAYER_KWS = ["demon-slayer", "demon slayer", "ds"];
-const JOJO_KWS = [
-  "jojos bizarre adventure",
-  "jojo's bizarre adventure",
-  "jjba",
-];
-const MY_HERO_ACADEMIA_KWS = ["my hero academia", "mha"];
-const MOB_PSYCHO_KWS = ["mob psycho 100", "mob psycho", "mp100"];
-const ONE_PUNCH_MAN_KWS = ["one punch man", "one-punch man", "opm"];
-const SPY_X_FAMILY_KWS = [
-  "spy-x-family",
-  "spy x family",
-  "spy family",
-  "spy-family",
-  "sxf",
-];
-const VINLAND_SAGA_KWS = ["vinland saga", "vinland", "vs"];
 const CONTACT_KWS = [
   "contact",
   "support",
@@ -83,6 +66,27 @@ const LOGIN_REGISTER_KWS = [
   "create an account",
   "create a account",
 ];
+
+//! Search Keywords
+const ATTACK_ON_TITAN_KWS = ["aot", "attack on titan"];
+const CHAINSAW_MAN_KWS = ["chainsaw man", "chainsaw-man", "csm"];
+const DEMON_SLAYER_KWS = ["demon-slayer", "demon slayer", "ds"];
+const JOJO_KWS = [
+  "jojos bizarre adventure",
+  "jojo's bizarre adventure",
+  "jjba",
+];
+const MY_HERO_ACADEMIA_KWS = ["my hero academia", "mha"];
+const MOB_PSYCHO_KWS = ["mob psycho 100", "mob psycho", "mp100"];
+const ONE_PUNCH_MAN_KWS = ["one punch man", "one-punch man", "opm"];
+const SPY_X_FAMILY_KWS = [
+  "spy-x-family",
+  "spy x family",
+  "spy family",
+  "spy-family",
+  "sxf",
+];
+const VINLAND_SAGA_KWS = ["vinland saga", "vinland", "vs"];
 
 export {
   SITE_KWS,
