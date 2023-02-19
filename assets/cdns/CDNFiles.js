@@ -6,6 +6,4 @@
 
 import { CDNFileReturn } from "./CDNReturns";
 
-const RESUME_PDF = CDNFileReturn("resume", "Parker_Phelps_Resume", "pdf");
-
-export { RESUME_PDF };
+export {};

@@ -19,6 +19,7 @@ import { DesktopNav } from "@/assets/components/global/Nav/Desktop/DesktopNav";
 import { DesktopNavMegaMenu } from "@/assets/components/global/Nav/Desktop/DesktopNavMegaMenu";
 import { MobileNav } from "@/assets/components/global/Nav/Mobile/MobileNav";
 import { MobileNavMenu } from "@/assets/components/global/Nav/Mobile/MobileNavMenu";
+import { Search } from "@/assets/components/global/Nav/Both/Search";
 
 // Style Imports
 import "../assets/styles/modules/News/News.module.css";
@@ -44,6 +45,8 @@ export default function News() {
         robots="index, follow"
         url="https://sparkling-dragon-f3af91.netlify.app/news/"
       />
+
+      <Search />
 
       <main id="pageCnt" className="page-cnt full-second">
         <DesktopNav />
