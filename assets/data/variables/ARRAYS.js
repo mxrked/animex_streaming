@@ -68,16 +68,18 @@ const LOGIN_REGISTER_KWS = [
 ];
 
 //! Search Keywords
-const ATTACK_ON_TITAN_KWS = ["aot", "attack on titan"];
+const ATTACK_ON_TITAN_KWS = ["aot", "attack on titan", "titan"];
 const CHAINSAW_MAN_KWS = ["chainsaw man", "chainsaw-man", "csm"];
 const DEMON_SLAYER_KWS = ["demon-slayer", "demon slayer", "ds"];
 const JOJO_KWS = [
   "jojos bizarre adventure",
   "jojo's bizarre adventure",
+  "jojo",
+  "jojos",
   "jjba",
 ];
-const MY_HERO_ACADEMIA_KWS = ["my hero academia", "mha"];
-const MOB_PSYCHO_KWS = ["mob psycho 100", "mob psycho", "mp100"];
+const MY_HERO_ACADEMIA_KWS = ["my hero academia", "mha", "my hero"];
+const MOB_PSYCHO_KWS = ["mob psycho 100", "mob psycho", "mp100", "mob"];
 const ONE_PUNCH_MAN_KWS = ["one punch man", "one-punch man", "opm"];
 const SPY_X_FAMILY_KWS = [
   "spy-x-family",
