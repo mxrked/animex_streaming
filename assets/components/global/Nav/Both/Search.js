@@ -4,14 +4,13 @@
  *
  */
 
-import { useEffect } from "react";
 import { useRouter } from "next/router";
 
 import { BackgroundImage } from "react-image-and-background-image-fade";
 
-import ExitAndRoute from "@/assets/functions/routing/ExitAndRoute";
 import FilterSearchLinks from "@/assets/functions/dom/filters/FilterSearchLinks";
 import SearchRoute from "@/assets/functions/routing/SearchRoute";
+import CloseSearch from "@/assets/functions/dom/closers/CloseSearch";
 
 import styles from "../../../../styles/modules/Nav/Nav.module.css";
 
@@ -19,11 +18,14 @@ export const Search = (props) => {
   const router = useRouter();
 
   return (
-    <div id="search" className={`${styles.search}`}>
+    <div id="search" className={`${styles.search} full-second`}>
       <div id="searchInner" className={`${styles.search_inner} half-second`}>
         <button
           id="searchCloser"
           className={`${styles.search_closer} half-second`}
+          onClick={() => {
+            CloseSearch();
+          }}
         >
           Close
         </button>
