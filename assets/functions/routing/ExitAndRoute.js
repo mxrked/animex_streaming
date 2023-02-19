@@ -61,5 +61,5 @@ export default function ExitAndRoute(rooter, route, checkRoute) {
 
   setTimeout(() => {
     PageRouting(rooter, route, checkRoute);
-  }, 1000);
+  }, 200);
 }
