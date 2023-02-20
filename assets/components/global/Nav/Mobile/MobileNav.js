@@ -15,6 +15,7 @@ import { LOGO_LARGE_RED, LOGO_LARGE_ORANGE } from "@/assets/cdns/CDNIcons";
 import ExitAndRoute from "@/assets/functions/routing/ExitAndRoute";
 import ToggleMobileNav from "@/assets/functions/dom/togglers/ToggleMobileNav";
 import CloseMobileNav from "@/assets/functions/dom/closers/CloseMobileNav";
+import ToggleSearch from "@/assets/functions/dom/togglers/ToggleSearch";
 
 import styles from "../../../../styles/modules/Nav/Nav.module.css";
 
