@@ -1268,15 +1268,15 @@
     padding-right: 15px;
 
     .search_inner {
-      max-width: 700px;
-      height: 320px;
+      max-width: 640px;
+      height: 280px;
 
       .search_closer {
         font-size: 19px;
       }
 
       .search_inner_top {
-        height: 40px;
+        height: 30px;
         padding-left: 10px;
         padding-bottom: 10px;
 
@@ -1289,23 +1289,23 @@
 
       .search_inner_links {
         @include customScrollBar(13px, $Alabaster, $Carnation, $Jaffa);
-        height: 255px;
+        height: 175px;
 
         ul {
           li {
-            height: 85px;
+            height: 75px;
             padding-left: 20px;
 
             .bg {
               display: block;
-              height: 75px;
+              height: 65px;
             }
 
             span {
-              font-size: 17px;
+              font-size: 16px;
 
               span {
-                font-size: 14px;
+                font-size: 13px;
               }
             }
           }
