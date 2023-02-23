@@ -5,7 +5,7 @@
  */
 
 import DeclareStorageVariable from "../data/storage/DeclareStorageVariable";
-// import TriggerExitAnimations from "../dom/triggers/TriggerExitAnimations";
+import TriggerExitAnimations from "../dom/triggers/TriggerExitAnimations";
 
 // Gets the route
 function GetRoute(rooter, route) {
@@ -57,7 +57,7 @@ function PageRouting(rooter, route, checkRoute) {
 
 // Triggers exit animations and routes to page
 export default function ExitAndRoute(rooter, route, checkRoute) {
-  // TriggerExitAnimations(); // Triggers the exit animations
+  TriggerExitAnimations(); // Triggers the exit animations
 
   setTimeout(() => {
     PageRouting(rooter, route, checkRoute);
