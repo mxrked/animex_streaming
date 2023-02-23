@@ -21,6 +21,8 @@ import { MobileNav } from "@/assets/components/global/Nav/Mobile/MobileNav";
 import { MobileNavMenu } from "@/assets/components/global/Nav/Mobile/MobileNavMenu";
 import { Search } from "@/assets/components/global/Nav/Both/Search";
 
+import { IndexTop } from "@/assets/components/pages/Index/IndexTop";
+
 // Style Imports
 import "../assets/styles/modules/Index/Index.module.css";
 
@@ -67,6 +69,8 @@ export default function Home({ display_search_data }) {
         <DesktopNavMegaMenu />
         <MobileNav />
         <MobileNavMenu />
+
+        <IndexTop />
       </main>
     </div>
   );
