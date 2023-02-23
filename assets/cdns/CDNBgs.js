@@ -6,6 +6,6 @@
 
 import { CDNBGReturn } from "./CDNReturns";
 
-const TOP_BG = CDNBGReturn("top", "top-bg", "webp");
+const TOP_BG = CDNBGReturn("gradients", "gradient-1", "webp");
 
 export { TOP_BG };
