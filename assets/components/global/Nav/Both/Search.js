@@ -13,6 +13,7 @@ import SearchRoute from "@/assets/functions/routing/SearchRoute";
 import CloseSearch from "@/assets/functions/dom/closers/CloseSearch";
 
 import styles from "../../../../styles/modules/Nav/Nav.module.css";
+import TriggerExitAnimations from "@/assets/functions/dom/triggers/TriggerExitAnimations";
 
 export const Search = (props) => {
   const router = useRouter();
@@ -58,7 +59,15 @@ export const Search = (props) => {
                 className={`${styles.search_link} ${item.searchItemLinkType} search-link half-second`}
                 key={item.searchItemID}
                 onClick={() => {
-                  router.push(item.searchItemLink);
+                  CloseSearch();
+
+                  setTimeout(() => {
+                    TriggerExitAnimations();
+                  }, 600);
+
+                  setTimeout(() => {
+                    router.push(item.searchItemLink);
+                  }, 1400);
                 }}
               >
                 <BackgroundImage
