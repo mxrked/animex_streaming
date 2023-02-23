@@ -158,9 +158,9 @@ select {
   visibility: hidden;
 }
 
-// .hide-page {
-//   opacity: 0 !important;
-// }
+.hide-page {
+  opacity: 0 !important;
+}
 // .page-main {
 //   height: 100vh;
 //   background-color: red;
@@ -170,26 +170,31 @@ select {
 .scale {
   scale: 1.07;
 }
-.fade-in {
+.animate-fade-in,
+.animate-fade-in-sub {
   opacity: 0;
   visibility: hidden;
 }
-.fade-up {
+.animate-fade-up,
+.animate-fade-up-sub {
   transform: translateY(-60px);
   opacity: 0;
   visibility: hidden;
 }
-.fade-down {
+.animate-fade-down,
+.animate-fade-down-sub {
   transform: translateY(60px);
   opacity: 0;
   visibility: hidden;
 }
-.fade-left {
+.animate-fade-left,
+.animate-fade-left-sub {
   transform: translateX(60px);
   opacity: 0;
   visibility: hidden;
 }
-.fade-right {
+.animate-fade-right,
+.animate-fade-right-sub {
   transform: translateX(-60px);
   opacity: 0;
   visibility: hidden;
