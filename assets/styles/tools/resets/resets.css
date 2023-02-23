@@ -150,7 +150,8 @@ select {
   opacity: 0 !important;
 }
 
-.scale {
+.animate-scale,
+.animate-scale-sub {
   scale: 1.07;
 }
 

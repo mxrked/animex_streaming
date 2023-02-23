@@ -167,7 +167,8 @@ select {
 // }
 
 // Animation classes
-.scale {
+.animate-scale,
+.animate-scale-sub {
   scale: 1.07;
 }
 .animate-fade-in,
