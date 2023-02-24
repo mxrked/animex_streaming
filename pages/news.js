@@ -12,6 +12,7 @@ import { useRouter } from "next/router";
 
 // Data/Functions/Images Imports
 import ManipPageLink from "@/assets/functions/dom/manip/ManipPageLink";
+import TriggerEnterAnimations from "@/assets/functions/dom/triggers/TriggerEnterAnimations";
 
 // Component Imports
 import { PageHead } from "@/assets/components/global/PageHead";
@@ -44,6 +45,17 @@ export default function News({ display_search_data }) {
   // Disabling Page Links
   useEffect(() => {
     ManipPageLink("disable", "multiple", ".news-link");
+  }, []);
+
+  //! Triggering Enter Animations
+  useEffect(() => {
+    setTimeout(() => {
+      TriggerEnterAnimations();
+    }, 500);
+
+    window.addEventListener("popstate", () => {
+      TriggerEnterAnimations();
+    });
   }, []);
 
   // Enabling interactivity

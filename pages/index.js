@@ -12,6 +12,7 @@ import { useRouter } from "next/router";
 
 // Data/Functions/Images Imports
 import ManipPageLink from "@/assets/functions/dom/manip/ManipPageLink";
+import TriggerEnterAnimations from "@/assets/functions/dom/triggers/TriggerEnterAnimations";
 
 // Component Imports
 import { PageHead } from "@/assets/components/global/PageHead";
@@ -48,6 +49,17 @@ export default function Home({ display_search_data }) {
     ManipPageLink("disable", "multiple", ".index-link");
   }, []);
 
+  //! Triggering Enter Animations
+  useEffect(() => {
+    setTimeout(() => {
+      TriggerEnterAnimations();
+    }, 500);
+
+    window.addEventListener("popstate", () => {
+      TriggerEnterAnimations();
+    });
+  }, []);
+
   // Enabling interactivity
   useEffect(() => {
     document.body.style.overflowY = "auto";
@@ -69,8 +81,7 @@ export default function Home({ display_search_data }) {
         <DesktopNavMegaMenu />
         <MobileNav />
         <MobileNavMenu />
-
-        <IndexTop />
+        <IndexTop />s
       </main>
     </div>
   );
