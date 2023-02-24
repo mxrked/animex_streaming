@@ -24,4 +24,8 @@ export default function ToggleSearch() {
   setTimeout(() => {
     SEARCH.style.pointerEvents = "auto";
   }, 1200);
+
+  setTimeout(() => {
+    document.getElementById("searchIpt").focus();
+  }, 1300);
 }
