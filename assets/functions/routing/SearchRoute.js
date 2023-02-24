@@ -16,6 +16,7 @@ import {
   VINLAND_SAGA_KWS,
 } from "../../data/variables/ARRAYS";
 
+import CloseSearch from "../dom/closers/CloseSearch";
 import ExitAndRoute from "./ExitAndRoute";
 
 // Check KWs for route
@@ -49,9 +50,16 @@ function RouteBasedOnKWS(
 
           // A hash/slug
           if (type == "hash") {
-            const ROUTE_WITH_HASH = route + hash; // Combines the route with the hash the user is going to
+            const ROUTE_WITH_HASH = route + hash;
 
-            ExitAndRoute(rooter, ROUTE_WITH_HASH, checker);
+            if (sessionStorage.getItem("Search Opened")) {
+              CloseSearch();
+
+              // Allows the search to close before routing
+              setTimeout(() => {
+                rooter.push(ROUTE_WITH_HASH);
+              }, 900);
+            }
           }
         } else {
           console.log("You are already on that page..");
