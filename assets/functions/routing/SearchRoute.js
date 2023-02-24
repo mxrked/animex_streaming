@@ -50,16 +50,13 @@ function RouteBasedOnKWS(
 
           // A hash/slug
           if (type == "hash") {
-            const ROUTE_WITH_HASH = route + hash;
+            // Closing the search
+            CloseSearch();
 
-            if (sessionStorage.getItem("Search Opened")) {
-              CloseSearch();
-
-              // Allows the search to close before routing
-              setTimeout(() => {
-                rooter.push(ROUTE_WITH_HASH);
-              }, 900);
-            }
+            // Routing after search closes
+            setTimeout(() => {
+              rooter.push(route + hash);
+            }, 1000);
           }
         } else {
           console.log("You are already on that page..");
