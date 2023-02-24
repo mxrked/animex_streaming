@@ -60,6 +60,7 @@ function PageRouting(rooter, route, checkRoute) {
 export default function ExitAndRoute(rooter, route, checkRoute) {
   TriggerExitAnimations(); // Triggers the exit animations
 
+  // Closes search if opened, then routes
   if (sessionStorage.getItem("Search Opened")) {
     CloseSearch();
 
@@ -68,6 +69,7 @@ export default function ExitAndRoute(rooter, route, checkRoute) {
     }, 1200);
   }
 
+  // Routes normally if search isnt opened
   if (!sessionStorage.getItem("Search Opened")) {
     setTimeout(() => {
       PageRouting(rooter, route, checkRoute);
