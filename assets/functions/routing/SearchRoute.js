@@ -41,12 +41,17 @@ function RouteBasedOnKWS(
       if (UPPERCASED_INPUT.indexOf(UPPERCASED_LINK) > -1) {
         if (SEARCH_LINKS[linkIndex].style.opacity != 0.5) {
           //! These 2 if statements are to prevent some strange cancel rendering route error
+
+          // A basic link
           if (type == "link") {
             ExitAndRoute(rooter, route, checker);
           }
 
+          // A hash/slug
           if (type == "hash") {
-            rooter.push(route + hash);
+            const ROUTE_WITH_HASH = route + hash; // Combines the route with the hash the user is going to
+
+            ExitAndRoute(rooter, ROUTE_WITH_HASH, checker);
           }
         } else {
           console.log("You are already on that page..");
