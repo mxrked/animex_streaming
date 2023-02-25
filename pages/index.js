@@ -26,6 +26,7 @@ import { IndexTop } from "@/assets/components/pages/Index/IndexTop";
 
 // Style Imports
 import "../assets/styles/modules/Index/Index.module.css";
+import { IndexBrowsingWatching } from "@/assets/components/pages/Index/IndexBrowsingWatching";
 
 // Adding some json data to be used later
 export const getStaticProps = async () => {
@@ -81,7 +82,8 @@ export default function Home({ display_search_data }) {
         <DesktopNavMegaMenu />
         <MobileNav />
         <MobileNavMenu />
-        <IndexTop />s
+        <IndexTop />
+        <IndexBrowsingWatching />
       </main>
     </div>
   );
