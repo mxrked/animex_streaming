@@ -162,7 +162,8 @@ select {
 }
 
 .animate-fade-up,
-.animate-fade-up-sub {
+.animate-fade-up-sub,
+.scroll-fade-yA {
   -webkit-transform: translateY(-60px);
           transform: translateY(-60px);
   opacity: 0;
@@ -171,7 +172,7 @@ select {
 
 .animate-fade-down,
 .animate-fade-down-sub,
-.scroll-fade-x {
+.scroll-fade-yB {
   -webkit-transform: translateY(60px);
           transform: translateY(60px);
   opacity: 0;
@@ -179,7 +180,8 @@ select {
 }
 
 .animate-fade-left,
-.animate-fade-left-sub {
+.animate-fade-left-sub,
+.scroll-fade-xA {
   -webkit-transform: translateX(60px);
           transform: translateX(60px);
   opacity: 0;
@@ -187,7 +189,8 @@ select {
 }
 
 .animate-fade-right,
-.animate-fade-right-sub {
+.animate-fade-right-sub,
+.scroll-fade-xB {
   -webkit-transform: translateX(-60px);
           transform: translateX(-60px);
   opacity: 0;

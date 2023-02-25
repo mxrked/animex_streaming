@@ -177,26 +177,29 @@ select {
   visibility: hidden;
 }
 .animate-fade-up,
-.animate-fade-up-sub {
+.animate-fade-up-sub,
+.scroll-fade-yA {
   transform: translateY(-60px);
   opacity: 0;
   visibility: hidden;
 }
 .animate-fade-down,
 .animate-fade-down-sub,
-.scroll-fade-x {
+.scroll-fade-yB {
   transform: translateY(60px);
   opacity: 0;
   visibility: hidden;
 }
 .animate-fade-left,
-.animate-fade-left-sub {
+.animate-fade-left-sub,
+.scroll-fade-xA {
   transform: translateX(60px);
   opacity: 0;
   visibility: hidden;
 }
 .animate-fade-right,
-.animate-fade-right-sub {
+.animate-fade-right-sub,
+.scroll-fade-xB {
   transform: translateX(-60px);
   opacity: 0;
   visibility: hidden;
