@@ -23,6 +23,15 @@ export default function TriggerScrollAnimations() {
           ANIMATE_SCROLLS[i].style.visibility = "visible";
           ANIMATE_SCROLLS[i].style.transform = "translateY(0)";
         }
+
+        if (
+          ANIMATE_SCROLLS[i].classList.contains("scroll-fade-xA") ||
+          ANIMATE_SCROLLS[i].classList.contains("scroll-fade-xB")
+        ) {
+          ANIMATE_SCROLLS[i].style.opacity = 1;
+          ANIMATE_SCROLLS[i].style.visibility = "visible";
+          ANIMATE_SCROLLS[i].style.transform = "translateX(0)";
+        }
       }
     }
   }
