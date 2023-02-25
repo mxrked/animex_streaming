@@ -15,7 +15,10 @@ export default function TriggerScrollAnimations() {
 
       if (REVEAL_TOP < W_INNER_HEIGHT - REVEAL_POINT) {
         // Checking for a particular scroll class
-        if (ANIMATE_SCROLLS[i].classList.contains("scroll-fade-x")) {
+        if (
+          ANIMATE_SCROLLS[i].classList.contains("scroll-fade-yA") ||
+          ANIMATE_SCROLLS[i].classList.contains("scroll-fade-yB")
+        ) {
           ANIMATE_SCROLLS[i].style.opacity = 1;
           ANIMATE_SCROLLS[i].style.visibility = "visible";
           ANIMATE_SCROLLS[i].style.transform = "translateY(0)";
