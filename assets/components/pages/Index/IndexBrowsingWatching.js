@@ -30,7 +30,7 @@ export const IndexBrowsingWatching = () => {
       CheckAnimationType(
         window,
         "indexBrowsingWatchingInner",
-        "scroll-fade-x",
+        "scroll-fade-yB",
         "animate-fade-down"
       );
     });
