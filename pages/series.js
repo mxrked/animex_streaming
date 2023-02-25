@@ -21,6 +21,7 @@ import { DesktopNavMegaMenu } from "@/assets/components/global/Nav/Desktop/Deskt
 import { MobileNav } from "@/assets/components/global/Nav/Mobile/MobileNav";
 import { MobileNavMenu } from "@/assets/components/global/Nav/Mobile/MobileNavMenu";
 import { Search } from "@/assets/components/global/Nav/Both/Search";
+import { ScrollIndicator } from "@/assets/components/global/ScrollIndicator";
 
 // Style Imports
 import "../assets/styles/modules/Series/Series.module.css";
@@ -73,6 +74,8 @@ export default function Series({ display_search_data }) {
       />
 
       <Search searchData={display_search_data} />
+
+      <ScrollIndicator />
 
       <main id="pageCnt" className="page-cnt full-second">
         <DesktopNav />
