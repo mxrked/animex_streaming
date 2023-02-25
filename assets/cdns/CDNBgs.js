@@ -22,7 +22,7 @@ const COMEDY_BG = CDNBGReturn("comedy", "comedy", "webp");
 const FANTASY_BG = CDNBGReturn("fantasy", "fantasy", "webp");
 const HORROR_BG = CDNBGReturn("horror", "horror", "webp");
 const ROMANCE_BG = CDNBGReturn("romance", "romance", "webp");
-const SEINEN_BG = CDNBGReturn("seinen", "seinen", "webp");
+const SEINEN_BG = CDNBGReturn("seinen", "sienen", "webp");
 const SHONEN_BG = CDNBGReturn("shonen", "shonen", "webp");
 
 export { TOP_BG };
