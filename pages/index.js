@@ -13,6 +13,7 @@ import { useRouter } from "next/router";
 // Data/Functions/Images Imports
 import ManipPageLink from "@/assets/functions/dom/manip/ManipPageLink";
 import TriggerEnterAnimations from "@/assets/functions/dom/triggers/TriggerEnterAnimations";
+import TriggerScrollAnimations from "@/assets/functions/dom/triggers/TriggerScrollAnimations";
 
 // Component Imports
 import { PageHead } from "@/assets/components/global/PageHead";
@@ -59,6 +60,13 @@ export default function Home({ display_search_data }) {
 
     window.addEventListener("popstate", () => {
       TriggerEnterAnimations();
+    });
+  }, []);
+
+  //! Triggering Scroll Animations
+  useEffect(() => {
+    window.addEventListener("scroll", () => {
+      TriggerScrollAnimations();
     });
   }, []);
 
