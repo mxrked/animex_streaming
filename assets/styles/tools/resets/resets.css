@@ -170,7 +170,8 @@ select {
 }
 
 .animate-fade-down,
-.animate-fade-down-sub {
+.animate-fade-down-sub,
+.scroll-fade-x {
   -webkit-transform: translateY(60px);
           transform: translateY(60px);
   opacity: 0;
