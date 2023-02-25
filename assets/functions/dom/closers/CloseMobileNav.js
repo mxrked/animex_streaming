@@ -22,4 +22,15 @@ export default function CloseMobileNav() {
     GENRE_LINKS_CB.checked = false;
     document.getElementById("genreLinks").style.height = 0;
   }
+
+  // Prevents interactivity bug when opening and closing menu fast
+  setTimeout(() => {
+    if (
+      !sessionStorage.getItem("Search Opened") &&
+      !sessionStorage.getItem("Modal Opened")
+    ) {
+      document.body.style.overflowY = "auto";
+      document.body.style.pointerEvents = "auto";
+    }
+  }, 20);
 }
