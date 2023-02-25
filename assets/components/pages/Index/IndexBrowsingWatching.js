@@ -17,9 +17,9 @@ import {
 
 import ExitAndRoute from "@/assets/functions/routing/ExitAndRoute";
 import TriggerExitAnimations from "@/assets/functions/dom/triggers/TriggerExitAnimations";
+import CheckAnimationType from "@/assets/functions/dom/checkers/CheckingAnimationType";
 
 import styles from "../../../styles/modules/Index/Index.module.css";
-import CheckAnimationType from "@/assets/functions/dom/checkers/CheckingAnimationType";
 
 export const IndexBrowsingWatching = () => {
   const router = useRouter();
