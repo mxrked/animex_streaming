@@ -1,5 +1,26 @@
 // This file is used to hold some arrays
 
+import {
+  AOT_OBJ,
+  CSM_OBJ,
+  DEMON_SLAYER_OBJ,
+  JOJO_OBJ,
+  MHA_OBJ,
+  MOB_PSYCHO_OBJ,
+  OPM_OBJ,
+  SXF_OBJ,
+  VINLAND_SAGA_OBJ,
+} from "../classes/Series";
+
+import {
+  SHONEN_OBJ,
+  SEINEN_OBJ,
+  COMEDY_OBJ,
+  ROMANCE_OBJ,
+  FANTASY_OBJ,
+  HORROR_OBJ,
+} from "../classes/Genre";
+
 //! Meta Keywords
 const SITE_KWS = [
   "animex streaming",
@@ -90,6 +111,29 @@ const SPY_X_FAMILY_KWS = [
 ];
 const VINLAND_SAGA_KWS = ["vinland saga", "vinland", "vs"];
 
+//! Object Arrays
+const ALL_SERIES = [
+  AOT_OBJ,
+  CSM_OBJ,
+  DEMON_SLAYER_OBJ,
+  JOJO_OBJ,
+  MHA_OBJ,
+  MOB_PSYCHO_OBJ,
+  OPM_OBJ,
+  SXF_OBJ,
+  VINLAND_SAGA_OBJ,
+];
+const POPULAR_SERIES = [AOT_OBJ, JOJO_OBJ, MHA_OBJ];
+const LATEST_SERIES = [CSM_OBJ, MOB_PSYCHO_OBJ, SXF_OBJ];
+const ALL_GENRES = [
+  SHONEN_OBJ,
+  SEINEN_OBJ,
+  COMEDY_OBJ,
+  ROMANCE_OBJ,
+  FANTASY_OBJ,
+  HORROR_OBJ,
+];
+
 export {
   SITE_KWS,
   SERIES_KWS,
@@ -106,3 +150,5 @@ export {
   SPY_X_FAMILY_KWS,
   VINLAND_SAGA_KWS,
 };
+
+export { ALL_GENRES, ALL_SERIES, POPULAR_SERIES, LATEST_SERIES };
