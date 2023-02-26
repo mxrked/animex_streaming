@@ -1,0 +1,44 @@
+[
+  {
+    "articleID": "article_1",
+    "articleName": "Spy X Family renewed for 2nd season and movie.",
+    "articleDesc": "The popular family rom-com anime has been renewed for a second season and movie that will hit theaters.",
+    "articleLink": "/#article_1",
+    "articleImg": "https://raw.githubusercontent.com/mxrked/animex_streaming_CDN/master/bgs/sxf/bg-1.webp"
+  },
+  {
+    "articleID": "article_2",
+    "articleName": "Chainsaw Man's first season has finished.",
+    "articleDesc": "The latest hit bloody and action-packed shonen anime, Chainsaw Man, has finished its first season.",
+    "articleLink": "/#article_2",
+    "articleImg": "https://raw.githubusercontent.com/mxrked/animex_streaming_CDN/master/bgs/csm/bg-1.webp"
+  },
+  {
+    "articleID": "article_3",
+    "articleName": "Attack On Titan's final arc will be releasing in parts.",
+    "articleDesc": "On route to ending, the epic shonen's final arc is set to be releasing in parts based on MAPPA confirmation.",
+    "articleLink": "/#article_3",
+    "articleImg": "https://raw.githubusercontent.com/mxrked/animex_streaming_CDN/master/bgs/aot/bg-2.webp"
+  },
+  {
+    "articleID": "article_4",
+    "articleName": "Demon Slayer's third season will release early in theaters.",
+    "articleDesc": "The third season for the wildly popular shonen anime, Demon Slayer, will be shown early for movie theater goers.",
+    "articleLink": "/#article_4",
+    "articleImg": "https://raw.githubusercontent.com/mxrked/animex_streaming_CDN/master/bgs/demon-slayer/bg-1.webp"
+  },
+  {
+    "articleID": "article_5",
+    "articleName": "Mob Psycho 100 has offically ended.",
+    "articleDesc": "The amazing journey of Mob Psycho 100 has came to a satisfying close as the run for its anime has offically ended.",
+    "articleLink": "/#article_5",
+    "articleImg": "https://raw.githubusercontent.com/mxrked/animex_streaming_CDN/master/bgs/mob-psycho/bg-1.webp"
+  },
+  {
+    "articleID": "article_6",
+    "articleName": "JoJo's Bizarre Adventure: Stone Ocean ending explained.",
+    "articleDesc": "We are here to explain the epic ending to JoJo's Bizarre Adventure: Stone Ocean and whats in store next for JJBA.",
+    "articleLink": "/#article_6",
+    "articleImg": "https://raw.githubusercontent.com/mxrked/animex_streaming_CDN/master/bgs/jojo/bg-4.webp"
+  }
+]
