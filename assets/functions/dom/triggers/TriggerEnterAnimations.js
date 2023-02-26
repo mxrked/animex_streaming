@@ -14,7 +14,7 @@ export default function TriggerEnterAnimations() {
         page.style.opacity = 1;
         page.style.visibility = "visible";
       });
-    }, 500);
+    }, 300);
   }
 
   // animate-fade-in
@@ -28,7 +28,7 @@ export default function TriggerEnterAnimations() {
           anim.style.visibility = "visible";
         }
       });
-    }, 500);
+    }, 300);
   }
   // animate-fade-in-sub
   if (document.querySelector(".animate-fade-in-sub")) {
@@ -43,7 +43,7 @@ export default function TriggerEnterAnimations() {
           anim.style.visibility = "visible";
         }
       });
-    }, 900);
+    }, 500);
   }
 
   // animate-fade-left
@@ -58,7 +58,7 @@ export default function TriggerEnterAnimations() {
           anim.style.transform = "translateX(0)";
         }
       });
-    }, 500);
+    }, 300);
   }
   // animate-fade-left-sub
   if (document.querySelector(".animate-fade-left-sub")) {
@@ -74,7 +74,7 @@ export default function TriggerEnterAnimations() {
           anim.style.transform = "translateX(0)";
         }
       });
-    }, 900);
+    }, 500);
   }
 
   // animate-fade-right
@@ -91,7 +91,7 @@ export default function TriggerEnterAnimations() {
           anim.style.transform = "translateX(0)";
         }
       });
-    }, 500);
+    }, 300);
   }
   // animate-fade-left-sub
   if (document.querySelector(".animate-fade-right-sub")) {
@@ -107,7 +107,7 @@ export default function TriggerEnterAnimations() {
           anim.style.transform = "translateX(0)";
         }
       });
-    }, 900);
+    }, 500);
   }
 
   // animate-fade-up
@@ -122,7 +122,7 @@ export default function TriggerEnterAnimations() {
           anim.style.transform = "translateY(0)";
         }
       });
-    }, 500);
+    }, 300);
   }
   // animate-fade-up-sub
   if (document.querySelector(".animate-fade-up-sub")) {
@@ -138,7 +138,7 @@ export default function TriggerEnterAnimations() {
           anim.style.transform = "translateY(0)";
         }
       });
-    }, 900);
+    }, 500);
   }
 
   // animate-fade-down
@@ -153,7 +153,7 @@ export default function TriggerEnterAnimations() {
           anim.style.transform = "translateY(0)";
         }
       });
-    }, 500);
+    }, 300);
   }
   // animate-fade-down-sub
   if (document.querySelector(".animate-fade-down-sub")) {
@@ -169,6 +169,6 @@ export default function TriggerEnterAnimations() {
           anim.style.transform = "translateY(0)";
         }
       });
-    }, 900);
+    }, 500);
   }
 }
