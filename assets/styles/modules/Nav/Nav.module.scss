@@ -246,6 +246,10 @@
             color: $Alabaster;
           }
         }
+
+        .empty {
+          pointer-events: none !important;
+        }
       }
     }
   }

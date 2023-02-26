@@ -313,6 +313,10 @@
   color: #fafafa;
 }
 
+.desktop_nav_mega_menu .desktop_nav_mega_menu_inner .desktop_nav_mega_menu_inner_set ul .empty {
+  pointer-events: none !important;
+}
+
 .mobile_nav {
   display: none;
   width: 100%;
