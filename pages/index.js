@@ -35,16 +35,25 @@ export const getStaticProps = async () => {
   const SEARCH_RES = await fetch(
     "https://raw.githubusercontent.com/mxrked/animex_streaming_CDN/master/files/data/SEARCH.json"
   );
+  const NEWS_ARTICLES_RES = await fetch(
+    "https://raw.githubusercontent.com/mxrked/animex_streaming_CDN/master/files/data/NEWS_ARTICLES.json"
+  );
+
   const SEARCH_RES_DATA = await SEARCH_RES.json();
+  const NEWS_ARTICLES_RES_DATA = await NEWS_ARTICLES_RES.json();
 
   return {
     props: {
       display_search_data: SEARCH_RES_DATA,
+      display_news_articles_data: NEWS_ARTICLES_RES_DATA,
     },
   };
 };
 
-export default function Home({ display_search_data }) {
+export default function Home({
+  display_search_data,
+  display_news_articles_data,
+}) {
   const router = useRouter();
 
   // Disabling Page Links
