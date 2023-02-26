@@ -26,6 +26,7 @@ import { ScrollIndicator } from "@/assets/components/global/ScrollIndicator";
 
 import { IndexTop } from "@/assets/components/pages/Index/IndexTop";
 import { IndexBrowsingWatching } from "@/assets/components/pages/Index/IndexBrowsingWatching";
+import { IndexNews } from "@/assets/components/pages/Index/IndexNews";
 
 // Style Imports
 import "../assets/styles/modules/Index/Index.module.css";
@@ -115,6 +116,7 @@ export default function Home({
         <MobileNavMenu />
         <IndexTop />
         <IndexBrowsingWatching />
+        <IndexNews />
       </main>
     </div>
   );
