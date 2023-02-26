@@ -50,9 +50,11 @@ export default function Contact({ display_search_data }) {
 
   //! Triggering Enter Animations
   useEffect(() => {
-    setTimeout(() => {
-      TriggerEnterAnimations();
-    }, 500);
+    window.addEventListener("load", () => {
+      setTimeout(() => {
+        TriggerEnterAnimations();
+      }, 500);
+    });
 
     window.addEventListener("popstate", () => {
       TriggerEnterAnimations();
