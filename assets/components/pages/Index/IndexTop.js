@@ -24,7 +24,10 @@ export const IndexTop = () => {
 
   return (
     <section id="indexTop" className={`${styles.index_top}`}>
-      <div className="animation-holder animate-fade-in full-second">
+      <div
+        className="animation-holder full-second"
+        id="indexTopAnimationHolder"
+      >
         <BackgroundImage src={TOP_BG} className={`${styles.bg}`} />
 
         <div className={`${styles.hover_trigger}`}>
