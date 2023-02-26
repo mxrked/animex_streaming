@@ -60,13 +60,25 @@ export default function News({ display_search_data }) {
     window.addEventListener("load", () => {
       setTimeout(() => {
         TriggerEnterAnimations();
-      }, 500);
+      }, 900);
     });
 
     window.addEventListener("popstate", () => {
-      TriggerEnterAnimations();
+      setTimeout(() => {
+        TriggerEnterAnimations();
+      }, 900);
     });
-  }, []);
+
+    router.events.on("routeChangeComplete", () => {
+      setTimeout(() => {
+        TriggerEnterAnimations();
+      }, 900);
+    });
+
+    setTimeout(() => {
+      TriggerEnterAnimations();
+    }, 900);
+  }, [router]);
 
   // Enabling interactivity
   useEffect(() => {
