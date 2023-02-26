@@ -74,6 +74,13 @@ function MyApp({ Component, pageProps }) {
     }
   }, [router]);
 
+  //! Reload Page after route change (This is mostly for the animations)
+  useEffect(() => {
+    router.events.on("routeChangeComplete", () => {
+      router.reload();
+    });
+  }, [router]);
+
   //? DATA
   //! Session/Local Storage Clearing
   useEffect(() => {
