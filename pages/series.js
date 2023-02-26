@@ -58,26 +58,16 @@ export default function Series({ display_search_data }) {
     });
 
     window.addEventListener("load", () => {
-      setTimeout(() => {
-        TriggerEnterAnimations();
-      }, 900);
+      TriggerEnterAnimations();
     });
 
     window.addEventListener("popstate", () => {
-      setTimeout(() => {
-        TriggerEnterAnimations();
-      }, 900);
+      TriggerEnterAnimations();
     });
 
     router.events.on("routeChangeComplete", () => {
-      setTimeout(() => {
-        TriggerEnterAnimations();
-      }, 900);
-    });
-
-    setTimeout(() => {
       TriggerEnterAnimations();
-    }, 900);
+    });
   }, [router]);
 
   // Enabling interactivity
