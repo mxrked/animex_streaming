@@ -12,7 +12,7 @@ export default function CheckAnimationType(
   standardFadeAnim
 ) {
   // Desktop or larger
-  if (win.innerWidth > 823) {
+  if (win.innerWidth >= 1024) {
     document.getElementById(element).classList.add(standardFadeAnim); // Indicates element will be a standard animation
 
     // Removing the scroll classes
@@ -25,7 +25,7 @@ export default function CheckAnimationType(
   }
 
   // Mobile or smaller
-  if (win.innerWidth <= 823) {
+  if (win.innerWidth < 1024) {
     document.getElementById(element).classList.add("animate-scroll"); // Indicates element will be a scroll animation
     document.getElementById(element).classList.add(scrollFadeAnim);
 
