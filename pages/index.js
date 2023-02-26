@@ -54,6 +54,13 @@ export default function Home({ display_search_data }) {
 
   //! Triggering Enter Animations
   useEffect(() => {
+    // This fixes the issue if the user changes tabs during page load
+    document.addEventListener("visibilitychange", (e) => {
+      if (document.visibilityState == "visible") {
+        window.location.reload();
+      }
+    });
+
     window.addEventListener("load", () => {
       setTimeout(() => {
         TriggerEnterAnimations();
