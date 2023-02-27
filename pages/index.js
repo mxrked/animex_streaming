@@ -121,7 +121,7 @@ export default function Home({
         <MobileNavMenu />
         <IndexTop />
         <IndexBrowsingWatching />
-        <IndexNews />
+        <IndexNews newsArticlesData={display_news_articles_data} />
       </main>
     </div>
   );
