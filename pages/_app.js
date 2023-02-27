@@ -84,10 +84,13 @@ function MyApp({ Component, pageProps }) {
   //? DATA
   //! Session/Local Storage Clearing
   useEffect(() => {
-    RemoveStorageVariable("local", "ally-supports-cache");
-    RemoveStorageVariable("session", "Search Opened");
-    RemoveStorageVariable("session", "Mobile Nav Opened");
-    RemoveStorageVariable("session", "Modal Opened");
+    setTimeout(() => {
+      RemoveStorageVariable("local", "ally-supports-cache");
+      RemoveStorageVariable("session", "Search Opened");
+      RemoveStorageVariable("session", "Mobile Nav Opened");
+      RemoveStorageVariable("session", "Modal Opened");
+      RemoveStorageVariable("session", "Page Reload");
+    }, 700);
   }, [router]);
 
   //? CHECKERS
