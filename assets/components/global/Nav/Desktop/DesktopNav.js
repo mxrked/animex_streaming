@@ -47,7 +47,7 @@ export const DesktopNav = () => {
             >
               <div className={`${styles.desktop_nav_inner_side_cnt}`}>
                 <div
-                  className={`${styles.logo} half-second`} // index-link
+                  className={`${styles.logo} index-link half-second`} // index-link
                   onClick={() => {
                     ExitAndRoute(router, "/", indexRouted);
                   }}
