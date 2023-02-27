@@ -30,6 +30,8 @@ import { IndexNews } from "@/assets/components/pages/Index/IndexNews";
 
 // Style Imports
 import "../assets/styles/modules/Index/Index.module.css";
+import DeclareStorageVariable from "@/assets/functions/data/storage/DeclareStorageVariable";
+import RemoveStorageVariable from "@/assets/functions/data/storage/RemoveStorageVariable";
 
 // Adding some json data to be used later
 export const getStaticProps = async () => {
@@ -62,17 +64,21 @@ export default function Home({
     ManipPageLink("disable", "multiple", ".index-link");
   }, []);
 
+  // Refreshing Page on tab switch (This is used to fix the animations)
+  useEffect(() => {
+    if (!sessionStorage.getItem("Page Reload")) {
+      DeclareStorageVariable("session", "Page Reload", true);
+
+      router.reload();
+    }
+  }, []);
+
   //! Triggering Enter Animations
   useEffect(() => {
-    // This fixes the issue if the user changes tabs during page load
-    document.addEventListener("visibilitychange", (e) => {
-      if (document.visibilityState == "visible") {
-        window.location.reload();
-      }
-    });
-
     window.addEventListener("load", () => {
-      TriggerEnterAnimations();
+      setTimeout(() => {
+        TriggerEnterAnimations();
+      }, 660);
     });
 
     window.addEventListener("popstate", () => {

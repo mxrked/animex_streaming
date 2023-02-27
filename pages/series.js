@@ -48,15 +48,17 @@ export default function Series({ display_search_data }) {
     ManipPageLink("disable", "multiple", ".series-link");
   }, []);
 
+  // Refreshing Page on tab switch (This is used to fix the animations)
+  useEffect(() => {
+    if (!sessionStorage.getItem("Page Reload")) {
+      DeclareStorageVariable("session", "Page Reload", true);
+
+      router.reload();
+    }
+  }, []);
+
   //! Triggering Enter Animations
   useEffect(() => {
-    // This fixes the issue if the user changes tabs during page load
-    document.addEventListener("visibilitychange", (e) => {
-      if (document.visibilityState == "visible") {
-        window.location.reload();
-      }
-    });
-
     window.addEventListener("load", () => {
       TriggerEnterAnimations();
     });
