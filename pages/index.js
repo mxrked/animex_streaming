@@ -12,6 +12,7 @@ import { useRouter } from "next/router";
 
 // Data/Functions/Images Imports
 import ManipPageLink from "@/assets/functions/dom/manip/ManipPageLink";
+import DeclareStorageVariable from "@/assets/functions/data/storage/DeclareStorageVariable";
 import TriggerEnterAnimations from "@/assets/functions/dom/triggers/TriggerEnterAnimations";
 import TriggerScrollAnimations from "@/assets/functions/dom/triggers/TriggerScrollAnimations";
 
@@ -30,8 +31,6 @@ import { IndexNews } from "@/assets/components/pages/Index/IndexNews";
 
 // Style Imports
 import "../assets/styles/modules/Index/Index.module.css";
-import DeclareStorageVariable from "@/assets/functions/data/storage/DeclareStorageVariable";
-import RemoveStorageVariable from "@/assets/functions/data/storage/RemoveStorageVariable";
 
 // Adding some json data to be used later
 export const getStaticProps = async () => {
