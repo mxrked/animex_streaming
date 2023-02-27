@@ -11,6 +11,7 @@ import { useRouter } from "next/router";
 // Library Imports
 
 // Data/Functions/Images Imports
+import DeclareStorageVariable from "@/assets/functions/data/storage/DeclareStorageVariable";
 import ManipPageLink from "@/assets/functions/dom/manip/ManipPageLink";
 import TriggerEnterAnimations from "@/assets/functions/dom/triggers/TriggerEnterAnimations";
 
