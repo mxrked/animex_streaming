@@ -4,7 +4,6 @@
  *
  */
 
-import { useEffect } from "react";
 import { useRouter } from "next/router";
 
 import { BackgroundImage } from "react-image-and-background-image-fade";

@@ -4,7 +4,6 @@
  *
  */
 
-import { useEffect } from "react";
 import { useRouter } from "next/router";
 
 import { BackgroundImage } from "react-image-and-background-image-fade";
@@ -17,24 +16,11 @@ import {
 
 import ExitAndRoute from "@/assets/functions/routing/ExitAndRoute";
 import TriggerExitAnimations from "@/assets/functions/dom/triggers/TriggerExitAnimations";
-import CheckAnimationType from "@/assets/functions/dom/checkers/CheckingAnimationType";
 
 import styles from "../../../styles/modules/Index/Index.module.css";
 
 export const IndexBrowsingWatching = () => {
   const router = useRouter();
-
-  // Adding/Removing classes to element
-  useEffect(() => {
-    window.addEventListener("load", () => {
-      CheckAnimationType(
-        window,
-        "indexBrowsingWatchingInner",
-        "scroll-fade-yB",
-        "animate-fade-down"
-      );
-    });
-  }, []);
 
   // Checkers
   let seriesRouted = false;
@@ -45,7 +31,7 @@ export const IndexBrowsingWatching = () => {
       className={`${styles.index_browsing_watching}`}
     >
       <div
-        className={`${styles.index_browsing_watching_inner} full-second`}
+        className={`${styles.index_browsing_watching_inner} animate-fade-in full-second`}
         id="indexBrowsingWatchingInner"
       >
         <div className={`${styles.index_browsing_watching_inner_top}`}>
