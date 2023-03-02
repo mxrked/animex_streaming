@@ -4,7 +4,7 @@
  *
  */
 
-import { useEffect } from "react";
+import { useEffect, useState } from "react";
 import { useRouter } from "next/router";
 
 import { useAnimation, motion } from "framer-motion";
@@ -15,9 +15,8 @@ import {
   ALL_GENRES,
   LATEST_SERIES,
   POPULAR_SERIES,
+  FADES,
 } from "@/assets/data/variables/ARRAYS";
-
-import { FADE_UP } from "@/assets/anims/FADES";
 
 import ExitAndRoute from "@/assets/functions/routing/ExitAndRoute";
 import TriggerInViewMotion from "@/assets/functions/dom/triggers/TriggerInViewMotion";
@@ -26,19 +25,32 @@ import TriggerExitAnimations from "@/assets/functions/dom/triggers/TriggerExitAn
 import styles from "../../../styles/modules/Index/Index.module.css";
 
 export const IndexBrowsingWatching = () => {
+  const [isMobile, setIsMobile] = useState(false); // This is used to indicate if the variant needs to be changed
+
   const router = useRouter();
 
   // Checkers
   let seriesRouted = false;
 
-  // Framer Motion Detect InView
+  //! Framer Motion Detect InView
   const CONTROLS = useAnimation();
   const [REF, INVIEW] = useInView();
   useEffect(() => {
-    setTimeout(() => {
-      TriggerInViewMotion(CONTROLS, INVIEW);
-    }, 900);
+    TriggerInViewMotion(CONTROLS, INVIEW);
   }, [CONTROLS, INVIEW]);
+
+  //! Changing Variant based on device size
+  useEffect(() => {
+    // Fade In
+    if (window.innerWidth < 1024) {
+      setIsMobile(true);
+    }
+
+    // Fade Up
+    if (window.innerWidth >= 1024) {
+      setIsMobile(false);
+    }
+  }, [router]);
 
   return (
     <section
@@ -50,7 +62,9 @@ export const IndexBrowsingWatching = () => {
         ref={REF}
         animate={CONTROLS}
         initial="hidden"
-        variants={FADE_UP}
+        // isMobile = true - Fade In
+        // isMobile = false - Fade Up
+        variants={isMobile ? FADES[0] : FADES[1]}
       >
         <div className={`${styles.index_browsing_watching_inner} full-second`}>
           <div className={`${styles.index_browsing_watching_inner_top}`}>

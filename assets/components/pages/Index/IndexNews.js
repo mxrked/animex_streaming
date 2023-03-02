@@ -4,7 +4,7 @@
  *
  */
 
-import { useEffect } from "react";
+import { useEffect, useState } from "react";
 import { useRouter } from "next/router";
 
 import { useAnimation, motion } from "framer-motion";
@@ -14,22 +14,37 @@ import { BackgroundImage } from "react-image-and-background-image-fade";
 import ExitAndRoute from "@/assets/functions/routing/ExitAndRoute";
 import TriggerInViewMotion from "@/assets/functions/dom/triggers/TriggerInViewMotion";
 
-import { FADE_UP } from "@/assets/anims/FADES";
+import { FADES } from "@/assets/data/variables/ARRAYS";
 
 import styles from "../../../styles/modules/Index/Index.module.css";
 
 export const IndexNews = (props) => {
+  const [isMobile, setIsMobile] = useState(false); // This is used to indicate if the variant needs to be changed
+
   const router = useRouter();
 
   // Checkers
   let newsRouted = false;
 
-  // Framer Motion Detect InView
+  //! Framer Motion Detect InView
   const CONTROLS = useAnimation();
   const [REF, INVIEW] = useInView();
   useEffect(() => {
     TriggerInViewMotion(CONTROLS, INVIEW);
   }, [CONTROLS, INVIEW]);
+
+  //! Changing Variant based on device size
+  useEffect(() => {
+    // Fade In
+    if (window.innerWidth < 1024) {
+      setIsMobile(true);
+    }
+
+    // Fade Up
+    if (window.innerWidth >= 1024) {
+      setIsMobile(false);
+    }
+  }, [router]);
 
   return (
     <section id="indexNews" className={`${styles.index_news}`}>
@@ -38,7 +53,9 @@ export const IndexNews = (props) => {
         ref={REF}
         animate={CONTROLS}
         initial="hidden"
-        variants={FADE_UP}
+        // isMobile = true - Fade In
+        // isMobile = false - Fade Up
+        variants={isMobile ? FADES[0] : FADES[1]}
       >
         <div
           className={`${styles.index_news_inner} full-second`}

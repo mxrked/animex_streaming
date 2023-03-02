@@ -4,7 +4,7 @@
  *
  */
 
-import { useEffect } from "react";
+import { useEffect, useState } from "react";
 import { useRouter } from "next/router";
 
 import { useAnimation, motion } from "framer-motion";
@@ -14,7 +14,7 @@ import { BackgroundImage } from "react-image-and-background-image-fade";
 import { TOP_BG } from "@/assets/cdns/CDNBgs";
 import { CLUSTER_1 } from "@/assets/cdns/CDNImgs";
 
-import { FADE_IN } from "@/assets/anims/FADES";
+import { FADES } from "@/assets/data/variables/ARRAYS";
 
 import ExitAndRoute from "@/assets/functions/routing/ExitAndRoute";
 import TriggerInViewMotion from "@/assets/functions/dom/triggers/TriggerInViewMotion";
@@ -22,19 +22,32 @@ import TriggerInViewMotion from "@/assets/functions/dom/triggers/TriggerInViewMo
 import styles from "../../../styles/modules/Index/Index.module.css";
 
 export const IndexTop = () => {
+  const [isMobile, setIsMobile] = useState(false); // This is used to indicate if the variant needs to be changed
+
   const router = useRouter();
 
   // Checkers
   let seriesRouted = false;
 
-  // Framer Motion Detect InView
+  //! Framer Motion Detect InView
   const CONTROLS = useAnimation();
   const [REF, INVIEW] = useInView();
   useEffect(() => {
-    setTimeout(() => {
-      TriggerInViewMotion(CONTROLS, INVIEW);
-    }, 900);
+    TriggerInViewMotion(CONTROLS, INVIEW);
   }, [CONTROLS, INVIEW]);
+
+  //! Changing Variant based on device size
+  useEffect(() => {
+    // Fade In
+    if (window.innerWidth < 1024) {
+      setIsMobile(true);
+    }
+
+    // Fade Up
+    if (window.innerWidth >= 1024) {
+      setIsMobile(false);
+    }
+  }, [router]);
 
   return (
     <section id="indexTop" className={`${styles.index_top}`}>
@@ -47,8 +60,9 @@ export const IndexTop = () => {
           ref={REF}
           animate={CONTROLS}
           initial="hidden"
-          variants={FADE_IN}
-          exit="hidden"
+          // isMobile = true - Fade In
+          // isMobile = false - Fade Up
+          variants={isMobile ? FADES[0] : FADES[1]}
         >
           <div className={`${styles.index_top_inner}`}>
             <div className={`${styles.index_top_inner_box} container-fluid`}>
