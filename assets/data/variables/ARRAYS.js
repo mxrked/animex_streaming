@@ -21,7 +21,7 @@ import {
   HORROR_OBJ,
 } from "../classes/Genre";
 
-import { FADE_IN, FADE_UP } from "@/assets/anims/FADES";
+import { FADE_DOWN, FADE_IN, FADE_UP } from "@/assets/anims/FADES";
 
 //! Meta Keywords
 const SITE_KWS = [
@@ -137,7 +137,7 @@ const ALL_GENRES = [
 ];
 
 //! Animation Arrays
-const FADES = [FADE_IN, FADE_UP];
+const FADES = [FADE_IN, FADE_UP, FADE_DOWN];
 
 export {
   SITE_KWS,
