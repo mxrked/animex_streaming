@@ -31,17 +31,17 @@ function MyApp({ Component, pageProps }) {
 
   //? GLOBALS
   //! NProgress Init
-  // useEffect(() => {
-  //   // NProgress.done(); // Prevents NProgress from being stuck after page route completed
+  useEffect(() => {
+    // NProgress.done(); // Prevents NProgress from being stuck after page route completed
 
-  //   router.events.on("routeChangeStart", () => {
-  //     NProgress.start();
-  //   });
+    router.events.on("routeChangeStart", () => {
+      NProgress.start();
+    });
 
-  //   router.events.on("routeChangeComplete", () => {
-  //     NProgress.done();
-  //   });
-  // }, [router, router.events]);
+    router.events.on("routeChangeComplete", () => {
+      NProgress.done();
+    });
+  }, [router, router.events]);
 
   //! Forget scroll position and force user back to top of page
   useEffect(() => {
