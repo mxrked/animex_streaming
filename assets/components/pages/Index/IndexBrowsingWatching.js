@@ -30,7 +30,7 @@ export const IndexBrowsingWatching = () => {
       className={`${styles.index_browsing_watching}`}
     >
       <div
-        className={`${styles.index_browsing_watching_inner} animate-fade-in full-second`}
+        className={`${styles.index_browsing_watching_inner} full-second`}
         id="indexBrowsingWatchingInner"
       >
         <div className={`${styles.index_browsing_watching_inner_top}`}>

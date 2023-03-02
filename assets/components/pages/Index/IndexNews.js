@@ -10,24 +10,11 @@ import { useRouter } from "next/router";
 import { BackgroundImage } from "react-image-and-background-image-fade";
 
 import ExitAndRoute from "@/assets/functions/routing/ExitAndRoute";
-import CheckAndAddAnimateScroll from "@/assets/functions/dom/checkers/CheckAndAddAnimateScroll";
 
 import styles from "../../../styles/modules/Index/Index.module.css";
 
 export const IndexNews = (props) => {
   const router = useRouter();
-
-  // Adding/Removing classes to element
-  useEffect(() => {
-    window.addEventListener("load", () => {
-      CheckAndAddAnimateScroll(
-        // window,
-        "indexNewsInner",
-        "scroll-fade-yB",
-        "animate-fade-down"
-      );
-    });
-  }, []);
 
   // Checkers
   let newsRouted = false;
