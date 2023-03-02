@@ -6,7 +6,6 @@
 
 import DeclareStorageVariable from "../data/storage/DeclareStorageVariable";
 import CloseSearch from "../dom/closers/CloseSearch";
-import TriggerExitAnimations from "../dom/triggers/TriggerExitAnimations";
 
 // Gets the route
 function GetRoute(rooter, route) {
@@ -58,8 +57,6 @@ function PageRouting(rooter, route, checkRoute) {
 
 // Triggers exit animations and routes to page
 export default function ExitAndRoute(rooter, route, checkRoute) {
-  TriggerExitAnimations(); // Triggers the exit animations
-
   // Closes search if opened, then routes
   if (sessionStorage.getItem("Search Opened")) {
     CloseSearch();
