@@ -15,7 +15,6 @@ import {
 } from "@/assets/data/variables/ARRAYS";
 
 import ExitAndRoute from "@/assets/functions/routing/ExitAndRoute";
-import TriggerExitAnimations from "@/assets/functions/dom/triggers/TriggerExitAnimations";
 
 import styles from "../../../styles/modules/Index/Index.module.css";
 
@@ -72,8 +71,6 @@ export const IndexBrowsingWatching = () => {
                         <div
                           className="half-second"
                           onClick={() => {
-                            TriggerExitAnimations();
-
                             setTimeout(() => {
                               router.push("/series" + item.link);
                             }, 800);
@@ -122,8 +119,6 @@ export const IndexBrowsingWatching = () => {
                         <div
                           className="half-second"
                           onClick={() => {
-                            TriggerExitAnimations();
-
                             setTimeout(() => {
                               router.push("/series" + item.link);
                             }, 800);
@@ -167,8 +162,6 @@ export const IndexBrowsingWatching = () => {
                     <div
                       className={`${styles.darken} half-second`}
                       onClick={() => {
-                        TriggerExitAnimations();
-
                         setTimeout(() => {
                           router.push("/series" + item.link);
                         }, 800);

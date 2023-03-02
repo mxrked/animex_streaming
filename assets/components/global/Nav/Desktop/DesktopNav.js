@@ -13,9 +13,9 @@ import { MdAccountCircle } from "react-icons/md";
 import { LOGO_LARGE_RED, LOGO_LARGE_ORANGE } from "@/assets/cdns/CDNIcons";
 
 import ExitAndRoute from "@/assets/functions/routing/ExitAndRoute";
+import ToggleSearch from "@/assets/functions/dom/togglers/ToggleSearch";
 
 import styles from "../../../../styles/modules/Nav/Nav.module.css";
-import ToggleSearch from "@/assets/functions/dom/togglers/ToggleSearch";
 
 export const DesktopNav = () => {
   const router = useRouter();

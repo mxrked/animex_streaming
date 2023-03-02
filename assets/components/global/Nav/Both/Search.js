@@ -13,7 +13,6 @@ import SearchRoute from "@/assets/functions/routing/SearchRoute";
 import CloseSearch from "@/assets/functions/dom/closers/CloseSearch";
 
 import styles from "../../../../styles/modules/Nav/Nav.module.css";
-import TriggerExitAnimations from "@/assets/functions/dom/triggers/TriggerExitAnimations";
 
 export const Search = (props) => {
   const router = useRouter();
@@ -60,10 +59,6 @@ export const Search = (props) => {
                 key={item.searchItemID}
                 onClick={() => {
                   CloseSearch();
-
-                  setTimeout(() => {
-                    TriggerExitAnimations();
-                  }, 600);
 
                   setTimeout(() => {
                     router.push(item.searchItemLink);
