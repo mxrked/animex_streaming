@@ -11,9 +11,7 @@ import { useRouter } from "next/router";
 // Library Imports
 
 // Data/Functions/Images Imports
-import DeclareStorageVariable from "@/assets/functions/data/storage/DeclareStorageVariable";
 import ManipPageLink from "@/assets/functions/dom/manip/ManipPageLink";
-import TriggerEnterAnimations from "@/assets/functions/dom/triggers/TriggerEnterAnimations";
 
 // Component Imports
 import { PageHead } from "@/assets/components/global/PageHead";
@@ -48,30 +46,6 @@ export default function Contact({ display_search_data }) {
   useEffect(() => {
     ManipPageLink("disable", "multiple", ".contact-link");
   }, []);
-
-  // Refreshing Page on tab switch (This is used to fix the animations)
-  useEffect(() => {
-    if (!sessionStorage.getItem("Page Reload")) {
-      DeclareStorageVariable("session", "Page Reload", true);
-
-      router.reload();
-    }
-  }, []);
-
-  //! Triggering Enter Animations
-  useEffect(() => {
-    window.addEventListener("load", () => {
-      TriggerEnterAnimations();
-    });
-
-    window.addEventListener("popstate", () => {
-      TriggerEnterAnimations();
-    });
-
-    router.events.on("routeChangeComplete", () => {
-      TriggerEnterAnimations();
-    });
-  }, [router]);
 
   // Enabling interactivity
   useEffect(() => {

@@ -12,9 +12,6 @@ import { useRouter } from "next/router";
 
 // Data/Functions/Images Imports
 import ManipPageLink from "@/assets/functions/dom/manip/ManipPageLink";
-import DeclareStorageVariable from "@/assets/functions/data/storage/DeclareStorageVariable";
-import TriggerEnterAnimations from "@/assets/functions/dom/triggers/TriggerEnterAnimations";
-import TriggerScrollAnimations from "@/assets/functions/dom/triggers/TriggerScrollAnimations";
 
 // Component Imports
 import { PageHead } from "@/assets/components/global/PageHead";
@@ -61,39 +58,6 @@ export default function Home({
   // Disabling Page Links
   useEffect(() => {
     ManipPageLink("disable", "multiple", ".index-link");
-  }, []);
-
-  // Refreshing Page on tab switch (This is used to fix the animations)
-  useEffect(() => {
-    if (!sessionStorage.getItem("Page Reload")) {
-      DeclareStorageVariable("session", "Page Reload", true);
-
-      router.reload();
-    }
-  }, []);
-
-  //! Triggering Enter Animations
-  useEffect(() => {
-    window.addEventListener("load", () => {
-      setTimeout(() => {
-        TriggerEnterAnimations();
-      }, 660);
-    });
-
-    window.addEventListener("popstate", () => {
-      TriggerEnterAnimations();
-    });
-
-    router.events.on("routeChangeComplete", () => {
-      TriggerEnterAnimations();
-    });
-  }, [router]);
-
-  //! Triggering Scroll Animations
-  useEffect(() => {
-    window.addEventListener("scroll", () => {
-      TriggerScrollAnimations();
-    });
   }, []);
 
   // Enabling interactivity
