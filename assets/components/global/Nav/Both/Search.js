@@ -11,6 +11,7 @@ import { BackgroundImage } from "react-image-and-background-image-fade";
 import FilterSearchLinks from "@/assets/functions/dom/filters/FilterSearchLinks";
 import SearchRoute from "@/assets/functions/routing/SearchRoute";
 import CloseSearch from "@/assets/functions/dom/closers/CloseSearch";
+import TriggerExitAnimations from "@/assets/functions/dom/triggers/TriggerExitAnimations";
 
 import styles from "../../../../styles/modules/Nav/Nav.module.css";
 
@@ -59,6 +60,12 @@ export const Search = (props) => {
                 key={item.searchItemID}
                 onClick={() => {
                   CloseSearch();
+
+                  setTimeout(() => {
+                    document.body.style.pointerEvents = "none";
+                    document.body.style.overflowY = "hidden";
+                    TriggerExitAnimations();
+                  }, 1000);
 
                   setTimeout(() => {
                     router.push(item.searchItemLink);

@@ -17,6 +17,7 @@ import { CLUSTER_1 } from "@/assets/cdns/CDNImgs";
 import { FADE_IN } from "@/assets/anims/FADES";
 
 import ExitAndRoute from "@/assets/functions/routing/ExitAndRoute";
+import TriggerInViewMotion from "@/assets/functions/dom/triggers/TriggerInViewMotion";
 
 import styles from "../../../styles/modules/Index/Index.module.css";
 
@@ -30,11 +31,9 @@ export const IndexTop = () => {
   const CONTROLS = useAnimation();
   const [REF, INVIEW] = useInView();
   useEffect(() => {
-    if (INVIEW) {
-      setTimeout(() => {
-        CONTROLS.start("visible");
-      }, 900);
-    }
+    setTimeout(() => {
+      TriggerInViewMotion(CONTROLS, INVIEW);
+    }, 900);
   }, [CONTROLS, INVIEW]);
 
   return (
@@ -43,11 +42,13 @@ export const IndexTop = () => {
 
       <div className={`${styles.hover_trigger}`}>
         <motion.div
-          className={styles.fm_motion}
+          id="indexTopFM"
+          className={`fm-motion full-second ${styles.fm_motion}`}
           ref={REF}
           animate={CONTROLS}
           initial="hidden"
           variants={FADE_IN}
+          exit="hidden"
         >
           <div className={`${styles.index_top_inner}`}>
             <div className={`${styles.index_top_inner_box} container-fluid`}>
