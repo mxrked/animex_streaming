@@ -505,6 +505,31 @@
     .index_browsing_watching_inner {
       padding-left: 50px;
       padding-right: 50px;
+
+      .index_browsing_watching_inner_main {
+        .popular_series_box,
+        .latest_series_box {
+          .popular_series_row,
+          .latest_series_row {
+            .popular_series,
+            .latest_series {
+              .popular_series_inner,
+              .latest_series_inner {
+                .popular_series_inner_hover,
+                .latest_series_inner_hover {
+                  .hover_cnt {
+                    p {
+                      font-size: 17px;
+                      max-width: 300px;
+                      line-height: 20px;
+                    }
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
     }
   }
   .index_news {
