@@ -21,6 +21,8 @@ import {
   HORROR_OBJ,
 } from "../classes/Genre";
 
+import { FADE_IN, FADE_UP } from "@/assets/anims/FADES";
+
 //! Meta Keywords
 const SITE_KWS = [
   "animex streaming",
@@ -134,6 +136,9 @@ const ALL_GENRES = [
   HORROR_OBJ,
 ];
 
+//! Animation Arrays
+const FADES = [FADE_IN, FADE_UP];
+
 export {
   SITE_KWS,
   SERIES_KWS,
@@ -152,3 +157,5 @@ export {
 };
 
 export { ALL_GENRES, ALL_SERIES, POPULAR_SERIES, LATEST_SERIES };
+
+export { FADES };
