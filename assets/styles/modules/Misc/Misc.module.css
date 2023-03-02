@@ -2,27 +2,22 @@
   font-family: "Lato Regular";
   src: url("../../../fonts/Lato/Lato-Regular.ttf");
 }
-
 @font-face {
   font-family: "Lato Medium";
   src: url("../../../fonts/Lato/Lato-Medium.ttf");
 }
-
 @font-face {
   font-family: "Lato Semi Bold";
   src: url("../../../fonts/Lato/Lato-Semibold.ttf");
 }
-
 @font-face {
   font-family: "Lato Bold";
   src: url("../../../fonts/Lato/Lato-Bold.ttf");
 }
-
 @font-face {
   font-family: "Lato Black";
   src: url("../../../fonts/Lato/Lato-Black.ttf");
 }
-
 .scroll_indicator_holder {
   position: fixed;
   top: 0;
@@ -30,11 +25,9 @@
   z-index: 400;
   height: 8px;
   width: 100%;
-  background-color: #e6e4e4;
-  -webkit-transform: translateY(-20px);
-          transform: translateY(-20px);
+  background-color: rgb(230, 228, 228);
+  transform: translateY(-20px);
 }
-
 .scroll_indicator_holder .scroll_indicator {
   height: 8px;
   background-color: #ffd460;
@@ -43,5 +36,4 @@
   left: 0;
   top: 0;
   border-radius: 2px;
-}
-/*# sourceMappingURL=Misc.module.css.map */
+}/*# sourceMappingURL=Misc.module.css.map */

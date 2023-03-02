@@ -19,20 +19,17 @@
   z-index: 1031;
   top: 50%;
   left: 48%;
-  -webkit-transform: translate(-50%, -48%);
-          transform: translate(-50%, -48%);
+  transform: translate(-50%, -48%);
 }
 
 #nprogress .spinner-icon {
   width: 48px;
   height: 48px;
-  -webkit-box-sizing: border-box;
-          box-sizing: border-box;
+  box-sizing: border-box;
   border: solid 3px transparent;
   border-top-color: #f05454;
   border-left-color: #f07b3f;
   border-radius: 50%;
-  -webkit-animation: nprogress-spinner 400ms linear infinite;
   animation: nprogress-spinner 400ms linear infinite;
 }
 
@@ -45,24 +42,41 @@
 .nprogress-custom-parent #nprogress .bar {
   position: absolute;
 }
-
-@-webkit-keyframes nprogress-spinner {
-  0% {
-    -webkit-transform: rotate(0deg);
-  }
-  100% {
-    -webkit-transform: rotate(360deg);
-  }
-}
-
 @keyframes nprogress-spinner {
   0% {
-    -webkit-transform: rotate(0deg);
-            transform: rotate(0deg);
+    transform: rotate(0deg);
   }
   100% {
-    -webkit-transform: rotate(360deg);
-            transform: rotate(360deg);
+    transform: rotate(360deg);
   }
 }
-/*# sourceMappingURL=nprogress.css.map */
+@media only screen and (min-device-width: 768px) and (max-device-width: 1024px) and (orientation: portrait) and (-webkit-min-device-pixel-ratio: 1) {
+  #nprogress .spinner {
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
+}
+@media only screen and (min-device-width: 768px) and (max-device-width: 1024px) and (orientation: landscape) and (-webkit-min-device-pixel-ratio: 1) {
+  #nprogress .spinner {
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
+}
+@media only screen and (min-device-width: 1024px) and (max-device-width: 1366px) and (-webkit-min-device-pixel-ratio: 2) and (orientation: portrait) {
+  #nprogress .spinner {
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
+}
+@media only screen and (min-device-width: 1024px) and (max-device-width: 1366px) and (-webkit-min-device-pixel-ratio: 2) and (orientation: landscape) {
+  #nprogress .spinner {
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
+}
+@media screen and (min-device-width: 1200px) and (max-device-width: 1600px) and (-webkit-min-device-pixel-ratio: 1) {
+  #nprogress .spinner {
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
+}/*# sourceMappingURL=nprogress.css.map */

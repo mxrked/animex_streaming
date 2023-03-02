@@ -1,12 +1,1 @@
-{
-    "version": 3,
-    "mappings": "AAMA,UAAU;EACR,WAAW,EAAE,cAAc;EAC3B,GAAG,EAAE,2CAA2C;;;AAElD,UAAU;EACR,WAAW,EAAE,aAAa;EAC1B,GAAG,EAAE,0CAA0C;;;AAEjD,UAAU;EACR,WAAW,EAAE,gBAAgB;EAC7B,GAAG,EAAE,4CAA4C;;;AAEnD,UAAU;EACR,WAAW,EAAE,WAAW;EACxB,GAAG,EAAE,wCAAwC;;;AAE/C,UAAU;EACR,WAAW,EAAE,YAAY;EACzB,GAAG,EAAE,yCAAyC",
-    "sources": [
-        "Series.module.scss",
-        "../../tools/mixins/mixins.scss",
-        "../../tools/themes/themes.scss",
-        "../../tools/variables/variable.scss"
-    ],
-    "names": [],
-    "file": "Series.module.css"
-}
+{"version":3,"sources":["Series.module.scss","Series.module.css"],"names":[],"mappings":"AAMA;EACE,2BAAA;EACA,gDAAA;ACLF;ADOA;EACE,0BAAA;EACA,+CAAA;ACLF;ADOA;EACE,6BAAA;EACA,iDAAA;ACLF;ADOA;EACE,wBAAA;EACA,6CAAA;ACLF;ADOA;EACE,yBAAA;EACA,8CAAA;ACLF","file":"Series.module.css"}

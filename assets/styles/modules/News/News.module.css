@@ -2,24 +2,19 @@
   font-family: "Lato Regular";
   src: url("../../../fonts/Lato/Lato-Regular.ttf");
 }
-
 @font-face {
   font-family: "Lato Medium";
   src: url("../../../fonts/Lato/Lato-Medium.ttf");
 }
-
 @font-face {
   font-family: "Lato Semi Bold";
   src: url("../../../fonts/Lato/Lato-Semibold.ttf");
 }
-
 @font-face {
   font-family: "Lato Bold";
   src: url("../../../fonts/Lato/Lato-Bold.ttf");
 }
-
 @font-face {
   font-family: "Lato Black";
   src: url("../../../fonts/Lato/Lato-Black.ttf");
-}
-/*# sourceMappingURL=News.module.css.map */
+}/*# sourceMappingURL=News.module.css.map */
