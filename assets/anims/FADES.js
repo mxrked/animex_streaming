@@ -7,7 +7,7 @@
 const FADE_IN = {
   visible: {
     opacity: 1,
-    transition: { duration: 1 },
+    transition: { duration: 0.4 },
   },
   hidden: {
     opacity: 0,
@@ -18,7 +18,7 @@ const FADE_UP = {
   visible: {
     opacity: 1,
     y: 0,
-    transition: { duration: 1 },
+    transition: { duration: 0.4 },
   },
   hidden: {
     opacity: 0,
