@@ -25,6 +25,7 @@ import { ScrollIndicator } from "@/assets/components/global/ScrollIndicator";
 import { IndexTop } from "@/assets/components/pages/Index/IndexTop";
 import { IndexBrowsingWatching } from "@/assets/components/pages/Index/IndexBrowsingWatching";
 import { IndexNews } from "@/assets/components/pages/Index/IndexNews";
+import { IndexContact } from "@/assets/components/pages/Index/IndexContact";
 
 // Style Imports
 import "../assets/styles/modules/Index/Index.module.css";
@@ -86,6 +87,7 @@ export default function Home({
         <IndexTop />
         <IndexBrowsingWatching />
         <IndexNews newsArticlesData={display_news_articles_data} />
+        <IndexContact />
       </main>
     </div>
   );
