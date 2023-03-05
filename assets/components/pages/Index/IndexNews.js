@@ -49,13 +49,13 @@ export const IndexNews = (props) => {
   return (
     <section id="indexNews" className={`${styles.index_news}`}>
       <motion.div
-        className={`fm-motion full-second ${styles.fm_motion}`}
+        className={`fm-motion full-second fade-right-fix ${styles.fm_motion}`}
         ref={REF}
         animate={CONTROLS}
         initial="hidden"
         // isMobile = true - Fade In
         // isMobile = false - Fade Up
-        variants={isMobile ? FADES[0] : FADES[1]}
+        variants={isMobile ? FADES[0] : FADES[3]}
       >
         <div
           className={`${styles.index_news_inner} full-second`}

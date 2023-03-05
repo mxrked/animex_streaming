@@ -58,13 +58,13 @@ export const IndexBrowsingWatching = () => {
       className={`${styles.index_browsing_watching}`}
     >
       <motion.div
-        className={`fm-motion full-second ${styles.fm_motion}`}
+        className={`fm-motion full-second fade-left-fix ${styles.fm_motion}`}
         ref={REF}
         animate={CONTROLS}
         initial="hidden"
         // isMobile = true - Fade In
         // isMobile = false - Fade Up
-        variants={isMobile ? FADES[0] : FADES[1]}
+        variants={isMobile ? FADES[0] : FADES[2]}
       >
         <div className={`${styles.index_browsing_watching_inner} full-second`}>
           <div className={`${styles.index_browsing_watching_inner_top}`}>
