@@ -21,6 +21,7 @@ import { MobileNav } from "@/assets/components/global/Nav/Mobile/MobileNav";
 import { MobileNavMenu } from "@/assets/components/global/Nav/Mobile/MobileNavMenu";
 import { Search } from "@/assets/components/global/Nav/Both/Search";
 import { ScrollIndicator } from "@/assets/components/global/ScrollIndicator";
+import { Footer } from "@/assets/components/global/Footer/Footer";
 
 import { IndexTop } from "@/assets/components/pages/Index/IndexTop";
 import { IndexBrowsingWatching } from "@/assets/components/pages/Index/IndexBrowsingWatching";
@@ -88,6 +89,7 @@ export default function Home({
         <IndexBrowsingWatching />
         <IndexNews newsArticlesData={display_news_articles_data} />
         <IndexContact />
+        <Footer />
       </main>
     </div>
   );
