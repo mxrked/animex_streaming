@@ -5,6 +5,12 @@
 }
 
 @media all and (max-width: 991px) {
+  .fade-left-fix {
+    transform: translateX(0) !important;
+  }
+  .fade-right-fix {
+    transform: translateX(0) !important;
+  }
 }
 
 @media (min-width: 992px) {
@@ -12,10 +18,22 @@
 
 // Desktop Window (Smallest)
 @media all and (max-width: 768px) {
+  .fade-left-fix {
+    transform: translateX(0) !important;
+  }
+  .fade-right-fix {
+    transform: translateX(0) !important;
+  }
 }
 
 // Smaller Devices (Phones)
 @media all and (max-width: 419px) {
+  .fade-left-fix {
+    transform: translateX(0) !important;
+  }
+  .fade-right-fix {
+    transform: translateX(0) !important;
+  }
 }
 
 // Pixel 2 XL

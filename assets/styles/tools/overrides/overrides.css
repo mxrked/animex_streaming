@@ -1,3 +1,27 @@
+@media all and (max-width: 991px) {
+  .fade-left-fix {
+    transform: translateX(0) !important;
+  }
+  .fade-right-fix {
+    transform: translateX(0) !important;
+  }
+}
+@media all and (max-width: 768px) {
+  .fade-left-fix {
+    transform: translateX(0) !important;
+  }
+  .fade-right-fix {
+    transform: translateX(0) !important;
+  }
+}
+@media all and (max-width: 419px) {
+  .fade-left-fix {
+    transform: translateX(0) !important;
+  }
+  .fade-right-fix {
+    transform: translateX(0) !important;
+  }
+}
 @media only screen and (min-device-width: 768px) and (max-device-width: 1024px) and (orientation: portrait) and (-webkit-min-device-pixel-ratio: 1) {
   .fade-left-fix {
     transform: translateX(0) !important;
