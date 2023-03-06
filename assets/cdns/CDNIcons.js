@@ -14,4 +14,18 @@ const F32 = CDNIconReturn("tab-icons", "favicon-32x32", "png");
 const LOGO_LARGE_RED = CDNIconReturn("logo", "logo-large-red", "webp");
 const LOGO_LARGE_ORANGE = CDNIconReturn("logo", "logo-large-orange", "webp");
 
-export { ATI, FAVICON, F16, F32, LOGO_LARGE_ORANGE, LOGO_LARGE_RED };
+const FACEBOOK_ICON = CDNIconReturn("socials", "facebook", "webp");
+const INSTAGRAM_ICON = CDNIconReturn("socials", "instagram", "webp");
+const TWITTER_ICON = CDNIconReturn("socials", "twitter", "webp");
+
+export {
+  ATI,
+  FAVICON,
+  F16,
+  F32,
+  LOGO_LARGE_ORANGE,
+  LOGO_LARGE_RED,
+  FACEBOOK_ICON,
+  INSTAGRAM_ICON,
+  TWITTER_ICON,
+};
