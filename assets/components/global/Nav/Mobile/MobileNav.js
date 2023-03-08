@@ -16,6 +16,7 @@ import ExitAndRoute from "@/assets/functions/routing/ExitAndRoute";
 import ToggleMobileNav from "@/assets/functions/dom/togglers/ToggleMobileNav";
 import CloseMobileNav from "@/assets/functions/dom/closers/CloseMobileNav";
 import ToggleSearch from "@/assets/functions/dom/togglers/ToggleSearch";
+import RemoveStorageVariable from "@/assets/functions/data/storage/RemoveStorageVariable";
 
 import styles from "../../../../styles/modules/Nav/Nav.module.css";
 
@@ -124,6 +125,13 @@ export const MobileNav = () => {
                   <div
                     className="half-second"
                     onClick={() => {
+                      if (localStorage.getItem("Logged In")) {
+                        RemoveStorageVariable("local", "Logged In");
+                        RemoveStorageVariable("local", "Username");
+                        RemoveStorageVariable("local", "E_Email");
+                        RemoveStorageVariable("local", "E_Password");
+                      }
+
                       ExitAndRoute(
                         router,
                         "/login_register",
