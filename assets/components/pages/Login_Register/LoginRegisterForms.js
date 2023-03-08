@@ -232,7 +232,7 @@ export const LoginRegisterForms = () => {
                 e.preventDefault();
               }
             } else {
-              ExitAndRoute(router, "/", indexRouted);
+              ExitAndRoute(router, "/", indexRouted); // Routes the user to home if they arent on client
             }
           }}
         >
@@ -353,7 +353,6 @@ export const LoginRegisterForms = () => {
 
                 // Declaring storage variables
                 DeclareStorageVariable("local", "Logged In", true); // This marks that the user has logged in
-
                 DeclareStorageVariable("local", "E_Email", ENCRYPTED_EMAIL);
                 DeclareStorageVariable(
                   "local",
@@ -368,7 +367,7 @@ export const LoginRegisterForms = () => {
                 e.preventDefault();
               }
             } else {
-              ExitAndRoute(router, "/", indexRouted);
+              ExitAndRoute(router, "/", indexRouted); // Routes the user to home if they arent on client
             }
           }}
         >
