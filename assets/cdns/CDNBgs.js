@@ -8,6 +8,11 @@ import { CDNBGReturn } from "./CDNReturns";
 
 const TOP_BG = CDNBGReturn("gradients", "gradient-1", "webp");
 const FOOTER_BG = CDNBGReturn("gradients", "gradient-2", "webp");
+const LOGIN_REGISTER_BG = CDNBGReturn(
+  "login-register",
+  "login-register-bg",
+  "webp"
+);
 
 const AOT_BG = CDNBGReturn("aot", "bg-3", "webp");
 const CSM_BG = CDNBGReturn("csm", "bg-2", "webp");
@@ -26,7 +31,7 @@ const ROMANCE_BG = CDNBGReturn("romance", "romance", "webp");
 const SEINEN_BG = CDNBGReturn("seinen", "sienen", "webp");
 const SHONEN_BG = CDNBGReturn("shonen", "shonen", "webp");
 
-export { TOP_BG, FOOTER_BG };
+export { TOP_BG, FOOTER_BG, LOGIN_REGISTER_BG };
 export {
   AOT_BG,
   CSM_BG,
