@@ -17,6 +17,7 @@ import DeclareStorageVariable from "@/assets/functions/data/storage/DeclareStora
 import RemoveStorageVariable from "@/assets/functions/data/storage/RemoveStorageVariable";
 import CheckMobileNavMenuStatus from "@/assets/functions/dom/checkers/CheckMobileNavStatus";
 import CheckUserDevice from "@/assets/functions/dom/checkers/CheckUserDevice";
+import CheckUsername from "@/assets/functions/dom/checkers/account/CheckUsername";
 
 // Component Imports
 
@@ -117,6 +118,11 @@ function MyApp({ Component, pageProps }) {
       CheckUserDevice(mobile, desktop);
     });
   }, []);
+
+  //! Check Username
+  useEffect(() => {
+    CheckUsername(router);
+  }, [router]);
 
   //! Checking Mobile Nav Menu Status
   useEffect(() => {
