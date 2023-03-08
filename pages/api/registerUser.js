@@ -15,8 +15,8 @@ export default async function handler(req, res) {
 
   try {
     await Account.create(req.body);
-    res.redirect("/login_signup");
+    res.redirect("/login_register");
   } catch (error) {
-    res.redirect("/login_signup#SIGNUP_ERROR");
+    res.redirect("/login_register#REGISTER_ERROR");
   }
 }

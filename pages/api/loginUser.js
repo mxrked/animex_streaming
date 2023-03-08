@@ -17,9 +17,9 @@ export default async function handler(req, res) {
   const user = await Account.findOne({ username, password, email });
 
   if (!user) {
-    res.redirect("/login_signup#LOGIN_ERROR");
-    res.redirect("/login_signup");
+    res.redirect("/login_register#LOGIN_ERROR");
+    res.redirect("/login_register");
   } else {
-    res.redirect("/login_signup#succesful_login/#" + username); // Made it route back to the login page to prevent null error
+    res.redirect("/login_register#succesful_login/#" + username); // Made it route back to the login page to prevent null error
   }
 }
