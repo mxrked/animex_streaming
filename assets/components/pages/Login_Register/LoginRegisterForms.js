@@ -205,7 +205,7 @@ export const LoginRegisterForms = () => {
   return (
     <div className={`${styles.login_register_forms}`}>
       <span className={`${styles.register_error} error`}>
-        <span>ERROR:</span> That account/user already exists.
+        <span>ERROR:</span> That user/email is already in use.
       </span>
 
       <span className={`${styles.form_heading}`}>Register/Create</span>
@@ -317,7 +317,7 @@ export const LoginRegisterForms = () => {
       </div>
 
       <span className={`${styles.login_error} error`}>
-        <span>ERROR:</span> That account/user does not exist.
+        <span>ERROR:</span> That account does not exist.
       </span>
       <span className={`${styles.form_heading}`}>Account Login</span>
       <div className={`${styles.form_holder}`}>
