@@ -9,7 +9,6 @@ import { useRouter } from "next/router";
 
 import CryptoAES from "crypto-js/aes";
 
-import ExitAndRoute from "@/assets/functions/routing/ExitAndRoute";
 import RemoveStorageVariable from "@/assets/functions/data/storage/RemoveStorageVariable";
 import DeclareStorageVariable from "@/assets/functions/data/storage/DeclareStorageVariable";
 
@@ -129,9 +128,6 @@ function CheckingLoginFormInputs() {
 export const LoginRegisterForms = () => {
   const router = useRouter();
 
-  // Checkers
-  let indexRouted = false;
-
   // Removing error HASHES and storage variables after load
   useEffect(() => {
     if (
@@ -218,27 +214,20 @@ export const LoginRegisterForms = () => {
           method="POST"
           onSubmit={(e) => {
             // Makes it so the user gets routed to a different place based on their enviroment
-            // if (
-            //   window.location.hostname == "localhost" ||
-            //   window.location.hostname == "127.0.0.1"
-            // ) {
-            //   let passed = CheckRegisterFormInputs(); // This is used to check if the form will submit
+            if (
+              window.location.hostname == "localhost" ||
+              window.location.hostname == "127.0.0.1"
+            ) {
+              let passed = CheckRegisterFormInputs(); // This is used to check if the form will submit
 
-            //   if (passed) {
-            //     e.currentTarget.action = "/api/registerUser";
-            //   }
+              if (passed) {
+                e.currentTarget.action = "/api/registerUser";
+              }
 
-            //   if (!passed) {
-            //     e.preventDefault();
-            //   }
-            // } else {
-            //   // window.location.href =
-            //   //   "https://sparkling-dragon-f3af91.netlify.app/"; // Routes the user to home if they arent on client
-
-            //   router.push("/");
-            // }
-
-            router.push("/");
+              if (!passed) {
+                e.preventDefault();
+              }
+            }
           }}
         >
           <div className={`${styles.form_group}`}>
