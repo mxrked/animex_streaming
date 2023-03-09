@@ -238,7 +238,7 @@ export const LoginRegisterForms = () => {
             //   router.push("https://github.com/mxrked/animex_streaming");
             // }
 
-            router.push("/");
+            alert(true);
           }}
         >
           <div className={`${styles.form_group}`}>
