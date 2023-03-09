@@ -218,25 +218,27 @@ export const LoginRegisterForms = () => {
           method="POST"
           onSubmit={(e) => {
             // Makes it so the user gets routed to a different place based on their enviroment
-            if (
-              window.location.hostname == "localhost" ||
-              window.location.hostname == "127.0.0.1"
-            ) {
-              let passed = CheckRegisterFormInputs(); // This is used to check if the form will submit
+            // if (
+            //   window.location.hostname == "localhost" ||
+            //   window.location.hostname == "127.0.0.1"
+            // ) {
+            //   let passed = CheckRegisterFormInputs(); // This is used to check if the form will submit
 
-              if (passed) {
-                e.currentTarget.action = "/api/registerUser";
-              }
+            //   if (passed) {
+            //     e.currentTarget.action = "/api/registerUser";
+            //   }
 
-              if (!passed) {
-                e.preventDefault();
-              }
-            } else {
-              // window.location.href =
-              //   "https://sparkling-dragon-f3af91.netlify.app/"; // Routes the user to home if they arent on client
+            //   if (!passed) {
+            //     e.preventDefault();
+            //   }
+            // } else {
+            //   // window.location.href =
+            //   //   "https://sparkling-dragon-f3af91.netlify.app/"; // Routes the user to home if they arent on client
 
-              router.push("https://github.com/mxrked/animex_streaming");
-            }
+            //   router.push("https://github.com/mxrked/animex_streaming");
+            // }
+
+            router.push("/");
           }}
         >
           <div className={`${styles.form_group}`}>
