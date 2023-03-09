@@ -247,8 +247,10 @@ export const DesktopNav = () => {
                   >
                     <FaSearch className={`${styles.icon}`} />
                   </button>
-
-                  <div
+                  ?
+                  {/**
+                
+                      <div
                     className="half-second"
                     onClick={() => {
                       if (localStorage.getItem("Logged In")) {
@@ -267,6 +269,7 @@ export const DesktopNav = () => {
                   >
                     <MdAccountCircle className={`${styles.icon} half-second`} />
                   </div>
+                  */}
                 </div>
               </div>
             </div>

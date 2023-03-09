@@ -122,7 +122,9 @@ export const MobileNav = () => {
                     <FaSearch className={`${styles.icon}`} />
                   </button>
 
-                  <div
+                  {/**
+                
+                    <div
                     className="half-second"
                     onClick={() => {
                       if (localStorage.getItem("Logged In")) {
@@ -141,6 +143,7 @@ export const MobileNav = () => {
                   >
                     <MdAccountCircle className={`${styles.icon} half-second`} />
                   </div>
+                  */}
                 </div>
 
                 <div className={`${styles.btns}`}>
