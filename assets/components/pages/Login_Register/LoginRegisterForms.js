@@ -169,7 +169,7 @@ export const LoginRegisterForms = () => {
           localStorage.getItem("Username") !== "undefined" &&
           localStorage.getItem("Username")
         ) {
-          router.push("/");
+          router.push("https://sparkling-dragon-f3af91.netlify.app/");
         }
       }
     }
@@ -232,7 +232,8 @@ export const LoginRegisterForms = () => {
                 e.preventDefault();
               }
             } else {
-              ExitAndRoute(router, "/", indexRouted); // Routes the user to home if they arent on client
+              window.location.href =
+                "https://sparkling-dragon-f3af91.netlify.app/"; // Routes the user to home if they arent on client
             }
           }}
         >
@@ -367,7 +368,8 @@ export const LoginRegisterForms = () => {
                 e.preventDefault();
               }
             } else {
-              ExitAndRoute(router, "/", indexRouted); // Routes the user to home if they arent on client
+              window.location.href =
+                "https://sparkling-dragon-f3af91.netlify.app/"; // Routes the user to home if they arent on client
             }
           }}
         >
