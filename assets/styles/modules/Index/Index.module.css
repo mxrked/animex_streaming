@@ -3037,10 +3037,10 @@
 }
 @media all and (max-width: 768px) {
   .index_top {
-    height: 750px;
+    height: 630px;
   }
   .index_top .bg {
-    height: 540px;
+    height: 520px;
   }
   .index_top .hover_trigger:hover .index_top_inner .index_top_inner_box .index_top_inner_row .index_top_inner_R .index_top_inner_side_cnt img {
     scale: 1 !important;
@@ -3052,8 +3052,9 @@
     margin-top: 20px;
   }
   .index_top .index_top_inner .index_top_inner_box .index_top_inner_row .index_top_inner_side {
-    height: 300px;
+    height: 250px;
     width: 100%;
+    max-width: 100%;
   }
   .index_top .index_top_inner .index_top_inner_box .index_top_inner_row .index_top_inner_L {
     justify-content: center;
@@ -3064,8 +3065,8 @@
     text-align: center;
   }
   .index_top .index_top_inner .index_top_inner_box .index_top_inner_row .index_top_inner_L .index_top_inner_side_cnt h1 {
-    font-size: 32px;
-    line-height: 40px;
+    font-size: 27px;
+    line-height: 30px;
   }
   .index_top .index_top_inner .index_top_inner_box .index_top_inner_row .index_top_inner_L .index_top_inner_side_cnt p {
     font-size: 18px;
@@ -3092,7 +3093,7 @@
   .index_top .index_top_inner .index_top_inner_box .index_top_inner_row .index_top_inner_R .index_top_inner_side_cnt img {
     margin-left: auto;
     margin-right: auto;
-    max-width: 400px;
+    max-width: 320px;
     top: 20px;
     right: 0;
   }
@@ -3922,14 +3923,14 @@
 }
 @media all and (max-width: 419px) {
   .index_top {
-    height: 500px;
+    height: 480px;
   }
   .index_top .bg {
     height: 420px;
   }
   .index_top .hover_trigger:hover .index_top_inner .index_top_inner_box .index_top_inner_row .index_top_inner_R .index_top_inner_side_cnt img {
     scale: 1 !important;
-    top: 30px !important;
+    top: 10px !important;
   }
   .index_top .index_top_inner {
     padding-left: 25px;
@@ -3937,6 +3938,8 @@
   }
   .index_top .index_top_inner .index_top_inner_box .index_top_inner_row .index_top_inner_side {
     height: 220px;
+    max-width: 100%;
+    width: 100%;
   }
   .index_top .index_top_inner .index_top_inner_box .index_top_inner_row .index_top_inner_L {
     justify-content: center;
@@ -3976,8 +3979,8 @@
   .index_top .index_top_inner .index_top_inner_box .index_top_inner_row .index_top_inner_R .index_top_inner_side_cnt img {
     margin-left: auto;
     margin-right: auto;
-    max-width: 285px;
-    top: 30px;
+    max-width: 225px;
+    top: 10px;
     right: 0;
   }
   .index_browsing_watching {
@@ -4972,7 +4975,7 @@
     height: 300px;
   }
   .index_top .bg {
-    height: 250px;
+    height: 230px;
   }
   .index_top .hover_trigger:hover .index_top_inner .index_top_inner_box .index_top_inner_row .index_top_inner_R .index_top_inner_side_cnt img {
     scale: 1 !important;
@@ -4985,14 +4988,14 @@
     margin-top: -20px;
   }
   .index_top .index_top_inner .index_top_inner_box .index_top_inner_row .index_top_inner_side {
-    height: 220px;
+    height: 250px;
     max-width: 50%;
   }
   .index_top .index_top_inner .index_top_inner_box .index_top_inner_row .index_top_inner_L {
     justify-content: center;
   }
   .index_top .index_top_inner .index_top_inner_box .index_top_inner_row .index_top_inner_L .index_top_inner_side_cnt {
-    padding-top: 60px;
+    padding-top: 30px;
     padding-bottom: 0;
     text-align: left;
   }
@@ -7102,7 +7105,7 @@
     height: 370px;
   }
   .index_top .bg {
-    height: 300px;
+    height: 270px;
   }
   .index_top .hover_trigger:hover .index_top_inner .index_top_inner_box .index_top_inner_row .index_top_inner_R .index_top_inner_side_cnt img {
     scale: 1 !important;
@@ -7115,14 +7118,14 @@
     margin-top: -40px;
   }
   .index_top .index_top_inner .index_top_inner_box .index_top_inner_row .index_top_inner_side {
-    height: 320px;
+    height: 350px;
     max-width: 50%;
   }
   .index_top .index_top_inner .index_top_inner_box .index_top_inner_row .index_top_inner_L {
     justify-content: center;
   }
   .index_top .index_top_inner .index_top_inner_box .index_top_inner_row .index_top_inner_L .index_top_inner_side_cnt {
-    padding-top: 70px;
+    padding-top: 20px;
     padding-bottom: 0;
     text-align: left;
   }
@@ -7158,7 +7161,7 @@
   .index_top .index_top_inner .index_top_inner_box .index_top_inner_row .index_top_inner_R .index_top_inner_side_cnt img {
     margin-left: auto;
     margin-right: auto;
-    max-width: 330px;
+    max-width: 300px;
     top: 30px;
     right: -10px;
   }
