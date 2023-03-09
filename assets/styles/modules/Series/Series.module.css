@@ -320,7 +320,7 @@
     max-width: 100%;
   }
   .series_top .hover_trigger .series_top_inner .series_top_inner_box .series_top_inner_row .series_top_inner_L {
-    height: 190px;
+    height: 180px;
     max-width: 60%;
     justify-content: flex-start;
   }
@@ -342,11 +342,11 @@
     margin-left: 0;
   }
   .series_top .hover_trigger .series_top_inner .series_top_inner_box .series_top_inner_row .series_top_inner_R {
-    height: 190px;
+    height: 180px;
     max-width: 40%;
   }
   .series_top .hover_trigger .series_top_inner .series_top_inner_box .series_top_inner_row .series_top_inner_R .series_top_inner_side_cnt img {
-    max-width: 230px;
+    max-width: 210px;
     top: 30px;
     left: -50%;
     scale: 1 !important;
