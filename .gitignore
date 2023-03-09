@@ -15,6 +15,7 @@
 # production
 /build
 /!_IGNORE_!
+/!_OLD_CODE_!
 
 # misc
 .DS_Store
