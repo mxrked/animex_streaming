@@ -145,17 +145,6 @@
 .desktop_nav .desktop_nav_inner .desktop_nav_inner_box .desktop_nav_inner_row .desktop_nav_R .desktop_nav_inner_side_cnt .side_links button:hover {
   color: #f05454;
 }
-.desktop_nav .desktop_nav_inner .desktop_nav_inner_box .desktop_nav_inner_row .desktop_nav_R .desktop_nav_inner_side_cnt .side_links div {
-  margin-left: 20px;
-  cursor: pointer;
-}
-.desktop_nav .desktop_nav_inner .desktop_nav_inner_box .desktop_nav_inner_row .desktop_nav_R .desktop_nav_inner_side_cnt .side_links div:hover .icon {
-  color: #f05454;
-}
-.desktop_nav .desktop_nav_inner .desktop_nav_inner_box .desktop_nav_inner_row .desktop_nav_R .desktop_nav_inner_side_cnt .side_links div .icon {
-  color: #fafafa;
-  font-size: 27px;
-}
 
 .desktop_nav_mega_menu {
   position: absolute;
@@ -315,17 +304,6 @@
 }
 .mobile_nav .mobile_nav_inner .mobile_nav_inner_box .mobile_nav_inner_row .mobile_nav_R .mobile_nav_inner_side_cnt .side_links button:hover {
   color: #f05454;
-}
-.mobile_nav .mobile_nav_inner .mobile_nav_inner_box .mobile_nav_inner_row .mobile_nav_R .mobile_nav_inner_side_cnt .side_links div {
-  margin-left: 20px;
-  cursor: pointer;
-}
-.mobile_nav .mobile_nav_inner .mobile_nav_inner_box .mobile_nav_inner_row .mobile_nav_R .mobile_nav_inner_side_cnt .side_links div:hover .icon {
-  color: #f05454;
-}
-.mobile_nav .mobile_nav_inner .mobile_nav_inner_box .mobile_nav_inner_row .mobile_nav_R .mobile_nav_inner_side_cnt .side_links div .icon {
-  color: #fafafa;
-  font-size: 22px;
 }
 .mobile_nav .mobile_nav_inner .mobile_nav_inner_box .mobile_nav_inner_row .mobile_nav_R .mobile_nav_inner_side_cnt .btns {
   position: relative;
@@ -775,9 +753,6 @@
   .mobile_nav .mobile_nav_inner .mobile_nav_inner_box .mobile_nav_inner_row .mobile_nav_R .mobile_nav_inner_side_cnt .side_links button .icon {
     font-size: 17px;
   }
-  .mobile_nav .mobile_nav_inner .mobile_nav_inner_box .mobile_nav_inner_row .mobile_nav_R .mobile_nav_inner_side_cnt .side_links div .icon {
-    font-size: 19px;
-  }
   .mobile_nav .mobile_nav_inner .mobile_nav_inner_box .mobile_nav_inner_row .mobile_nav_R .mobile_nav_inner_side_cnt .mobile_nav_toggler span {
     width: 28px;
   }
@@ -878,9 +853,6 @@
   }
   .mobile_nav .mobile_nav_inner .mobile_nav_inner_box .mobile_nav_inner_row .mobile_nav_R .mobile_nav_inner_side_cnt .side_links button .icon {
     font-size: 17px;
-  }
-  .mobile_nav .mobile_nav_inner .mobile_nav_inner_box .mobile_nav_inner_row .mobile_nav_R .mobile_nav_inner_side_cnt .side_links div .icon {
-    font-size: 19px;
   }
   .mobile_nav .mobile_nav_inner .mobile_nav_inner_box .mobile_nav_inner_row .mobile_nav_R .mobile_nav_inner_side_cnt .mobile_nav_toggler {
     margin-left: 10px;
@@ -991,9 +963,6 @@
   }
   .mobile_nav .mobile_nav_inner .mobile_nav_inner_box .mobile_nav_inner_row .mobile_nav_R .mobile_nav_inner_side_cnt .side_links button .icon {
     font-size: 20px;
-  }
-  .mobile_nav .mobile_nav_inner .mobile_nav_inner_box .mobile_nav_inner_row .mobile_nav_R .mobile_nav_inner_side_cnt .side_links div .icon {
-    font-size: 24px;
   }
   .mobile_nav .mobile_nav_inner .mobile_nav_inner_box .mobile_nav_inner_row .mobile_nav_R .mobile_nav_inner_side_cnt .mobile_nav_toggler {
     margin-left: 20px;
