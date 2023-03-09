@@ -27,6 +27,13 @@ import "../assets/styles/modules/Login_Register/Login_Register.module.css";
 export default function Login_Register() {
   const router = useRouter();
 
+  // Routes user back to home page on production
+  useEffect(() => {
+    if (location.hostname !== "localhost") {
+      router.push("/");
+    }
+  }, [router]);
+
   return (
     <div id="page" className="page overrides_Login_Register full-second">
       <PageHead
