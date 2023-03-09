@@ -13,6 +13,9 @@ import { useRouter } from "next/router";
 // Data/Functions/Images Imports
 import DeclareStorageVariable from "@/assets/functions/data/storage/DeclareStorageVariable";
 import ManipPageLink from "@/assets/functions/dom/manip/ManipPageLink";
+import CheckSeriesRoute from "@/assets/functions/routing/CheckSeriesRoute";
+
+import { SERIES_ROUTES } from "@/assets/data/variables/ARRAYS";
 
 // Component Imports
 import { PageHead } from "@/assets/components/global/PageHead";
@@ -23,6 +26,8 @@ import { MobileNavMenu } from "@/assets/components/global/Nav/Mobile/MobileNavMe
 import { Search } from "@/assets/components/global/Nav/Both/Search";
 import { ScrollIndicator } from "@/assets/components/global/ScrollIndicator";
 import { Footer } from "@/assets/components/global/Footer/Footer";
+
+import { SeriesTop } from "@/assets/components/pages/Series/SeriesTop";
 
 // Style Imports
 import "../assets/styles/modules/Series/Series.module.css";
@@ -55,6 +60,23 @@ export default function Series({ display_search_data }) {
     document.body.style.pointerEvents = "auto";
   }, []);
 
+  // Checking current series hash
+  useEffect(() => {
+    const checkSeriesRoute = CheckSeriesRoute(router);
+
+    // Logging the current hash path the user is on
+    SERIES_ROUTES.forEach((route) => {
+      if (checkSeriesRoute == route) {
+        console.log("Currently on " + route);
+      }
+    });
+
+    // If no hash = the standard series page
+    if (!window.location.hash) {
+      console.log("Currently on Series (Main)");
+    }
+  }, [router]);
+
   return (
     <div id="page" className="page overrides_Series full-second">
       <PageHead
@@ -72,6 +94,9 @@ export default function Series({ display_search_data }) {
         <DesktopNavMegaMenu />
         <MobileNav />
         <MobileNavMenu />
+
+        <SeriesTop />
+
         <Footer />
       </main>
     </div>
