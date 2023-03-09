@@ -161,6 +161,10 @@
   border-radius: 5px;
   color: #222831;
 }
+.page_cnt_box .page_cnt_row .page_cnt_R .page_cnt_side_cnt .login_register_forms .form_holder form .form_group .form_set input:focus {
+  border-color: rgba(255, 166, 0, 0.477) !important;
+  background-color: white;
+}
 .page_cnt_box .page_cnt_row .page_cnt_R .page_cnt_side_cnt .login_register_forms .form_holder form .double_group .form_set {
   max-width: 49%;
 }
@@ -241,60 +245,73 @@
 }
 @media all and (max-width: 768px) {
   .page_cnt_box {
-    height: 100vh;
+    overflow-y: auto;
+    height: 100%;
     display: flex;
     align-items: center;
     justify-content: center;
     width: 100%;
     background-color: #fafafa;
+    padding-top: 60px;
+    padding-bottom: 90px;
   }
   .page_cnt_box .page_cnt_row {
     width: 100%;
+    height: 100%;
   }
   .page_cnt_box .page_cnt_row .page_cnt_L {
     display: none;
   }
   .page_cnt_box .page_cnt_row .page_cnt_R {
-    padding-left: 10px;
-    padding-right: 10px;
+    padding-left: 18px;
+    padding-right: 20px;
     width: 100%;
     max-width: 100%;
+    display: flex;
+    align-items: center;
+    height: 100%;
   }
   .page_cnt_box .page_cnt_row .page_cnt_R .page_cnt_side_cnt {
-    max-width: 500px;
+    max-width: 340px;
+    height: auto;
+    padding-top: 0;
   }
   .page_cnt_box .page_cnt_row .page_cnt_R .page_cnt_side_cnt .login_register_top .login_register_top_inner_box .login_register_top_inner_row .login_register_top_inner_side {
-    max-width: 50%;
+    height: 40px;
+    align-items: center;
+    justify-content: center;
+    max-width: 100%;
   }
-  .page_cnt_box .page_cnt_row .page_cnt_R .page_cnt_side_cnt .login_register_top .login_register_top_inner_box .login_register_top_inner_row .login_register_top_L .logo img {
-    max-width: 30px;
-  }
-  .page_cnt_box .page_cnt_row .page_cnt_R .page_cnt_side_cnt .login_register_top .login_register_top_inner_box .login_register_top_inner_row .login_register_top_L .logo div .logo_large_text {
-    font-size: 23px;
-  }
-  .page_cnt_box .page_cnt_row .page_cnt_R .page_cnt_side_cnt .login_register_top .login_register_top_inner_box .login_register_top_inner_row .login_register_top_L .logo div .logo_small_text {
-    font-size: 11px;
+  .page_cnt_box .page_cnt_row .page_cnt_R .page_cnt_side_cnt .login_register_top .login_register_top_inner_box .login_register_top_inner_row .login_register_top_L {
+    display: none;
   }
   .page_cnt_box .page_cnt_row .page_cnt_R .page_cnt_side_cnt .login_register_top .login_register_top_inner_box .login_register_top_inner_row .login_register_top_R div {
-    font-size: 16px;
+    font-size: 15px;
   }
   .page_cnt_box .page_cnt_row .page_cnt_R .page_cnt_side_cnt .login_register_forms .form_heading {
-    font-size: 20px;
+    font-size: 19px;
   }
   .page_cnt_box .page_cnt_row .page_cnt_R .page_cnt_side_cnt .login_register_forms .form_holder {
-    margin-bottom: 40px;
+    margin-bottom: 0px;
+  }
+  .page_cnt_box .page_cnt_row .page_cnt_R .page_cnt_side_cnt .login_register_forms .form_holder form .form_group {
+    margin-bottom: 10px;
   }
   .page_cnt_box .page_cnt_row .page_cnt_R .page_cnt_side_cnt .login_register_forms .form_holder form .form_group .form_set input {
     height: 40px;
-    font-size: 13px;
+    font-size: 12px;
+    padding-left: 10px;
+    padding-right: 10px;
+    padding-top: 2px;
   }
   .page_cnt_box .page_cnt_row .page_cnt_R .page_cnt_side_cnt .login_register_forms .form_holder form .btns {
     max-width: 140px;
     margin-top: 20px;
   }
   .page_cnt_box .page_cnt_row .page_cnt_R .page_cnt_side_cnt .login_register_forms .form_holder form .btns button {
-    height: 35px;
-    font-size: 13px;
+    height: 32px;
+    font-size: 12px;
+    padding-top: 2px;
   }
 }
 @media all and (max-width: 419px) {

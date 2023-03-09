@@ -184,6 +184,11 @@
                     font-family: "Lato Semibold";
                     border-radius: 5px;
                     color: $EbonyClay;
+
+                    &:focus {
+                      border-color: rgba(255, 166, 0, 0.477) !important;
+                      background-color: white;
+                    }
                   }
                 }
               }
@@ -333,57 +338,55 @@
 // Desktop Window (Smallest)
 @media all and (max-width: 768px) {
   .page_cnt_box {
-    height: 100vh;
+    overflow-y: auto;
+    height: 100%;
     display: flex;
     align-items: center;
     justify-content: center;
     width: 100%;
     background-color: $Alabaster;
+    padding-top: 60px;
+    padding-bottom: 90px;
 
     .page_cnt_row {
       width: 100%;
+      height: 100%;
 
       .page_cnt_L {
         display: none;
       }
 
       .page_cnt_R {
-        padding-left: 10px;
-        padding-right: 10px;
+        padding-left: 18px;
+        padding-right: 20px;
         width: 100%;
         max-width: 100%;
-        // height: 100%;
+        display: flex;
+        align-items: center;
+        height: 100%;
 
         .page_cnt_side_cnt {
-          max-width: 500px;
+          max-width: 340px;
+          height: auto;
+          padding-top: 0;
 
           .login_register_top {
             .login_register_top_inner_box {
               .login_register_top_inner_row {
                 .login_register_top_inner_side {
-                  max-width: 50%;
+                  height: 40px;
+                  align-items: center;
+                  justify-content: center;
+                  max-width: 100%;
                 }
 
                 .login_register_top_L {
-                  .logo {
-                    img {
-                      max-width: 30px;
-                    }
-
-                    div {
-                      .logo_large_text {
-                        font-size: 23px;
-                      }
-                      .logo_small_text {
-                        font-size: 11px;
-                      }
-                    }
-                  }
+                  display: none;
                 }
 
                 .login_register_top_R {
                   div {
-                    font-size: 16px;
+                    font-size: 15px;
                   }
                 }
               }
@@ -392,18 +395,23 @@
 
           .login_register_forms {
             .form_heading {
-              font-size: 20px;
+              font-size: 19px;
             }
 
             .form_holder {
-              margin-bottom: 40px;
+              margin-bottom: 0px;
 
               form {
                 .form_group {
+                  margin-bottom: 10px;
+
                   .form_set {
                     input {
                       height: 40px;
-                      font-size: 13px;
+                      font-size: 12px;
+                      padding-left: 10px;
+                      padding-right: 10px;
+                      padding-top: 2px;
                     }
                   }
                 }
@@ -413,8 +421,9 @@
                   margin-top: 20px;
 
                   button {
-                    height: 35px;
-                    font-size: 13px;
+                    height: 32px;
+                    font-size: 12px;
+                    padding-top: 2px;
                   }
                 }
               }
