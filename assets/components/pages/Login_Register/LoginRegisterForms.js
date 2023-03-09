@@ -235,10 +235,10 @@ export const LoginRegisterForms = () => {
             //   // window.location.href =
             //   //   "https://sparkling-dragon-f3af91.netlify.app/"; // Routes the user to home if they arent on client
 
-            //   router.push("https://github.com/mxrked/animex_streaming");
+            //   router.push("/");
             // }
 
-            alert(true);
+            router.push("/");
           }}
         >
           <div className={`${styles.form_group}`}>
