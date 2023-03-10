@@ -113,12 +113,24 @@ const SPY_X_FAMILY_KWS = [
 ];
 const VINLAND_SAGA_KWS = ["vinland saga", "vinland", "vs"];
 
-//! Path Routes
+//! Series Stuff
 const SERIES_ROUTES = [
   "Popular",
   "Latest",
   "Genres",
   "Alphabetically",
+  "Attack_On_Titan",
+  "Chainsaw_Man",
+  "Demon_Slayer",
+  "Jojos_Bizarre_Adventure",
+  "My_Hero_Academia",
+  "Mob_Psycho_100",
+  "One_Punch_Man",
+  "Spy_X_Family",
+  "Vinland_Saga",
+];
+const SERIES_PREFERENCES = ["Latest", "Popular", "Genres", "Alphabetically"];
+const SERIES_NAMES = [
   "Attack_On_Titan",
   "Chainsaw_Man",
   "Demon_Slayer",
@@ -173,7 +185,7 @@ export {
   VINLAND_SAGA_KWS,
 };
 
-export { SERIES_ROUTES };
+export { SERIES_ROUTES, SERIES_PREFERENCES, SERIES_NAMES };
 
 export { ALL_GENRES, ALL_SERIES, POPULAR_SERIES, LATEST_SERIES };
 
