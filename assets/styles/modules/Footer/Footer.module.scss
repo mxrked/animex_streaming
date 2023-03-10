@@ -29,7 +29,7 @@
 .footer {
   height: 650px;
   width: 100%;
-  margin-top: 230px;
+  margin-top: 130px;
   position: relative;
   @include displayElement(flex, center, center);
   background-color: rgb(11, 11, 11);
@@ -495,7 +495,7 @@
 @media only screen and (min-device-width: 768px) and (max-device-width: 1024px) and (orientation: portrait) and (-webkit-min-device-pixel-ratio: 1) {
   .footer {
     height: 350px;
-    margin-top: 150px;
+    margin-top: 90px;
 
     .footer_inner {
       height: 320px;
@@ -581,7 +581,7 @@
 @media only screen and (min-device-width: 768px) and (max-device-width: 1024px) and (orientation: landscape) and (-webkit-min-device-pixel-ratio: 1) {
   .footer {
     height: 350px;
-    margin-top: 150px;
+    margin-top: 80px;
 
     .footer_inner {
       height: 320px;
@@ -668,7 +668,7 @@
 @media only screen and (min-device-width: 1024px) and (max-device-width: 1366px) and (-webkit-min-device-pixel-ratio: 2) and (orientation: portrait) {
   .footer {
     height: 365px;
-    margin-top: 80px;
+    margin-top: 100px;
 
     .footer_inner {
       height: 250px;
