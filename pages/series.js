@@ -11,11 +11,15 @@ import { useRouter } from "next/router";
 // Library Imports
 
 // Data/Functions/Images Imports
-import DeclareStorageVariable from "@/assets/functions/data/storage/DeclareStorageVariable";
 import ManipPageLink from "@/assets/functions/dom/manip/ManipPageLink";
 import CheckSeriesRoute from "@/assets/functions/routing/CheckSeriesRoute";
+import TriggerSeriesModal from "@/assets/functions/dom/triggers/series/TriggerSeriesModal";
+import TriggerSeriesPreference from "@/assets/functions/dom/triggers/series/TriggerSeriesPreferenceModal";
 
-import { SERIES_ROUTES } from "@/assets/data/variables/ARRAYS";
+import {
+  ALPHABETICAL_SERIES,
+  SERIES_ROUTES,
+} from "@/assets/data/variables/ARRAYS";
 
 // Component Imports
 import { PageHead } from "@/assets/components/global/PageHead";
@@ -28,6 +32,11 @@ import { ScrollIndicator } from "@/assets/components/global/ScrollIndicator";
 import { Footer } from "@/assets/components/global/Footer/Footer";
 
 import { SeriesTop } from "@/assets/components/pages/Series/SeriesTop";
+import { SeriesBrowsePreferences } from "@/assets/components/pages/Series/SeriesBrowsePreferences";
+import { SeriesLatestModal } from "@/assets/components/pages/Series/SeriesLatestModal";
+import { SeriesAlphabeticallyModal } from "@/assets/components/pages/Series/SeriesAlphabeticallyModal";
+import { SeriesGenresModal } from "@/assets/components/pages/Series/SeriesGenresModal";
+import { SeriesPopularModal } from "@/assets/components/pages/Series/SeriesPopularModal";
 
 // Style Imports
 import "../assets/styles/modules/Series/Series.module.css";
@@ -77,6 +86,12 @@ export default function Series({ display_search_data }) {
     }
   }, [router]);
 
+  // Displaying preferences or series modals
+  useEffect(() => {
+    TriggerSeriesPreference();
+    TriggerSeriesModal();
+  }, []);
+
   return (
     <div id="page" className="page overrides_Series full-second">
       <PageHead
@@ -89,6 +104,11 @@ export default function Series({ display_search_data }) {
 
       <ScrollIndicator />
 
+      <SeriesLatestModal />
+      <SeriesPopularModal />
+      <SeriesGenresModal />
+      <SeriesAlphabeticallyModal />
+
       <main id="pageCnt" className="page-cnt full-second">
         <DesktopNav />
         <DesktopNavMegaMenu />
@@ -96,8 +116,59 @@ export default function Series({ display_search_data }) {
         <MobileNavMenu />
 
         <SeriesTop />
+        <SeriesBrowsePreferences />
 
         <Footer />
+
+        {/**
+
+          <span id="Attack_On_Titan_Modal" className="_modal series-modal">
+          Attack On Titan Modal
+        </span>
+        <span id="Chainsaw_Man_Modal" className="_modal series-modal">
+          Chainsaw Man Modal
+        </span>
+        <span id="Demon_Slayer_Modal" className="_modal series-modal">
+          Demon Slayer Modal
+        </span>
+        <span
+          id="Jojos_Bizarre_Adventure_Modal"
+          className="_modal series-modal"
+        >
+          Jojo's Bizarre Adventure Modal
+        </span>
+        <span id="My_Hero_Academia_Modal" className="_modal series-modal">
+          My Hero Academia Modal
+        </span>
+        <span id="Mob_Psycho_100_Modal" className="_modal series-modal">
+          Mob Psycho 100 Modal
+        </span>
+        <span id="One_Punch_Man_Modal" className="_modal series-modal">
+          One Punch Man Modal
+        </span>
+        <span id="Spy_X_Family_Modal" className="_modal series-modal">
+          Spy X Family Modal
+        </span>
+        <span id="Vinland_Saga_Modal" className="_modal series-modal">
+          Vinland Saga Modal
+        </span>
+        <span id="latestPreferenceModal" className="_modal preference-modal">
+          Latest Modal
+        </span>
+        <span id="popularPreferenceModal" className="_modal preference-modal">
+          Popular Modal
+        </span>
+        <span id="genresPreferenceModal" className="_modal preference-modal">
+          Genres Modal
+        </span>
+        <span
+          id="alphabeticallyPreferenceModal"
+          className="_modal preference-modal"
+        >
+          Alphabetically Modal
+        </span>
+      
+        */}
       </main>
     </div>
   );
