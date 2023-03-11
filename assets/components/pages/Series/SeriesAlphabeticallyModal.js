@@ -1,6 +1,6 @@
 /**
  *
- *  This is the series popular modal
+ *  This is the series alphabetically modal
  *
  */
 
@@ -8,15 +8,15 @@ import { BackgroundImage } from "react-image-and-background-image-fade";
 
 import CloseModal from "@/assets/functions/dom/closers/CloseModal";
 
-import { POPULAR_SERIES } from "@/assets/data/variables/ARRAYS";
+import { ALPHABETICAL_SERIES } from "@/assets/data/variables/ARRAYS";
 
 import styles from "../../../styles/modules/Series/Series.module.css";
 
-export const SeriesPopularModal = () => {
+export const SeriesAlphabeticallyModal = () => {
   return (
     <div
-      id="popularPreferenceModal"
-      className={`${styles.modal} ${styles.popular_modal} _modal full-second`}
+      id="alphabeticallyPreferenceModal"
+      className={`${styles.modal} ${styles.alphabetically_modal} _modal full-second`}
     >
       <div
         className={`${styles.modal_darken}`}
@@ -27,7 +27,7 @@ export const SeriesPopularModal = () => {
       <div className={`${styles.modal_inner}`}>
         <div className={`${styles.modal_inner_cnt}`}>
           <div className={`${styles.modal_inner_cnt_top}`}>
-            <h1>Popular Series</h1>
+            <h1>Alphabetical</h1>
 
             <button
               className={`${styles.closer} half-second`}
@@ -39,10 +39,10 @@ export const SeriesPopularModal = () => {
             </button>
           </div>
 
-          <div className={`${styles.series_holder}`}>
+          <div className={`${styles.alphabetical_holder}`}>
             <div className={`${styles.modal_inner_cnt_box} container-fluid`}>
               <div className={`${styles.modal_inner_cnt_row} row`}>
-                {POPULAR_SERIES.map((series) => (
+                {ALPHABETICAL_SERIES.map((series) => (
                   <div
                     className={`${styles.series} col-lg-4 col-md-4 col-sm-4 col-xs-12`}
                   >

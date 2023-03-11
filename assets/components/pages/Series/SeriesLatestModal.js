@@ -35,30 +35,32 @@ export const SeriesLatestModal = () => {
                 CloseModal();
               }}
             >
-              Close Latest
+              Close Modal
             </button>
           </div>
 
-          <div className={`${styles.modal_inner_cnt_box} container-fluid`}>
-            <div className={`${styles.modal_inner_cnt_row} row`}>
-              {LATEST_SERIES.map((series) => (
-                <div
-                  className={`${styles.series} col-lg-4 col-md-4 col-sm-4 col-xs-12`}
-                >
-                  <div className={`${styles.series_inner}`}>
-                    <BackgroundImage
-                      src={series.getImg}
-                      className={`${styles.bg} half-second`}
-                      width="100%"
-                      height="100%"
-                    />
+          <div className={`${styles.series_holder}`}>
+            <div className={`${styles.modal_inner_cnt_box} container-fluid`}>
+              <div className={`${styles.modal_inner_cnt_row} row`}>
+                {LATEST_SERIES.map((series) => (
+                  <div
+                    className={`${styles.series} col-lg-4 col-md-4 col-sm-4 col-xs-12`}
+                  >
+                    <div className={`${styles.series_inner}`}>
+                      <BackgroundImage
+                        src={series.getImg}
+                        className={`${styles.bg} half-second`}
+                        width="100%"
+                        height="100%"
+                      />
 
-                    <button className={`${styles.darken} half-second`}>
-                      <span>{series.getName}</span>
-                    </button>
+                      <button className={`${styles.darken} half-second`}>
+                        <span>{series.getName}</span>
+                      </button>
+                    </div>
                   </div>
-                </div>
-              ))}
+                ))}
+              </div>
             </div>
           </div>
         </div>
