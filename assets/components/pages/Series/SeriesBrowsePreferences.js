@@ -17,6 +17,8 @@ import { FADES } from "@/assets/data/variables/ARRAYS";
 import { BackgroundImage } from "react-image-and-background-image-fade";
 
 import TriggerInViewMotion from "@/assets/functions/dom/triggers/TriggerInViewMotion";
+import CheckSeriesPreference from "@/assets/functions/dom/checkers/series/CheckSeriesPreference";
+import TriggerSeriesPreferenceModal from "@/assets/functions/dom/triggers/series/TriggerSeriesPreferenceModal";
 
 import styles from "../../../styles/modules/Series/Series.module.css";
 
@@ -80,6 +82,11 @@ export const SeriesBrowsePreferences = () => {
 
                   <button
                     id="latestToggler"
+                    onClick={() => {
+                      window.location.hash = "Latest";
+
+                      TriggerSeriesPreferenceModal();
+                    }}
                     className={`${styles.toggler} half-second`}
                   >
                     <span>By Latest</span>
@@ -97,6 +104,11 @@ export const SeriesBrowsePreferences = () => {
 
                   <button
                     id="popularToggler"
+                    onClick={() => {
+                      window.location.hash = "Popular";
+
+                      TriggerSeriesPreferenceModal();
+                    }}
                     className={`${styles.toggler} half-second`}
                   >
                     <span>By Popularity</span>
@@ -114,6 +126,11 @@ export const SeriesBrowsePreferences = () => {
 
                   <button
                     id="genresToggler"
+                    onClick={() => {
+                      window.location.hash = "Genres";
+
+                      TriggerSeriesPreferenceModal();
+                    }}
                     className={`${styles.toggler} half-second`}
                   >
                     <span>By Genre</span>
@@ -131,6 +148,11 @@ export const SeriesBrowsePreferences = () => {
 
                   <button
                     id="alphabeticallyToggler"
+                    onClick={() => {
+                      window.location.hash = "Alphabetically";
+
+                      TriggerSeriesPreferenceModal();
+                    }}
                     className={`${styles.toggler} half-second`}
                   >
                     <span>Alphabetically</span>
