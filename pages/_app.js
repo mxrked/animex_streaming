@@ -17,7 +17,7 @@ import DeclareStorageVariable from "@/assets/functions/data/storage/DeclareStora
 import RemoveStorageVariable from "@/assets/functions/data/storage/RemoveStorageVariable";
 import CheckMobileNavMenuStatus from "@/assets/functions/dom/checkers/CheckMobileNavStatus";
 import CheckUserDevice from "@/assets/functions/dom/checkers/CheckUserDevice";
-import CheckUsername from "@/assets/functions/dom/checkers/account/CheckUsername";
+// import CheckUsername from "@/assets/functions/dom/checkers/account/CheckUsername";
 
 // Component Imports
 
@@ -89,7 +89,12 @@ function MyApp({ Component, pageProps }) {
       RemoveStorageVariable("local", "ally-supports-cache");
       RemoveStorageVariable("session", "Search Opened");
       RemoveStorageVariable("session", "Mobile Nav Opened");
-      RemoveStorageVariable("session", "Modal Opened");
+
+      // This will allow the modal to stay opened and prevents user from interacting
+      if (!window.location.hash) {
+        RemoveStorageVariable("session", "Modal Opened");
+      }
+
       RemoveStorageVariable("session", "Page Reload");
     }, 700);
   }, [router]);
@@ -119,10 +124,10 @@ function MyApp({ Component, pageProps }) {
     });
   }, []);
 
-  //! Check Username
-  useEffect(() => {
-    CheckUsername(router);
-  }, [router]);
+  // //! Check Username
+  // useEffect(() => {
+  //   CheckUsername(router);
+  // }, [router]);
 
   //! Checking Mobile Nav Menu Status
   useEffect(() => {
