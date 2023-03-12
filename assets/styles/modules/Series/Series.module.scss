@@ -33,7 +33,7 @@
   overflow: hidden;
 
   .bg {
-    height: 500px;
+    height: 470px;
     @include bGSU(cover, center);
   }
 
@@ -237,7 +237,7 @@
     position: absolute;
     width: 100%;
     height: 100%;
-    background-color: rgba(0, 0, 0, 0.9);
+    background-color: rgba(26, 8, 2, 0.9);
     top: 0;
     left: 0;
     cursor: pointer;
@@ -253,6 +253,7 @@
     left: 50%;
     transform: translate(-50%, -50%);
     border-radius: 10px;
+    box-shadow: 0 12px 2px rgba(0, 0, 0, 0.088);
   }
 }
 .popular_modal,
@@ -261,7 +262,7 @@
     overflow: hidden;
     white-space: nowrap;
     max-width: 1800px;
-    height: 100% - 40%;
+    height: 800px;
 
     .modal_inner_cnt {
       width: 100%;
@@ -290,7 +291,7 @@
       .series_holder {
         width: 100%;
         height: 100%;
-        max-height: 540px;
+        max-height: 545px;
         overflow-y: auto;
         white-space: nowrap;
         background-color: rgba(248, 248, 255, 0.579);
@@ -299,11 +300,12 @@
         border: 2px solid rgba(128, 128, 128, 0.057);
         padding-left: 20px;
         padding-right: 20px;
+        @include customScrollBar(14px, rgb(232, 232, 232), $Jaffa, $Carnation);
 
         .modal_inner_cnt_box {
           .modal_inner_cnt_row {
             .series {
-              height: 500px;
+              height: 480px;
               padding: 0;
 
               .series_inner {
@@ -351,7 +353,7 @@
 .genres_modal {
   .modal_inner {
     max-width: 1800px;
-    height: 100% - 20%;
+    height: 800px;
     overflow: hidden;
     white-space: nowrap;
 
@@ -382,7 +384,7 @@
 
       .genres_holder {
         height: 100%;
-        max-height: 790px;
+        max-height: 540px;
         width: 100%;
         // background-color: red;
         overflow: hidden;
@@ -393,6 +395,7 @@
         border: 2px solid rgba(128, 128, 128, 0.057);
         padding-left: 20px;
         padding-right: 20px;
+        @include customScrollBar(14px, rgb(232, 232, 232), $Jaffa, $Carnation);
 
         .genre_name {
           font-family: "Lato Bold";
@@ -462,7 +465,7 @@
 .alphabetically_modal {
   .modal_inner {
     max-width: 1800px;
-    height: 100% - 20%;
+    height: 800px;
     overflow: hidden;
     white-space: nowrap;
 
@@ -493,7 +496,7 @@
 
       .alphabetical_holder {
         height: 100%;
-        max-height: 790px;
+        max-height: 540px;
         width: 100%;
         // background-color: red;
         overflow: hidden;
@@ -505,6 +508,7 @@
         border: 2px solid rgba(128, 128, 128, 0.057);
         padding-left: 20px;
         padding-right: 20px;
+        @include customScrollBar(14px, rgb(232, 232, 232), $Jaffa, $Carnation);
 
         .modal_inner_cnt_box {
           .modal_inner_cnt_row {
@@ -512,6 +516,12 @@
               height: 250px;
               padding: 0;
               margin-bottom: 30px;
+
+              &:nth-child(9),
+              &:nth-child(8),
+              &:nth-child(7) {
+                margin-bottom: 0;
+              }
 
               .series_inner {
                 height: 100%;
@@ -633,6 +643,85 @@
       max-width: 1200px;
     }
   }
+  .popular_modal,
+  .latest_modal {
+    .modal_inner {
+      max-width: 1200px;
+      height: 710px;
+
+      .modal_inner_cnt {
+        .series_holder {
+          height: 475px;
+
+          .modal_inner_cnt_box {
+            .modal_inner_cnt_row {
+              .series {
+                height: 410px;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+  .genres_modal {
+    .modal_inner {
+      max-width: 1200px;
+      height: 710px;
+      .modal_inner_cnt {
+        .genres_holder {
+          height: 460px;
+
+          .modal_inner_cnt_box {
+            .modal_inner_cnt_row {
+              .series {
+                max-width: 50%;
+                width: 100%;
+                height: 240px;
+
+                .series_inner {
+                  button {
+                    padding-left: 15px;
+                    padding-bottom: 15px;
+
+                    span {
+                      font-size: 24px;
+                    }
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+  .alphabetically_modal {
+    .modal_inner {
+      max-width: 1200px;
+      height: 710px;
+
+      .modal_inner_cnt {
+        .alphabetical_holder {
+          height: 460px;
+
+          .modal_inner_cnt_box {
+            .modal_inner_cnt_row {
+              .series {
+                max-width: 50%;
+                width: 100%;
+
+                &:nth-child(8),
+                &:nth-child(7) {
+                  margin-bottom: 30px;
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
 }
 
 @media all and (max-width: 991px) {
@@ -737,6 +826,123 @@
                 button {
                   font-size: 20px;
                   background-color: rgba(0, 0, 0, 0.6);
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+  .popular_modal,
+  .latest_modal {
+    .modal_inner {
+      max-width: 700px;
+      height: 720px;
+
+      .modal_inner_cnt {
+        .modal_inner_cnt_top {
+          height: 150px;
+
+          h1 {
+            font-size: 34px;
+          }
+
+          button {
+            font-size: 16px;
+          }
+        }
+
+        .series_holder {
+          height: 100%;
+
+          .modal_inner_cnt_box {
+            .modal_inner_cnt_row {
+              .series {
+                width: 100%;
+                max-width: 100%;
+                height: 300px;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+  .genres_modal {
+    .modal_inner {
+      max-width: 700px;
+      height: 730px;
+      .modal_inner_cnt {
+        .modal_inner_cnt_top {
+          height: 150px;
+
+          h1 {
+            font-size: 34px;
+          }
+
+          button {
+            font-size: 16px;
+          }
+        }
+
+        .genres_holder {
+          height: 720px;
+
+          .modal_inner_cnt_box {
+            .modal_inner_cnt_row {
+              .series {
+                max-width: 100%;
+                width: 100%;
+                height: 200px;
+
+                .series_inner {
+                  button {
+                    padding-left: 15px;
+                    padding-bottom: 15px;
+
+                    span {
+                      font-size: 24px;
+                    }
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+  .alphabetically_modal {
+    .modal_inner {
+      max-width: 700px;
+      height: 900px;
+
+      .modal_inner_cnt {
+        .modal_inner_cnt_top {
+          height: 150px;
+
+          h1 {
+            font-size: 34px;
+          }
+
+          button {
+            font-size: 16px;
+          }
+        }
+
+        .alphabetical_holder {
+          height: 720px;
+
+          .modal_inner_cnt_box {
+            .modal_inner_cnt_row {
+              .series {
+                max-width: 100%;
+                width: 100%;
+
+                &:nth-child(8),
+                &:nth-child(7) {
+                  margin-bottom: 30px;
                 }
               }
             }
@@ -886,6 +1092,184 @@
       }
     }
   }
+  .popular_modal,
+  .latest_modal {
+    .modal_inner {
+      max-width: 700px;
+      height: 680px;
+
+      .modal_inner_cnt {
+        .modal_inner_cnt_top {
+          height: 150px;
+          display: block;
+          text-align: center;
+          padding-top: 50px;
+
+          h1 {
+            font-size: 26px;
+          }
+
+          button {
+            margin-top: 20px;
+            font-size: 14px;
+          }
+        }
+
+        .series_holder {
+          height: 500px;
+          max-width: 440px;
+          @include quickCenter("relative");
+
+          .modal_inner_cnt_box {
+            .modal_inner_cnt_row {
+              .series {
+                width: 100%;
+                max-width: 100%;
+                height: 170px;
+
+                .series_inner {
+                  button {
+                    padding-left: 12px;
+                    padding-bottom: 12px;
+                    font-size: 20px;
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+  .genres_modal {
+    .modal_inner {
+      max-width: 700px;
+      height: 680px;
+      .modal_inner_cnt {
+        .modal_inner_cnt_top {
+          height: 150px;
+          display: block;
+          text-align: center;
+          padding-top: 50px;
+          padding-left: 10px;
+          padding-right: 25px;
+
+          h1 {
+            font-size: 26px;
+          }
+
+          button {
+            margin-top: 20px;
+            font-size: 14px;
+          }
+        }
+
+        .genres_holder {
+          height: 500px;
+          max-width: 440px;
+          @include quickCenter("relative");
+          padding-left: 10px;
+          padding-right: 10px;
+
+          .genre_name {
+            text-align: center;
+            font-size: 20px;
+          }
+
+          .modal_inner_cnt_box {
+            .modal_inner_cnt_row {
+              .series {
+                width: 100%;
+                max-width: 100%;
+                height: 140px;
+                margin-bottom: 12px;
+
+                &:last-child {
+                  margin-bottom: 25px;
+                }
+
+                .series_inner {
+                  button {
+                    padding-left: 15px;
+                    padding-bottom: 15px;
+
+                    span {
+                      font-size: 20px;
+                    }
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+  .alphabetically_modal {
+    .modal_inner {
+      max-width: 700px;
+      height: 680px;
+
+      .modal_inner_cnt {
+        .modal_inner_cnt_top {
+          height: 150px;
+          display: block;
+          text-align: center;
+          padding-top: 50px;
+          padding-left: 10px;
+          padding-right: 25px;
+
+          h1 {
+            font-size: 26px;
+          }
+
+          button {
+            margin-top: 20px;
+            font-size: 14px;
+          }
+        }
+
+        .alphabetical_holder {
+          height: 500px;
+          max-width: 440px;
+          @include quickCenter("relative");
+          padding-left: 10px;
+          padding-right: 10px;
+
+          .modal_inner_cnt_box {
+            .modal_inner_cnt_row {
+              .series {
+                width: 100%;
+                max-width: 100%;
+                height: 140px;
+                margin-bottom: 12px;
+
+                &:nth-child(8),
+                &:nth-child(7) {
+                  margin-bottom: 12px;
+                }
+
+                &:last-child {
+                  margin-bottom: 0px;
+                }
+
+                .series_inner {
+                  button {
+                    padding-left: 15px;
+                    padding-bottom: 15px;
+
+                    span {
+                      font-size: 20px;
+                    }
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
 }
 
 // Smaller Devices (Phones)
@@ -893,7 +1277,7 @@
   .series_top {
     height: 400px;
     .bg {
-      height: 345px;
+      height: 315px;
     }
 
     .hover_trigger {
@@ -970,7 +1354,7 @@
     }
   }
   .series_browse_preferences {
-    margin-top: 20px;
+    margin-top: 0px;
 
     .series_browse_preferences_inner {
       padding-left: 20px;
@@ -1027,6 +1411,187 @@
       }
     }
   }
+  .popular_modal,
+  .latest_modal {
+    .modal_inner {
+      max-width: 700px;
+      height: 500px;
+      padding-left: 10px;
+      padding-right: 10px;
+
+      .modal_inner_cnt {
+        .modal_inner_cnt_top {
+          height: 150px;
+          display: block;
+          text-align: center;
+          padding-top: 50px;
+
+          h1 {
+            font-size: 24px;
+          }
+
+          button {
+            margin-top: 20px;
+            font-size: 14px;
+          }
+        }
+
+        .series_holder {
+          height: 320px;
+          max-width: 440px;
+          @include quickCenter("relative");
+          padding-top: 15px;
+          padding-bottom: 15px;
+          padding-left: 10px;
+          padding-right: 10px;
+
+          .modal_inner_cnt_box {
+            .modal_inner_cnt_row {
+              .series {
+                width: 100%;
+                max-width: 100%;
+                height: 130px;
+
+                .series_inner {
+                  button {
+                    padding-left: 12px;
+                    padding-bottom: 12px;
+                    font-size: 17px;
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+  .genres_modal {
+    .modal_inner {
+      max-width: 700px;
+      height: 500px;
+      padding-left: 10px;
+      padding-right: 10px;
+      .modal_inner_cnt {
+        .modal_inner_cnt_top {
+          height: 150px;
+          display: block;
+          text-align: center;
+          padding-top: 50px;
+
+          h1 {
+            font-size: 24px;
+          }
+
+          button {
+            margin-top: 20px;
+            font-size: 14px;
+          }
+        }
+
+        .genres_holder {
+          height: 320px;
+          max-width: 440px;
+          @include quickCenter("relative");
+          padding-top: 25px;
+          padding-bottom: 15px;
+          padding-left: 10px;
+          padding-right: 10px;
+
+          .genre_name {
+            text-align: center;
+            font-size: 20px;
+          }
+
+          .modal_inner_cnt_box {
+            .modal_inner_cnt_row {
+              .series {
+                width: 100%;
+                max-width: 100%;
+                height: 130px;
+
+                &:last-child {
+                  margin-bottom: 0;
+                }
+
+                .series_inner {
+                  button {
+                    padding-left: 12px;
+                    padding-bottom: 12px;
+
+                    span {
+                      font-size: 17px;
+                    }
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+  .alphabetically_modal {
+    .modal_inner {
+      max-width: 700px;
+      height: 500px;
+      padding-left: 10px;
+      padding-right: 10px;
+
+      .modal_inner_cnt {
+        .modal_inner_cnt_top {
+          height: 150px;
+          display: block;
+          text-align: center;
+          padding-top: 50px;
+
+          h1 {
+            font-size: 24px;
+          }
+
+          button {
+            margin-top: 20px;
+            font-size: 14px;
+          }
+        }
+
+        .alphabetical_holder {
+          height: 320px;
+          max-width: 440px;
+          @include quickCenter("relative");
+          padding-top: 25px;
+          padding-bottom: 15px;
+          padding-left: 10px;
+          padding-right: 10px;
+
+          .modal_inner_cnt_box {
+            .modal_inner_cnt_row {
+              .series {
+                width: 100%;
+                max-width: 100%;
+                height: 130px;
+
+                &:last-child {
+                  margin-bottom: 0;
+                }
+
+                .series_inner {
+                  button {
+                    padding-left: 12px;
+                    padding-bottom: 12px;
+
+                    span {
+                      font-size: 17px;
+                    }
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
 }
 
 // Pixel 2 XL
@@ -1034,7 +1599,7 @@
   .series_top {
     height: 250px;
     .bg {
-      height: 200px;
+      height: 180px;
     }
 
     .hover_trigger {
@@ -1071,12 +1636,12 @@
             }
 
             .series_top_inner_L {
-              height: 150px;
+              height: 140px;
               max-width: 60%;
               justify-content: flex-start;
 
               .series_top_inner_side_cnt {
-                padding-top: 0px;
+                padding-top: 40px;
                 padding-bottom: 0;
                 text-align: left;
 
@@ -1096,13 +1661,13 @@
             }
 
             .series_top_inner_R {
-              height: 150px;
+              height: 180px;
               max-width: 40%;
 
               .series_top_inner_side_cnt {
                 img {
                   max-width: 210px;
-                  top: 30px;
+                  top: 20px;
                   left: -50%;
                   scale: 1 !important;
                   transform: translateX(50%);
@@ -1115,7 +1680,7 @@
     }
   }
   .series_browse_preferences {
-    margin-top: 20px;
+    margin-top: 0px;
 
     .series_browse_preferences_inner {
       padding-left: 20px;
@@ -1174,6 +1739,194 @@
       }
     }
   }
+  .popular_modal,
+  .latest_modal {
+    .modal_inner {
+      max-width: 500px;
+      height: 280px;
+      padding-left: 10px;
+      padding-right: 10px;
+
+      .modal_inner_cnt {
+        .modal_inner_cnt_top {
+          height: 80px;
+          display: flex;
+          text-align: center;
+          padding-top: 0px;
+          padding-left: 5px;
+          padding-right: 5px;
+
+          h1 {
+            font-size: 21px;
+          }
+
+          button {
+            margin-top: 0px;
+            font-size: 14px;
+          }
+        }
+
+        .series_holder {
+          height: 190px;
+          max-width: 490px;
+          @include quickCenter("relative");
+          padding-top: 15px;
+          padding-bottom: 15px;
+          padding-left: 10px;
+          padding-right: 10px;
+
+          .modal_inner_cnt_box {
+            .modal_inner_cnt_row {
+              .series {
+                width: 100%;
+                max-width: 100%;
+                height: 130px;
+
+                .series_inner {
+                  button {
+                    padding-left: 12px;
+                    padding-bottom: 12px;
+                    font-size: 17px;
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+  .genres_modal {
+    .modal_inner {
+      max-width: 500px;
+      height: 280px;
+      padding-left: 10px;
+      padding-right: 10px;
+
+      .modal_inner_cnt {
+        .modal_inner_cnt_top {
+          height: 80px;
+          display: flex;
+          text-align: center;
+          padding-top: 0px;
+          padding-left: 5px;
+          padding-right: 5px;
+
+          h1 {
+            font-size: 21px;
+          }
+
+          button {
+            margin-top: 0px;
+            font-size: 14px;
+          }
+        }
+
+        .genres_holder {
+          height: 190px;
+          max-width: 490px;
+          @include quickCenter("relative");
+          padding-top: 25px;
+          padding-bottom: 25px;
+          padding-left: 10px;
+          padding-right: 10px;
+
+          .genre_name {
+            text-align: center;
+            font-size: 20px;
+          }
+
+          .modal_inner_cnt_box {
+            .modal_inner_cnt_row {
+              .series {
+                width: 100%;
+                max-width: 100%;
+                height: 130px;
+
+                &:last-child {
+                  margin-bottom: 0;
+                }
+
+                .series_inner {
+                  button {
+                    padding-left: 12px;
+                    padding-bottom: 12px;
+
+                    span {
+                      font-size: 17px;
+                    }
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+  .alphabetically_modal {
+    .modal_inner {
+      max-width: 500px;
+      height: 280px;
+      padding-left: 10px;
+      padding-right: 10px;
+
+      .modal_inner_cnt {
+        .modal_inner_cnt_top {
+          height: 80px;
+          display: flex;
+          text-align: center;
+          padding-top: 0px;
+          padding-left: 5px;
+          padding-right: 5px;
+
+          h1 {
+            font-size: 21px;
+          }
+
+          button {
+            margin-top: 0px;
+            font-size: 14px;
+          }
+        }
+
+        .alphabetical_holder {
+          height: 190px;
+          max-width: 490px;
+          @include quickCenter("relative");
+          padding-top: 25px;
+          padding-bottom: 25px;
+          padding-left: 10px;
+          padding-right: 10px;
+
+          .modal_inner_cnt_box {
+            .modal_inner_cnt_row {
+              .series {
+                width: 100%;
+                max-width: 100%;
+                height: 130px;
+
+                &:last-child {
+                  margin-bottom: 0;
+                }
+
+                .series_inner {
+                  button {
+                    padding-left: 12px;
+                    padding-bottom: 12px;
+
+                    span {
+                      font-size: 17px;
+                    }
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
 }
 
 // Ipad
@@ -1181,7 +1934,7 @@
   .series_top {
     height: 280px;
     .bg {
-      height: 245px;
+      height: 225px;
     }
 
     .hover_trigger {
@@ -1218,7 +1971,7 @@
             }
 
             .series_top_inner_L {
-              height: 200px;
+              height: 220px;
               max-width: 60%;
               justify-content: flex-start;
 
@@ -1262,7 +2015,7 @@
     }
   }
   .series_browse_preferences {
-    margin-top: 70px;
+    margin-top: 40px;
 
     .series_browse_preferences_inner {
       padding-left: 25px;
@@ -1321,13 +2074,184 @@
       }
     }
   }
+  .popular_modal,
+  .latest_modal {
+    .modal_inner {
+      max-width: 700px;
+      height: 550px;
+      padding-left: 10px;
+      padding-right: 10px;
+
+      .modal_inner_cnt {
+        .modal_inner_cnt_top {
+          height: 140px;
+          display: flex;
+          text-align: center;
+          padding-top: 0px;
+          padding-left: 5px;
+          padding-right: 5px;
+
+          h1 {
+            font-size: 26px;
+          }
+
+          button {
+            margin-top: 0px;
+            font-size: 17px;
+          }
+        }
+
+        .series_holder {
+          height: 375px;
+          max-width: 680px;
+          @include quickCenter("relative");
+          padding-top: 15px;
+          padding-bottom: 15px;
+          padding-left: 10px;
+          padding-right: 10px;
+
+          .modal_inner_cnt_box {
+            .modal_inner_cnt_row {
+              .series {
+                width: 100%;
+                max-width: 50%;
+                height: 170px;
+
+                .series_inner {
+                  max-width: 99.5%;
+
+                  button {
+                    padding-left: 12px;
+                    padding-bottom: 12px;
+                    font-size: 19px;
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+  .genres_modal {
+    .modal_inner {
+      max-width: 700px;
+      height: 620px;
+      padding-left: 10px;
+      padding-right: 10px;
+
+      .modal_inner_cnt {
+        .modal_inner_cnt_top {
+          height: 140px;
+          display: flex;
+          text-align: center;
+          padding-top: 0px;
+          padding-left: 5px;
+          padding-right: 5px;
+
+          h1 {
+            font-size: 26px;
+          }
+
+          button {
+            margin-top: 0px;
+            font-size: 17px;
+          }
+        }
+
+        .genres_holder {
+          max-width: 680px;
+          height: 440px;
+
+          .genre_name {
+            font-size: 24px;
+          }
+
+          .modal_inner_cnt_box {
+            .modal_inner_cnt_row {
+              .series {
+                max-width: 50%;
+                width: 100%;
+                height: 200px;
+
+                .series_inner {
+                  button {
+                    padding-left: 15px;
+                    padding-bottom: 15px;
+
+                    span {
+                      font-size: 21px;
+                    }
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+  .alphabetically_modal {
+    .modal_inner {
+      max-width: 700px;
+      height: 620px;
+      padding-left: 10px;
+      padding-right: 10px;
+
+      .modal_inner_cnt {
+        .modal_inner_cnt_top {
+          height: 140px;
+          display: flex;
+          text-align: center;
+          padding-top: 0px;
+          padding-left: 5px;
+          padding-right: 5px;
+
+          h1 {
+            font-size: 26px;
+          }
+
+          button {
+            margin-top: 0px;
+            font-size: 17px;
+          }
+        }
+
+        .alphabetical_holder {
+          max-width: 680px;
+          height: 440px;
+
+          .modal_inner_cnt_box {
+            .modal_inner_cnt_row {
+              .series {
+                max-width: 50%;
+                width: 100%;
+                height: 200px;
+
+                .series_inner {
+                  button {
+                    padding-left: 15px;
+                    padding-bottom: 15px;
+
+                    span {
+                      font-size: 21px;
+                    }
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
 }
 
 @media only screen and (min-device-width: 768px) and (max-device-width: 1024px) and (orientation: landscape) and (-webkit-min-device-pixel-ratio: 1) {
   .series_top {
     height: 250px;
     .bg {
-      height: 215px;
+      height: 195px;
     }
 
     .hover_trigger {
@@ -1369,7 +2293,7 @@
               justify-content: flex-start;
 
               .series_top_inner_side_cnt {
-                padding-top: 10px;
+                padding-top: 40px;
                 padding-bottom: 0;
                 text-align: left;
 
@@ -1389,7 +2313,7 @@
             }
 
             .series_top_inner_R {
-              height: 150px;
+              height: 180px;
               max-width: 40%;
 
               .series_top_inner_side_cnt {
@@ -1408,7 +2332,7 @@
     }
   }
   .series_browse_preferences {
-    margin-top: 50px;
+    margin-top: 20px;
 
     .series_browse_preferences_inner {
       padding-left: 25px;
@@ -1467,6 +2391,177 @@
       }
     }
   }
+  .popular_modal,
+  .latest_modal {
+    .modal_inner {
+      max-width: 700px;
+      height: 300px;
+      padding-left: 10px;
+      padding-right: 10px;
+
+      .modal_inner_cnt {
+        .modal_inner_cnt_top {
+          height: 90px;
+          display: flex;
+          text-align: center;
+          padding-top: 0px;
+          padding-left: 5px;
+          padding-right: 5px;
+
+          h1 {
+            font-size: 21px;
+          }
+
+          button {
+            margin-top: 0px;
+            font-size: 14px;
+          }
+        }
+
+        .series_holder {
+          height: 190px;
+          max-width: 690px;
+          @include quickCenter("relative");
+          padding-top: 15px;
+          padding-bottom: 15px;
+          padding-left: 10px;
+          padding-right: 10px;
+
+          .modal_inner_cnt_box {
+            .modal_inner_cnt_row {
+              .series {
+                width: 100%;
+                max-width: 50%;
+                height: 130px;
+
+                .series_inner {
+                  max-width: 99.5%;
+
+                  button {
+                    padding-left: 12px;
+                    padding-bottom: 12px;
+                    font-size: 17px;
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+  .genres_modal {
+    .modal_inner {
+      max-width: 700px;
+      height: 350px;
+      padding-left: 10px;
+      padding-right: 10px;
+
+      .modal_inner_cnt {
+        .modal_inner_cnt_top {
+          height: 140px;
+          display: flex;
+          text-align: center;
+          padding-top: 0px;
+          padding-left: 5px;
+          padding-right: 5px;
+
+          h1 {
+            font-size: 26px;
+          }
+
+          button {
+            margin-top: 0px;
+            font-size: 17px;
+          }
+        }
+
+        .genres_holder {
+          max-width: 680px;
+          height: 180px;
+
+          .genre_name {
+            font-size: 21px;
+          }
+
+          .modal_inner_cnt_box {
+            .modal_inner_cnt_row {
+              .series {
+                max-width: 50%;
+                width: 100%;
+                height: 140px;
+
+                .series_inner {
+                  button {
+                    padding-left: 15px;
+                    padding-bottom: 15px;
+
+                    span {
+                      font-size: 18px;
+                    }
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+  .alphabetically_modal {
+    .modal_inner {
+      max-width: 700px;
+      height: 350px;
+      padding-left: 10px;
+      padding-right: 10px;
+
+      .modal_inner_cnt {
+        .modal_inner_cnt_top {
+          height: 140px;
+          display: flex;
+          text-align: center;
+          padding-top: 0px;
+          padding-left: 5px;
+          padding-right: 5px;
+
+          h1 {
+            font-size: 26px;
+          }
+
+          button {
+            margin-top: 0px;
+            font-size: 17px;
+          }
+        }
+
+        .alphabetical_holder {
+          max-width: 680px;
+          height: 180px;
+
+          .modal_inner_cnt_box {
+            .modal_inner_cnt_row {
+              .series {
+                max-width: 50%;
+                width: 100%;
+                height: 140px;
+
+                .series_inner {
+                  button {
+                    padding-left: 15px;
+                    padding-bottom: 15px;
+
+                    span {
+                      font-size: 18px;
+                    }
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
 }
 
 // iPad Pro
@@ -1474,7 +2569,7 @@
   .series_top {
     height: 320px;
     .bg {
-      height: 265px;
+      height: 245px;
     }
 
     .hover_trigger {
@@ -1511,7 +2606,7 @@
             }
 
             .series_top_inner_L {
-              height: 200px;
+              height: 250px;
               max-width: 60%;
               justify-content: flex-start;
 
@@ -1536,7 +2631,7 @@
             }
 
             .series_top_inner_R {
-              height: 200px;
+              height: 250px;
               max-width: 40%;
 
               .series_top_inner_side_cnt {
@@ -1555,7 +2650,7 @@
     }
   }
   .series_browse_preferences {
-    margin-top: 70px;
+    margin-top: 40px;
 
     .series_browse_preferences_inner {
       padding-left: 25px;
@@ -1614,13 +2709,184 @@
       }
     }
   }
+  .popular_modal,
+  .latest_modal {
+    .modal_inner {
+      max-width: 900px;
+      height: 620px;
+      padding-left: 10px;
+      padding-right: 10px;
+
+      .modal_inner_cnt {
+        .modal_inner_cnt_top {
+          height: 140px;
+          display: flex;
+          text-align: center;
+          padding-top: 0px;
+          padding-left: 5px;
+          padding-right: 5px;
+
+          h1 {
+            font-size: 26px;
+          }
+
+          button {
+            margin-top: 0px;
+            font-size: 17px;
+          }
+        }
+
+        .series_holder {
+          height: 435px;
+          max-width: 840px;
+          @include quickCenter("relative");
+          padding-top: 15px;
+          padding-bottom: 15px;
+          padding-left: 10px;
+          padding-right: 10px;
+
+          .modal_inner_cnt_box {
+            .modal_inner_cnt_row {
+              .series {
+                width: 100%;
+                max-width: 50%;
+                height: 200px;
+
+                .series_inner {
+                  max-width: 99.5%;
+
+                  button {
+                    padding-left: 12px;
+                    padding-bottom: 12px;
+                    font-size: 19px;
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+  .genres_modal {
+    .modal_inner {
+      max-width: 900px;
+      height: 620px;
+      padding-left: 10px;
+      padding-right: 10px;
+
+      .modal_inner_cnt {
+        .modal_inner_cnt_top {
+          height: 140px;
+          display: flex;
+          text-align: center;
+          padding-top: 0px;
+          padding-left: 5px;
+          padding-right: 5px;
+
+          h1 {
+            font-size: 26px;
+          }
+
+          button {
+            margin-top: 0px;
+            font-size: 17px;
+          }
+        }
+
+        .genres_holder {
+          height: 435px;
+          max-width: 840px;
+
+          .genre_name {
+            font-size: 24px;
+          }
+
+          .modal_inner_cnt_box {
+            .modal_inner_cnt_row {
+              .series {
+                max-width: 50%;
+                width: 100%;
+                height: 200px;
+
+                .series_inner {
+                  button {
+                    padding-left: 15px;
+                    padding-bottom: 15px;
+
+                    span {
+                      font-size: 21px;
+                    }
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+  .alphabetically_modal {
+    .modal_inner {
+      max-width: 900px;
+      height: 620px;
+      padding-left: 10px;
+      padding-right: 10px;
+
+      .modal_inner_cnt {
+        .modal_inner_cnt_top {
+          height: 140px;
+          display: flex;
+          text-align: center;
+          padding-top: 0px;
+          padding-left: 5px;
+          padding-right: 5px;
+
+          h1 {
+            font-size: 26px;
+          }
+
+          button {
+            margin-top: 0px;
+            font-size: 17px;
+          }
+        }
+
+        .alphabetical_holder {
+          height: 435px;
+          max-width: 840px;
+
+          .modal_inner_cnt_box {
+            .modal_inner_cnt_row {
+              .series {
+                max-width: 50%;
+                width: 100%;
+                height: 200px;
+
+                .series_inner {
+                  button {
+                    padding-left: 15px;
+                    padding-bottom: 15px;
+
+                    span {
+                      font-size: 21px;
+                    }
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
 }
 
 @media only screen and (min-device-width: 1024px) and (max-device-width: 1366px) and (-webkit-min-device-pixel-ratio: 2) and (orientation: landscape) {
   .series_top {
     height: 370px;
     .bg {
-      height: 295px;
+      height: 275px;
     }
 
     .hover_trigger {
@@ -1657,7 +2923,7 @@
             }
 
             .series_top_inner_L {
-              height: 240px;
+              height: 260px;
               max-width: 60%;
               justify-content: flex-start;
 
@@ -1682,7 +2948,7 @@
             }
 
             .series_top_inner_R {
-              height: 240px;
+              height: 270px;
               max-width: 40%;
 
               .series_top_inner_side_cnt {
@@ -1701,7 +2967,7 @@
     }
   }
   .series_browse_preferences {
-    margin-top: 70px;
+    margin-top: 40px;
 
     .series_browse_preferences_inner {
       padding-left: 25px;
@@ -1760,6 +3026,177 @@
       }
     }
   }
+  .popular_modal,
+  .latest_modal {
+    .modal_inner {
+      max-width: 900px;
+      height: 620px;
+      padding-left: 10px;
+      padding-right: 10px;
+
+      .modal_inner_cnt {
+        .modal_inner_cnt_top {
+          height: 140px;
+          display: flex;
+          text-align: center;
+          padding-top: 0px;
+          padding-left: 5px;
+          padding-right: 5px;
+
+          h1 {
+            font-size: 26px;
+          }
+
+          button {
+            margin-top: 0px;
+            font-size: 17px;
+          }
+        }
+
+        .series_holder {
+          height: 435px;
+          max-width: 840px;
+          @include quickCenter("relative");
+          padding-top: 15px;
+          padding-bottom: 15px;
+          padding-left: 10px;
+          padding-right: 10px;
+
+          .modal_inner_cnt_box {
+            .modal_inner_cnt_row {
+              .series {
+                width: 100%;
+                max-width: 50%;
+                height: 200px;
+
+                .series_inner {
+                  max-width: 99.5%;
+
+                  button {
+                    padding-left: 12px;
+                    padding-bottom: 12px;
+                    font-size: 19px;
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+  .genres_modal {
+    .modal_inner {
+      max-width: 900px;
+      height: 620px;
+      padding-left: 10px;
+      padding-right: 10px;
+
+      .modal_inner_cnt {
+        .modal_inner_cnt_top {
+          height: 140px;
+          display: flex;
+          text-align: center;
+          padding-top: 0px;
+          padding-left: 5px;
+          padding-right: 5px;
+
+          h1 {
+            font-size: 26px;
+          }
+
+          button {
+            margin-top: 0px;
+            font-size: 17px;
+          }
+        }
+
+        .genres_holder {
+          height: 435px;
+          max-width: 840px;
+
+          .genre_name {
+            font-size: 24px;
+          }
+
+          .modal_inner_cnt_box {
+            .modal_inner_cnt_row {
+              .series {
+                max-width: 50%;
+                width: 100%;
+                height: 200px;
+
+                .series_inner {
+                  button {
+                    padding-left: 15px;
+                    padding-bottom: 15px;
+
+                    span {
+                      font-size: 21px;
+                    }
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+  .alphabetically_modal {
+    .modal_inner {
+      max-width: 900px;
+      height: 620px;
+      padding-left: 10px;
+      padding-right: 10px;
+
+      .modal_inner_cnt {
+        .modal_inner_cnt_top {
+          height: 140px;
+          display: flex;
+          text-align: center;
+          padding-top: 0px;
+          padding-left: 5px;
+          padding-right: 5px;
+
+          h1 {
+            font-size: 26px;
+          }
+
+          button {
+            margin-top: 0px;
+            font-size: 17px;
+          }
+        }
+
+        .alphabetical_holder {
+          height: 435px;
+          max-width: 840px;
+
+          .modal_inner_cnt_box {
+            .modal_inner_cnt_row {
+              .series {
+                max-width: 50%;
+                width: 100%;
+                height: 200px;
+
+                .series_inner {
+                  button {
+                    padding-left: 15px;
+                    padding-bottom: 15px;
+
+                    span {
+                      font-size: 21px;
+                    }
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
 }
 
 // Laptops
@@ -1767,7 +3204,7 @@
   .series_top {
     height: 360px;
     .bg {
-      height: 305px;
+      height: 295px;
     }
 
     .hover_trigger {
@@ -1804,7 +3241,7 @@
             }
 
             .series_top_inner_L {
-              height: 260px;
+              height: 280px;
               max-width: 60%;
               justify-content: flex-start;
 
@@ -1830,7 +3267,7 @@
             }
 
             .series_top_inner_R {
-              height: 260px;
+              height: 290px;
               max-width: 40%;
 
               .series_top_inner_side_cnt {
@@ -1849,7 +3286,7 @@
     }
   }
   .series_browse_preferences {
-    margin-top: 90px;
+    margin-top: 50px;
 
     .series_browse_preferences_inner {
       padding-left: 25px;
@@ -1900,6 +3337,187 @@
                   font-size: 23px;
                   padding-left: 12px;
                   padding-bottom: 12px;
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+  .popular_modal,
+  .latest_modal {
+    .modal_inner {
+      max-width: 1100px;
+      height: 620px;
+      padding-left: 10px;
+      padding-right: 10px;
+
+      .modal_inner_cnt {
+        .modal_inner_cnt_top {
+          height: 140px;
+          display: flex;
+          text-align: center;
+          padding-top: 0px;
+          padding-left: 5px;
+          padding-right: 5px;
+
+          h1 {
+            font-size: 35px;
+          }
+
+          button {
+            margin-top: 0px;
+            font-size: 21px;
+          }
+        }
+
+        .series_holder {
+          height: 435px;
+          max-width: 1040px;
+          @include quickCenter("relative");
+          padding-top: 15px;
+          padding-bottom: 15px;
+          padding-left: 10px;
+          padding-right: 10px;
+
+          .modal_inner_cnt_box {
+            .modal_inner_cnt_row {
+              .series {
+                width: 100%;
+                max-width: 50%;
+                height: 250px;
+
+                .series_inner {
+                  max-width: 99.5%;
+
+                  button {
+                    padding-left: 12px;
+                    padding-bottom: 12px;
+                    font-size: 24px;
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+  .genres_modal {
+    .modal_inner {
+      max-width: 1100px;
+      height: 600px;
+      padding-left: 10px;
+      padding-right: 10px;
+
+      .modal_inner_cnt {
+        .modal_inner_cnt_top {
+          height: 140px;
+          display: flex;
+          text-align: center;
+          padding-top: 0px;
+          padding-left: 5px;
+          padding-right: 5px;
+
+          h1 {
+            font-size: 35px;
+          }
+
+          button {
+            margin-top: 0px;
+            font-size: 21px;
+          }
+        }
+
+        .genres_holder {
+          height: 415px;
+          max-width: 1040px;
+          @include quickCenter("relative");
+          padding-top: 38px;
+          padding-bottom: 15px;
+          padding-left: 10px;
+          padding-right: 10px;
+
+          .genre_name {
+            font-size: 24px;
+          }
+
+          .modal_inner_cnt_box {
+            .modal_inner_cnt_row {
+              .series {
+                max-width: 50%;
+                width: 100%;
+                height: 200px;
+
+                .series_inner {
+                  button {
+                    padding-left: 15px;
+                    padding-bottom: 15px;
+
+                    span {
+                      font-size: 24px;
+                    }
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+  .alphabetically_modal {
+    .modal_inner {
+      max-width: 1100px;
+      height: 600px;
+      padding-left: 10px;
+      padding-right: 10px;
+
+      .modal_inner_cnt {
+        .modal_inner_cnt_top {
+          height: 140px;
+          display: flex;
+          text-align: center;
+          padding-top: 0px;
+          padding-left: 5px;
+          padding-right: 5px;
+
+          h1 {
+            font-size: 35px;
+          }
+
+          button {
+            margin-top: 0px;
+            font-size: 21px;
+          }
+        }
+
+        .alphabetical_holder {
+          height: 415px;
+          max-width: 1040px;
+          @include quickCenter("relative");
+          padding-top: 38px;
+          padding-bottom: 15px;
+          padding-left: 10px;
+          padding-right: 10px;
+
+          .modal_inner_cnt_box {
+            .modal_inner_cnt_row {
+              .series {
+                max-width: 50%;
+                width: 100%;
+                height: 200px;
+
+                .series_inner {
+                  button {
+                    padding-left: 15px;
+                    padding-bottom: 15px;
+
+                    span {
+                      font-size: 24px;
+                    }
+                  }
                 }
               }
             }
