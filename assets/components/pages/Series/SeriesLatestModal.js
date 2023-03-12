@@ -30,7 +30,7 @@ export const SeriesLatestModal = () => {
             <h1>Latest Series</h1>
 
             <button
-              className={`${styles.closer} half-second`}
+              className={`${styles.closer}`}
               onClick={() => {
                 CloseModal();
               }}

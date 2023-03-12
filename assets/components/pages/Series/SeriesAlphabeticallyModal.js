@@ -30,7 +30,7 @@ export const SeriesAlphabeticallyModal = () => {
             <h1>Alphabetical</h1>
 
             <button
-              className={`${styles.closer} half-second`}
+              className={`${styles.closer}`}
               onClick={() => {
                 CloseModal();
               }}

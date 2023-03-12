@@ -37,7 +37,7 @@ export const SeriesGenresModal = () => {
             <h1>Genres</h1>
 
             <button
-              className={`${styles.closer} half-second`}
+              className={`${styles.closer}`}
               onClick={() => {
                 CloseModal();
               }}
