@@ -140,6 +140,16 @@ export const Footer = () => {
                       <span
                         className="half-second"
                         onClick={() => {
+                          ExitAndRoute(router, "/series#Genres", seriesRouted);
+                        }}
+                      >
+                        Genres
+                      </span>
+                    </li>
+                    <li className="half-second series-link">
+                      <span
+                        className="half-second"
+                        onClick={() => {
                           ExitAndRoute(
                             router,
                             "/series#Alphabetically",
