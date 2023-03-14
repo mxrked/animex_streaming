@@ -119,6 +119,12 @@ const SERIES_ROUTES = [
   "Latest",
   "Genres",
   "Alphabetically",
+  "Shonen",
+  "Seinen",
+  "Comedy",
+  "Romance",
+  "Fantasy",
+  "Horror",
   "Attack_On_Titan",
   "Chainsaw_Man",
   "Demon_Slayer",
@@ -130,6 +136,14 @@ const SERIES_ROUTES = [
   "Vinland_Saga",
 ];
 const SERIES_PREFERENCES = ["Latest", "Popular", "Genres", "Alphabetically"];
+const SERIES_GENRES = [
+  "Shonen",
+  "Seinen",
+  "Comedy",
+  "Romance",
+  "Fantasy",
+  "Horror",
+];
 const SERIES_NAMES = [
   "Attack_On_Titan",
   "Chainsaw_Man",
@@ -201,7 +215,7 @@ export {
   VINLAND_SAGA_KWS,
 };
 
-export { SERIES_ROUTES, SERIES_PREFERENCES, SERIES_NAMES };
+export { SERIES_ROUTES, SERIES_PREFERENCES, SERIES_NAMES, SERIES_GENRES };
 
 export {
   ALL_GENRES,
