@@ -48,7 +48,9 @@ export const SeriesGenresModal = () => {
           </div>
 
           <div className={`${styles.genres_holder}`}>
-            <span className={`${styles.genre_name}`}>Shonen</span>
+            <span className={`${styles.genre_name}`} id="shonenSect">
+              Shonen
+            </span>
             <div className={`${styles.modal_inner_cnt_box} container-fluid`}>
               <div className={`${styles.modal_inner_cnt_row} row`}>
                 {SHONEN_SERIES.map((series) => (
@@ -83,7 +85,9 @@ export const SeriesGenresModal = () => {
               </div>
             </div>
 
-            <span className={`${styles.genre_name}`}>Seinen</span>
+            <span className={`${styles.genre_name}`} id="seinenSect">
+              Seinen
+            </span>
             <div className={`${styles.modal_inner_cnt_box} container-fluid`}>
               <div className={`${styles.modal_inner_cnt_row} row`}>
                 {SEINEN_SERIES.map((series) => (
@@ -118,7 +122,9 @@ export const SeriesGenresModal = () => {
               </div>
             </div>
 
-            <span className={`${styles.genre_name}`}>Comedy</span>
+            <span className={`${styles.genre_name}`} id="comedySect">
+              Comedy
+            </span>
             <div className={`${styles.modal_inner_cnt_box} container-fluid`}>
               <div className={`${styles.modal_inner_cnt_row} row`}>
                 {COMEDY_SERIES.map((series) => (
@@ -153,7 +159,9 @@ export const SeriesGenresModal = () => {
               </div>
             </div>
 
-            <span className={`${styles.genre_name}`}>Romance</span>
+            <span className={`${styles.genre_name}`} id="romanceSect">
+              Romance
+            </span>
             <div className={`${styles.modal_inner_cnt_box} container-fluid`}>
               <div className={`${styles.modal_inner_cnt_row} row`}>
                 {ROMANCE_SERIES.map((series) => (
@@ -188,7 +196,9 @@ export const SeriesGenresModal = () => {
               </div>
             </div>
 
-            <span className={`${styles.genre_name}`}>Fantasy</span>
+            <span className={`${styles.genre_name}`} id="fantasySect">
+              Fantasy
+            </span>
             <div className={`${styles.modal_inner_cnt_box} container-fluid`}>
               <div className={`${styles.modal_inner_cnt_row} row`}>
                 {FANTASY_SERIES.map((series) => (
@@ -223,7 +233,9 @@ export const SeriesGenresModal = () => {
               </div>
             </div>
 
-            <span className={`${styles.genre_name}`}>Horror</span>
+            <span className={`${styles.genre_name}`} id="horrorSect">
+              Horror
+            </span>
             <div className={`${styles.modal_inner_cnt_box} container-fluid`}>
               <div className={`${styles.modal_inner_cnt_row} row`}>
                 {HORROR_SERIES.map((series) => (

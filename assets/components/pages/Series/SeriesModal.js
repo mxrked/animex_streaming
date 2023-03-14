@@ -26,7 +26,7 @@ export const SeriesModal = () => {
 
       <div className={`${styles.series_modal_inner} full-second`}>
         <div className={`${styles.video_holder}`}>
-          <video controls id="seriesModalVideo">
+          <video controls id="seriesModalVideo" poster="">
             <source src="" type="video/mp4" />
           </video>
         </div>
