@@ -37,10 +37,10 @@ import { SeriesLatestModal } from "@/assets/components/pages/Series/SeriesLatest
 import { SeriesAlphabeticallyModal } from "@/assets/components/pages/Series/SeriesAlphabeticallyModal";
 import { SeriesGenresModal } from "@/assets/components/pages/Series/SeriesGenresModal";
 import { SeriesPopularModal } from "@/assets/components/pages/Series/SeriesPopularModal";
+import { SeriesModal } from "@/assets/components/pages/Series/SeriesModal";
 
 // Style Imports
 import "../assets/styles/modules/Series/Series.module.css";
-
 // Adding some json data to be used later
 export const getStaticProps = async () => {
   const SEARCH_RES = await fetch(
@@ -108,6 +108,8 @@ export default function Series({ display_search_data }) {
       <SeriesPopularModal />
       <SeriesGenresModal />
       <SeriesAlphabeticallyModal />
+
+      <SeriesModal />
 
       <main id="pageCnt" className="page-cnt full-second">
         <DesktopNav />
