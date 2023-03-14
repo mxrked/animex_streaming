@@ -4,6 +4,7 @@
  *
  */
 
+import CheckSeriesGenre from "../../checkers/series/CheckSeriesGenre";
 import CheckSeriesPreference from "../../checkers/series/CheckSeriesPreference";
 import DeclareStorageVariable from "@/assets/functions/data/storage/DeclareStorageVariable";
 
@@ -36,6 +37,7 @@ function DisplayPreferenceModal(modalId) {
 
 export default function TriggerSeriesPreferenceModal() {
   const SERIES_PREFERENCE = CheckSeriesPreference();
+  const GENRE = CheckSeriesGenre();
 
   let modalId;
 
@@ -59,5 +61,43 @@ export default function TriggerSeriesPreferenceModal() {
     modalId = "alphabeticallyPreferenceModal"; // Setting the modal id
 
     DisplayPreferenceModal(modalId);
+  }
+
+  // Genres
+  if (GENRE === "Shonen") {
+    modalId = "genresPreferenceModal"; // Setting the modal id
+    DisplayPreferenceModal(modalId);
+
+    document.getElementById("shonenSect").scrollIntoView(); // Scrolling the user to section
+  }
+  if (GENRE === "Seinen") {
+    modalId = "genresPreferenceModal"; // Setting the modal id
+    DisplayPreferenceModal(modalId);
+
+    document.getElementById("seinenSect").scrollIntoView(); // Scrolling the user to section
+  }
+  if (GENRE === "Comedy") {
+    modalId = "genresPreferenceModal"; // Setting the modal id
+    DisplayPreferenceModal(modalId);
+
+    document.getElementById("comedySect").scrollIntoView(); // Scrolling the user to section
+  }
+  if (GENRE === "Romance") {
+    modalId = "genresPreferenceModal"; // Setting the modal id
+    DisplayPreferenceModal(modalId);
+
+    document.getElementById("romanceSect").scrollIntoView(); // Scrolling the user to section
+  }
+  if (GENRE === "Fantasy") {
+    modalId = "genresPreferenceModal"; // Setting the modal id
+    DisplayPreferenceModal(modalId);
+
+    document.getElementById("fantasySect").scrollIntoView(); // Scrolling the user to section
+  }
+  if (GENRE === "Horror") {
+    modalId = "genresPreferenceModal"; // Setting the modal id
+    DisplayPreferenceModal(modalId);
+
+    document.getElementById("horrorSect").scrollIntoView(); // Scrolling the user to section
   }
 }

@@ -5,6 +5,7 @@
  */
 
 import { ALL_SERIES } from "@/assets/data/variables/ARRAYS";
+
 import DeclareStorageVariable from "@/assets/functions/data/storage/DeclareStorageVariable";
 import CheckSeries from "../../checkers/series/CheckSeries";
 
@@ -55,11 +56,14 @@ export default function TriggerSeriesModal() {
       SERIES_MODAL.style.opacity = 1;
       SERIES_MODAL.style.visibility = "visible";
 
-      SERIES_MODAL_VIDEO.src = ALL_SERIES[i].getVideo; // Changing the video source
+      // Changing the video source
+      SERIES_MODAL_VIDEO.src = ALL_SERIES[i].getVideo;
 
       setTimeout(() => {
         SERIES_MODAL.style.pointerEvents = "auto";
         SERIES_MODAL.style.overflowY = "auto";
+
+        DeclareStorageVariable("session", "Modal Opened", true); // Indicates a modal is opened
       }, 800);
     }
   }
