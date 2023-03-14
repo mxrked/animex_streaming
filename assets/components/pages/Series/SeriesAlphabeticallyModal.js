@@ -7,6 +7,7 @@
 import { BackgroundImage } from "react-image-and-background-image-fade";
 
 import CloseModal from "@/assets/functions/dom/closers/CloseModal";
+import TriggerSeriesModal from "@/assets/functions/dom/triggers/series/TriggerSeriesModal";
 
 import { ALPHABETICAL_SERIES } from "@/assets/data/variables/ARRAYS";
 
@@ -54,7 +55,18 @@ export const SeriesAlphabeticallyModal = () => {
                         height="100%"
                       />
 
-                      <button className={`${styles.darken} half-second`}>
+                      <button
+                        className={`${styles.darken} half-second`}
+                        onClick={() => {
+                          CloseModal();
+
+                          window.location.hash = series.getLink;
+
+                          setTimeout(() => {
+                            TriggerSeriesModal();
+                          }, 1600);
+                        }}
+                      >
                         <span>{series.getName}</span>
                       </button>
                     </div>

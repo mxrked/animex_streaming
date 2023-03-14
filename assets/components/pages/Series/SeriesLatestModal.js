@@ -9,6 +9,7 @@ import { BackgroundImage } from "react-image-and-background-image-fade";
 import { LATEST_SERIES } from "@/assets/data/variables/ARRAYS";
 
 import CloseModal from "@/assets/functions/dom/closers/CloseModal";
+import TriggerSeriesModal from "@/assets/functions/dom/triggers/series/TriggerSeriesModal";
 
 import styles from "../../../styles/modules/Series/Series.module.css";
 
@@ -54,7 +55,18 @@ export const SeriesLatestModal = () => {
                         height="100%"
                       />
 
-                      <button className={`${styles.darken} half-second`}>
+                      <button
+                        className={`${styles.darken} half-second`}
+                        onClick={() => {
+                          CloseModal();
+
+                          window.location.hash = series.getLink;
+
+                          setTimeout(() => {
+                            TriggerSeriesModal();
+                          }, 1600);
+                        }}
+                      >
                         <span>{series.getName}</span>
                       </button>
                     </div>
