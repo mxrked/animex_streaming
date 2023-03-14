@@ -9,6 +9,12 @@ import RemoveStorageVariable from "../../data/storage/RemoveStorageVariable";
 import { SERIES_ROUTES } from "@/assets/data/variables/ARRAYS";
 
 export default function CloseModal() {
+  const SERIES_MODAL_VIDEO = document.getElementById("seriesModalVideo");
+
+  // Pauses and resets video
+  SERIES_MODAL_VIDEO.pause();
+  SERIES_MODAL_VIDEO.currentTime = 0;
+
   // Removing hash from URL
   for (let i = 0; i < SERIES_ROUTES.length; i++) {
     if (window.location.hash == "#" + SERIES_ROUTES[i]) {
