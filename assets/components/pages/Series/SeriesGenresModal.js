@@ -4,6 +4,8 @@
  *
  */
 
+import { useEffect } from "react";
+
 import { BackgroundImage } from "react-image-and-background-image-fade";
 
 import CloseModal from "@/assets/functions/dom/closers/CloseModal";
@@ -21,6 +23,37 @@ import {
 import styles from "../../../styles/modules/Series/Series.module.css";
 
 export const SeriesGenresModal = () => {
+  // Series Hovers/Unhovers
+  useEffect(() => {
+    const SERIES_INNERS = document.querySelectorAll(".series-inner");
+
+    SERIES_INNERS.forEach((inner) => {
+      // Hovering
+      inner.addEventListener("mouseenter", (e) => {
+        // Hiding overlay
+        inner.querySelector(".series-inner-overlay").style.opacity = 0;
+        inner.querySelector(".series-inner-overlay").style.visibility =
+          "hidden";
+
+        // Showing button
+        inner.querySelector("button").style.opacity = 1;
+        inner.querySelector("button").style.visibility = "visible";
+      });
+
+      // Unhovering
+      inner.addEventListener("mouseleave", (e) => {
+        // Hiding button
+        inner.querySelector("button").style.opacity = 0;
+        inner.querySelector("button").style.visibility = "hidden";
+
+        // Showing overlay
+        inner.querySelector(".series-inner-overlay").style.opacity = 1;
+        inner.querySelector(".series-inner-overlay").style.visibility =
+          "visible";
+      });
+    });
+  }, []);
+
   return (
     <div
       id="genresPreferenceModal"
@@ -57,13 +90,21 @@ export const SeriesGenresModal = () => {
                   <div
                     className={`${styles.series} col-lg-4 col-md-4 col-sm-4 col-xs-12`}
                   >
-                    <div className={`${styles.series_inner}`}>
+                    <div className={`${styles.series_inner} series-inner`}>
                       <BackgroundImage
                         src={series.getImg}
                         className={`${styles.bg} half-second`}
                         width="100%"
                         height="100%"
                       />
+
+                      <div
+                        className={`${styles.overlay} series-inner-overlay half-second`}
+                      >
+                        <span>{series.getName}</span>
+                      </div>
+
+                      {/***/}
 
                       <button
                         className={`${styles.darken} half-second`}
@@ -77,7 +118,15 @@ export const SeriesGenresModal = () => {
                           }, 1600);
                         }}
                       >
-                        <span>{series.getName}</span>
+                        <span className={`${styles.series_name}`}>
+                          {series.getName}
+                        </span>
+
+                        <p>{series.getDesc}</p>
+
+                        <div className="half-second">
+                          <span>View</span>
+                        </div>
                       </button>
                     </div>
                   </div>
@@ -94,13 +143,21 @@ export const SeriesGenresModal = () => {
                   <div
                     className={`${styles.series} col-lg-4 col-md-4 col-sm-4 col-xs-12`}
                   >
-                    <div className={`${styles.series_inner}`}>
+                    <div className={`${styles.series_inner} series-inner`}>
                       <BackgroundImage
                         src={series.getImg}
                         className={`${styles.bg} half-second`}
                         width="100%"
                         height="100%"
                       />
+
+                      <div
+                        className={`${styles.overlay} series-inner-overlay half-second`}
+                      >
+                        <span>{series.getName}</span>
+                      </div>
+
+                      {/***/}
 
                       <button
                         className={`${styles.darken} half-second`}
@@ -114,7 +171,15 @@ export const SeriesGenresModal = () => {
                           }, 1600);
                         }}
                       >
-                        <span>{series.getName}</span>
+                        <span className={`${styles.series_name}`}>
+                          {series.getName}
+                        </span>
+
+                        <p>{series.getDesc}</p>
+
+                        <div className="half-second">
+                          <span>View</span>
+                        </div>
                       </button>
                     </div>
                   </div>
@@ -131,13 +196,21 @@ export const SeriesGenresModal = () => {
                   <div
                     className={`${styles.series} col-lg-4 col-md-4 col-sm-4 col-xs-12`}
                   >
-                    <div className={`${styles.series_inner}`}>
+                    <div className={`${styles.series_inner} series-inner`}>
                       <BackgroundImage
                         src={series.getImg}
                         className={`${styles.bg} half-second`}
                         width="100%"
                         height="100%"
                       />
+
+                      <div
+                        className={`${styles.overlay} series-inner-overlay half-second`}
+                      >
+                        <span>{series.getName}</span>
+                      </div>
+
+                      {/***/}
 
                       <button
                         className={`${styles.darken} half-second`}
@@ -151,7 +224,15 @@ export const SeriesGenresModal = () => {
                           }, 1600);
                         }}
                       >
-                        <span>{series.getName}</span>
+                        <span className={`${styles.series_name}`}>
+                          {series.getName}
+                        </span>
+
+                        <p>{series.getDesc}</p>
+
+                        <div className="half-second">
+                          <span>View</span>
+                        </div>
                       </button>
                     </div>
                   </div>
@@ -168,13 +249,21 @@ export const SeriesGenresModal = () => {
                   <div
                     className={`${styles.series} col-lg-4 col-md-4 col-sm-4 col-xs-12`}
                   >
-                    <div className={`${styles.series_inner}`}>
+                    <div className={`${styles.series_inner} series-inner`}>
                       <BackgroundImage
                         src={series.getImg}
                         className={`${styles.bg} half-second`}
                         width="100%"
                         height="100%"
                       />
+
+                      <div
+                        className={`${styles.overlay} series-inner-overlay half-second`}
+                      >
+                        <span>{series.getName}</span>
+                      </div>
+
+                      {/***/}
 
                       <button
                         className={`${styles.darken} half-second`}
@@ -188,7 +277,15 @@ export const SeriesGenresModal = () => {
                           }, 1600);
                         }}
                       >
-                        <span>{series.getName}</span>
+                        <span className={`${styles.series_name}`}>
+                          {series.getName}
+                        </span>
+
+                        <p>{series.getDesc}</p>
+
+                        <div className="half-second">
+                          <span>View</span>
+                        </div>
                       </button>
                     </div>
                   </div>
@@ -205,13 +302,21 @@ export const SeriesGenresModal = () => {
                   <div
                     className={`${styles.series} col-lg-4 col-md-4 col-sm-4 col-xs-12`}
                   >
-                    <div className={`${styles.series_inner}`}>
+                    <div className={`${styles.series_inner} series-inner`}>
                       <BackgroundImage
                         src={series.getImg}
                         className={`${styles.bg} half-second`}
                         width="100%"
                         height="100%"
                       />
+
+                      <div
+                        className={`${styles.overlay} series-inner-overlay half-second`}
+                      >
+                        <span>{series.getName}</span>
+                      </div>
+
+                      {/***/}
 
                       <button
                         className={`${styles.darken} half-second`}
@@ -225,7 +330,15 @@ export const SeriesGenresModal = () => {
                           }, 1600);
                         }}
                       >
-                        <span>{series.getName}</span>
+                        <span className={`${styles.series_name}`}>
+                          {series.getName}
+                        </span>
+
+                        <p>{series.getDesc}</p>
+
+                        <div className="half-second">
+                          <span>View</span>
+                        </div>
                       </button>
                     </div>
                   </div>
@@ -242,13 +355,21 @@ export const SeriesGenresModal = () => {
                   <div
                     className={`${styles.series} col-lg-4 col-md-4 col-sm-4 col-xs-12`}
                   >
-                    <div className={`${styles.series_inner}`}>
+                    <div className={`${styles.series_inner} series-inner`}>
                       <BackgroundImage
                         src={series.getImg}
                         className={`${styles.bg} half-second`}
                         width="100%"
                         height="100%"
                       />
+
+                      <div
+                        className={`${styles.overlay} series-inner-overlay half-second`}
+                      >
+                        <span>{series.getName}</span>
+                      </div>
+
+                      {/***/}
 
                       <button
                         className={`${styles.darken} half-second`}
@@ -262,7 +383,15 @@ export const SeriesGenresModal = () => {
                           }, 1600);
                         }}
                       >
-                        <span>{series.getName}</span>
+                        <span className={`${styles.series_name}`}>
+                          {series.getName}
+                        </span>
+
+                        <p>{series.getDesc}</p>
+
+                        <div className="half-second">
+                          <span>View</span>
+                        </div>
                       </button>
                     </div>
                   </div>

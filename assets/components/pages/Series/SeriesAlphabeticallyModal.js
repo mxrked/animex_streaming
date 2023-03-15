@@ -4,6 +4,8 @@
  *
  */
 
+import { useEffect } from "react";
+
 import { BackgroundImage } from "react-image-and-background-image-fade";
 
 import CloseModal from "@/assets/functions/dom/closers/CloseModal";
@@ -47,13 +49,21 @@ export const SeriesAlphabeticallyModal = () => {
                   <div
                     className={`${styles.series} col-lg-4 col-md-4 col-sm-4 col-xs-12`}
                   >
-                    <div className={`${styles.series_inner}`}>
+                    <div className={`${styles.series_inner} series-inner`}>
                       <BackgroundImage
                         src={series.getImg}
                         className={`${styles.bg} half-second`}
                         width="100%"
                         height="100%"
                       />
+
+                      <div
+                        className={`${styles.overlay} series-inner-overlay half-second`}
+                      >
+                        <span>{series.getName}</span>
+                      </div>
+
+                      {/***/}
 
                       <button
                         className={`${styles.darken} half-second`}
@@ -67,8 +77,33 @@ export const SeriesAlphabeticallyModal = () => {
                           }, 1600);
                         }}
                       >
-                        <span>{series.getName}</span>
+                        <span className={`${styles.series_name}`}>
+                          {series.getName}
+                        </span>
+
+                        <p>{series.getDesc}</p>
+
+                        <div className="half-second">
+                          <span>View</span>
+                        </div>
                       </button>
+
+                      {/** 
+                 <button
+                className={`${styles.darken} half-second`}
+                onClick={() => {
+                  CloseModal();
+
+                  window.location.hash = series.getLink;
+
+                  setTimeout(() => {
+                    TriggerSeriesModal();
+                  }, 1600);
+                }}
+              >
+                <span>{series.getName}</span>
+              </button>
+              */}
                     </div>
                   </div>
                 ))}
