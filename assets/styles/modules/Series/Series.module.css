@@ -295,6 +295,7 @@
   border-radius: 10px;
   overflow: hidden;
   position: relative;
+  white-space: pre-wrap;
   border: 2px solid #fafafa;
 }
 .popular_modal .modal_inner .modal_inner_cnt .series_holder .modal_inner_cnt_box .modal_inner_cnt_row .series .series_inner:hover button,
@@ -307,8 +308,8 @@
   background-position: center;
   background-repeat: no-repeat;
 }
-.popular_modal .modal_inner .modal_inner_cnt .series_holder .modal_inner_cnt_box .modal_inner_cnt_row .series .series_inner button,
-.latest_modal .modal_inner .modal_inner_cnt .series_holder .modal_inner_cnt_box .modal_inner_cnt_row .series .series_inner button {
+.popular_modal .modal_inner .modal_inner_cnt .series_holder .modal_inner_cnt_box .modal_inner_cnt_row .series .series_inner .overlay,
+.latest_modal .modal_inner .modal_inner_cnt .series_holder .modal_inner_cnt_box .modal_inner_cnt_row .series .series_inner .overlay {
   background-color: rgba(0, 0, 0, 0.6);
   position: absolute;
   width: 100%;
@@ -323,6 +324,52 @@
   font-family: "Lato Semibold";
   color: #fafafa;
   font-size: 28px;
+}
+.popular_modal .modal_inner .modal_inner_cnt .series_holder .modal_inner_cnt_box .modal_inner_cnt_row .series .series_inner button,
+.latest_modal .modal_inner .modal_inner_cnt .series_holder .modal_inner_cnt_box .modal_inner_cnt_row .series .series_inner button {
+  background-color: rgba(0, 0, 0, 0.6);
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  text-align: center;
+  padding-top: 20px;
+  padding-bottom: 20px;
+  color: #fafafa;
+  opacity: 0;
+  visibility: hidden;
+}
+.popular_modal .modal_inner .modal_inner_cnt .series_holder .modal_inner_cnt_box .modal_inner_cnt_row .series .series_inner button .series_name,
+.latest_modal .modal_inner .modal_inner_cnt .series_holder .modal_inner_cnt_box .modal_inner_cnt_row .series .series_inner button .series_name {
+  font-family: "Lato Semibold";
+  font-size: 28px;
+}
+.popular_modal .modal_inner .modal_inner_cnt .series_holder .modal_inner_cnt_box .modal_inner_cnt_row .series .series_inner button p,
+.latest_modal .modal_inner .modal_inner_cnt .series_holder .modal_inner_cnt_box .modal_inner_cnt_row .series .series_inner button p {
+  font-family: "Lato Regular";
+  font-size: 17px;
+  line-height: 24px;
+  display: block;
+  max-width: 370px;
+  word-wrap: pre-wrap;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 20px;
+}
+.popular_modal .modal_inner .modal_inner_cnt .series_holder .modal_inner_cnt_box .modal_inner_cnt_row .series .series_inner button div,
+.latest_modal .modal_inner .modal_inner_cnt .series_holder .modal_inner_cnt_box .modal_inner_cnt_row .series .series_inner button div {
+  height: 40px;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: 2px solid #fafafa;
+  max-width: 60px;
+  font-family: "Lato Semibold";
+  font-size: 17px;
 }
 
 .genres_modal .modal_inner {
@@ -418,6 +465,7 @@
   border-radius: 10px;
   overflow: hidden;
   position: relative;
+  white-space: pre-wrap;
   border: 2px solid #fafafa;
 }
 .genres_modal .modal_inner .modal_inner_cnt .genres_holder .modal_inner_cnt_box .modal_inner_cnt_row .series .series_inner:hover button {
@@ -428,7 +476,7 @@
   background-position: center;
   background-repeat: no-repeat;
 }
-.genres_modal .modal_inner .modal_inner_cnt .genres_holder .modal_inner_cnt_box .modal_inner_cnt_row .series .series_inner button {
+.genres_modal .modal_inner .modal_inner_cnt .genres_holder .modal_inner_cnt_box .modal_inner_cnt_row .series .series_inner .overlay {
   background-color: rgba(0, 0, 0, 0.6);
   position: absolute;
   width: 100%;
@@ -443,6 +491,48 @@
   font-family: "Lato Semibold";
   color: #fafafa;
   font-size: 28px;
+}
+.genres_modal .modal_inner .modal_inner_cnt .genres_holder .modal_inner_cnt_box .modal_inner_cnt_row .series .series_inner button {
+  background-color: rgba(0, 0, 0, 0.6);
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  text-align: center;
+  padding-top: 20px;
+  padding-bottom: 20px;
+  color: #fafafa;
+  opacity: 0;
+  visibility: hidden;
+}
+.genres_modal .modal_inner .modal_inner_cnt .genres_holder .modal_inner_cnt_box .modal_inner_cnt_row .series .series_inner button .series_name {
+  font-family: "Lato Semibold";
+  font-size: 28px;
+}
+.genres_modal .modal_inner .modal_inner_cnt .genres_holder .modal_inner_cnt_box .modal_inner_cnt_row .series .series_inner button p {
+  font-family: "Lato Regular";
+  font-size: 17px;
+  line-height: 24px;
+  display: block;
+  max-width: 370px;
+  word-wrap: pre-wrap;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 20px;
+}
+.genres_modal .modal_inner .modal_inner_cnt .genres_holder .modal_inner_cnt_box .modal_inner_cnt_row .series .series_inner button div {
+  height: 40px;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: 2px solid #fafafa;
+  max-width: 60px;
+  font-family: "Lato Semibold";
+  font-size: 17px;
 }
 
 .alphabetically_modal .modal_inner {
@@ -526,6 +616,7 @@
   border-radius: 10px;
   overflow: hidden;
   position: relative;
+  white-space: pre-wrap;
   border: 2px solid #fafafa;
 }
 .alphabetically_modal .modal_inner .modal_inner_cnt .alphabetical_holder .modal_inner_cnt_box .modal_inner_cnt_row .series .series_inner:hover button {
@@ -536,7 +627,7 @@
   background-position: center;
   background-repeat: no-repeat;
 }
-.alphabetically_modal .modal_inner .modal_inner_cnt .alphabetical_holder .modal_inner_cnt_box .modal_inner_cnt_row .series .series_inner button {
+.alphabetically_modal .modal_inner .modal_inner_cnt .alphabetical_holder .modal_inner_cnt_box .modal_inner_cnt_row .series .series_inner .overlay {
   background-color: rgba(0, 0, 0, 0.6);
   position: absolute;
   width: 100%;
@@ -551,6 +642,48 @@
   font-family: "Lato Semibold";
   color: #fafafa;
   font-size: 28px;
+}
+.alphabetically_modal .modal_inner .modal_inner_cnt .alphabetical_holder .modal_inner_cnt_box .modal_inner_cnt_row .series .series_inner button {
+  background-color: rgba(0, 0, 0, 0.6);
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  text-align: center;
+  padding-top: 20px;
+  padding-bottom: 20px;
+  color: #fafafa;
+  opacity: 0;
+  visibility: hidden;
+}
+.alphabetically_modal .modal_inner .modal_inner_cnt .alphabetical_holder .modal_inner_cnt_box .modal_inner_cnt_row .series .series_inner button .series_name {
+  font-family: "Lato Semibold";
+  font-size: 28px;
+}
+.alphabetically_modal .modal_inner .modal_inner_cnt .alphabetical_holder .modal_inner_cnt_box .modal_inner_cnt_row .series .series_inner button p {
+  font-family: "Lato Regular";
+  font-size: 17px;
+  line-height: 24px;
+  display: block;
+  max-width: 370px;
+  word-wrap: pre-wrap;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 20px;
+}
+.alphabetically_modal .modal_inner .modal_inner_cnt .alphabetical_holder .modal_inner_cnt_box .modal_inner_cnt_row .series .series_inner button div {
+  height: 40px;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: 2px solid #fafafa;
+  max-width: 60px;
+  font-family: "Lato Semibold";
+  font-size: 17px;
 }
 
 .series_modal {
@@ -640,9 +773,14 @@
   .latest_modal .modal_inner .modal_inner_cnt .series_holder .modal_inner_cnt_box .modal_inner_cnt_row .series {
     height: 410px;
   }
-  .popular_modal .modal_inner .modal_inner_cnt .series_holder .modal_inner_cnt_box .modal_inner_cnt_row .series .series_inner button,
-  .latest_modal .modal_inner .modal_inner_cnt .series_holder .modal_inner_cnt_box .modal_inner_cnt_row .series .series_inner button {
+  .popular_modal .modal_inner .modal_inner_cnt .series_holder .modal_inner_cnt_box .modal_inner_cnt_row .series .series_inner button .series_name,
+  .latest_modal .modal_inner .modal_inner_cnt .series_holder .modal_inner_cnt_box .modal_inner_cnt_row .series .series_inner button .series_name {
     font-size: 23px;
+  }
+  .popular_modal .modal_inner .modal_inner_cnt .series_holder .modal_inner_cnt_box .modal_inner_cnt_row .series .series_inner button p,
+  .latest_modal .modal_inner .modal_inner_cnt .series_holder .modal_inner_cnt_box .modal_inner_cnt_row .series .series_inner button p {
+    padding-left: 20px;
+    padding-right: 20px;
   }
   .genres_modal .modal_inner {
     max-width: 1200px;
@@ -660,8 +798,13 @@
     padding-left: 15px;
     padding-bottom: 15px;
   }
-  .genres_modal .modal_inner .modal_inner_cnt .genres_holder .modal_inner_cnt_box .modal_inner_cnt_row .series .series_inner button span {
+  .genres_modal .modal_inner .modal_inner_cnt .genres_holder .modal_inner_cnt_box .modal_inner_cnt_row .series .series_inner button .series_name {
     font-size: 23px;
+  }
+  .genres_modal .modal_inner .modal_inner_cnt .genres_holder .modal_inner_cnt_box .modal_inner_cnt_row .series .series_inner button p {
+    padding-left: 20px;
+    padding-right: 20px;
+    max-width: 440px;
   }
   .alphabetically_modal .modal_inner {
     max-width: 1200px;
@@ -677,8 +820,12 @@
   .alphabetically_modal .modal_inner .modal_inner_cnt .alphabetical_holder .modal_inner_cnt_box .modal_inner_cnt_row .series:nth-child(8), .alphabetically_modal .modal_inner .modal_inner_cnt .alphabetical_holder .modal_inner_cnt_box .modal_inner_cnt_row .series:nth-child(7) {
     margin-bottom: 30px;
   }
-  .alphabetically_modal .modal_inner .modal_inner_cnt .alphabetical_holder .modal_inner_cnt_box .modal_inner_cnt_row .series .series_inner button {
+  .alphabetically_modal .modal_inner .modal_inner_cnt .alphabetical_holder .modal_inner_cnt_box .modal_inner_cnt_row .series .series_inner button .series_name {
     font-size: 23px;
+  }
+  .alphabetically_modal .modal_inner .modal_inner_cnt .alphabetical_holder .modal_inner_cnt_box .modal_inner_cnt_row .series .series_inner button p {
+    padding-left: 20px;
+    padding-right: 20px;
   }
   .series_modal .series_modal_inner {
     max-width: 900px;
@@ -773,6 +920,20 @@
     max-width: 100%;
     height: 300px;
   }
+  .popular_modal .modal_inner .modal_inner_cnt .series_holder .modal_inner_cnt_box .modal_inner_cnt_row .series .series_inner .overlay,
+  .latest_modal .modal_inner .modal_inner_cnt .series_holder .modal_inner_cnt_box .modal_inner_cnt_row .series .series_inner .overlay {
+    opacity: 0 !important;
+    visibility: hidden !important;
+  }
+  .popular_modal .modal_inner .modal_inner_cnt .series_holder .modal_inner_cnt_box .modal_inner_cnt_row .series .series_inner button,
+  .latest_modal .modal_inner .modal_inner_cnt .series_holder .modal_inner_cnt_box .modal_inner_cnt_row .series .series_inner button {
+    opacity: 1 !important;
+    visibility: visible !important;
+  }
+  .popular_modal .modal_inner .modal_inner_cnt .series_holder .modal_inner_cnt_box .modal_inner_cnt_row .series .series_inner button p,
+  .latest_modal .modal_inner .modal_inner_cnt .series_holder .modal_inner_cnt_box .modal_inner_cnt_row .series .series_inner button p {
+    max-width: 400px;
+  }
   .genres_modal .modal_inner {
     max-width: 700px;
     height: 730px;
@@ -792,18 +953,19 @@
   .genres_modal .modal_inner .modal_inner_cnt .genres_holder .modal_inner_cnt_box .modal_inner_cnt_row .series {
     max-width: 100%;
     width: 100%;
-    height: 200px;
+    height: 220px;
+  }
+  .genres_modal .modal_inner .modal_inner_cnt .genres_holder .modal_inner_cnt_box .modal_inner_cnt_row .series .series_inner .overlay {
+    opacity: 0 !important;
+    visibility: hidden !important;
   }
   .genres_modal .modal_inner .modal_inner_cnt .genres_holder .modal_inner_cnt_box .modal_inner_cnt_row .series .series_inner button {
-    padding-left: 15px;
-    padding-bottom: 15px;
-  }
-  .genres_modal .modal_inner .modal_inner_cnt .genres_holder .modal_inner_cnt_box .modal_inner_cnt_row .series .series_inner button span {
-    font-size: 24px;
+    opacity: 1 !important;
+    visibility: visible !important;
   }
   .alphabetically_modal .modal_inner {
     max-width: 700px;
-    height: 900px;
+    height: 730px;
   }
   .alphabetically_modal .modal_inner .modal_inner_cnt .modal_inner_cnt_top {
     height: 150px;
@@ -823,6 +985,14 @@
   }
   .alphabetically_modal .modal_inner .modal_inner_cnt .alphabetical_holder .modal_inner_cnt_box .modal_inner_cnt_row .series:nth-child(8), .alphabetically_modal .modal_inner .modal_inner_cnt .alphabetical_holder .modal_inner_cnt_box .modal_inner_cnt_row .series:nth-child(7) {
     margin-bottom: 30px;
+  }
+  .alphabetically_modal .modal_inner .modal_inner_cnt .alphabetical_holder .modal_inner_cnt_box .modal_inner_cnt_row .series .series_inner .overlay {
+    opacity: 0 !important;
+    visibility: hidden !important;
+  }
+  .alphabetically_modal .modal_inner .modal_inner_cnt .alphabetical_holder .modal_inner_cnt_box .modal_inner_cnt_row .series .series_inner button {
+    opacity: 1 !important;
+    visibility: visible !important;
   }
   .series_modal .series_modal_inner {
     max-width: 700px;
@@ -945,13 +1115,31 @@
   .latest_modal .modal_inner .modal_inner_cnt .series_holder .modal_inner_cnt_box .modal_inner_cnt_row .series {
     width: 100%;
     max-width: 100%;
-    height: 170px;
+    height: 230px;
+  }
+  .popular_modal .modal_inner .modal_inner_cnt .series_holder .modal_inner_cnt_box .modal_inner_cnt_row .series .series_inner .overlay,
+  .latest_modal .modal_inner .modal_inner_cnt .series_holder .modal_inner_cnt_box .modal_inner_cnt_row .series .series_inner .overlay {
+    opacity: 0 !important;
+    visibility: hidden !important;
   }
   .popular_modal .modal_inner .modal_inner_cnt .series_holder .modal_inner_cnt_box .modal_inner_cnt_row .series .series_inner button,
   .latest_modal .modal_inner .modal_inner_cnt .series_holder .modal_inner_cnt_box .modal_inner_cnt_row .series .series_inner button {
-    padding-left: 12px;
-    padding-bottom: 12px;
+    opacity: 1 !important;
+    visibility: visible !important;
+  }
+  .popular_modal .modal_inner .modal_inner_cnt .series_holder .modal_inner_cnt_box .modal_inner_cnt_row .series .series_inner button .series_name,
+  .latest_modal .modal_inner .modal_inner_cnt .series_holder .modal_inner_cnt_box .modal_inner_cnt_row .series .series_inner button .series_name {
     font-size: 20px;
+  }
+  .popular_modal .modal_inner .modal_inner_cnt .series_holder .modal_inner_cnt_box .modal_inner_cnt_row .series .series_inner button p,
+  .latest_modal .modal_inner .modal_inner_cnt .series_holder .modal_inner_cnt_box .modal_inner_cnt_row .series .series_inner button p {
+    font-size: 14px;
+  }
+  .popular_modal .modal_inner .modal_inner_cnt .series_holder .modal_inner_cnt_box .modal_inner_cnt_row .series .series_inner button div,
+  .latest_modal .modal_inner .modal_inner_cnt .series_holder .modal_inner_cnt_box .modal_inner_cnt_row .series .series_inner button div {
+    font-size: 15px;
+    max-width: 55px;
+    height: 35px;
   }
   .genres_modal .modal_inner {
     max-width: 700px;
@@ -987,18 +1175,31 @@
   .genres_modal .modal_inner .modal_inner_cnt .genres_holder .modal_inner_cnt_box .modal_inner_cnt_row .series {
     width: 100%;
     max-width: 100%;
-    height: 140px;
+    height: 230px;
     margin-bottom: 12px;
   }
   .genres_modal .modal_inner .modal_inner_cnt .genres_holder .modal_inner_cnt_box .modal_inner_cnt_row .series:last-child {
     margin-bottom: 25px;
   }
-  .genres_modal .modal_inner .modal_inner_cnt .genres_holder .modal_inner_cnt_box .modal_inner_cnt_row .series .series_inner button {
-    padding-left: 15px;
-    padding-bottom: 15px;
+  .genres_modal .modal_inner .modal_inner_cnt .genres_holder .modal_inner_cnt_box .modal_inner_cnt_row .series .series_inner .overlay {
+    opacity: 0 !important;
+    visibility: hidden !important;
   }
-  .genres_modal .modal_inner .modal_inner_cnt .genres_holder .modal_inner_cnt_box .modal_inner_cnt_row .series .series_inner button span {
+  .genres_modal .modal_inner .modal_inner_cnt .genres_holder .modal_inner_cnt_box .modal_inner_cnt_row .series .series_inner button {
+    opacity: 1 !important;
+    visibility: visible !important;
+    padding-left: 0;
+  }
+  .genres_modal .modal_inner .modal_inner_cnt .genres_holder .modal_inner_cnt_box .modal_inner_cnt_row .series .series_inner button .series_name {
     font-size: 20px;
+  }
+  .genres_modal .modal_inner .modal_inner_cnt .genres_holder .modal_inner_cnt_box .modal_inner_cnt_row .series .series_inner button p {
+    font-size: 14px;
+  }
+  .genres_modal .modal_inner .modal_inner_cnt .genres_holder .modal_inner_cnt_box .modal_inner_cnt_row .series .series_inner button div {
+    font-size: 15px;
+    max-width: 55px;
+    height: 35px;
   }
   .alphabetically_modal .modal_inner {
     max-width: 700px;
@@ -1030,7 +1231,7 @@
   .alphabetically_modal .modal_inner .modal_inner_cnt .alphabetical_holder .modal_inner_cnt_box .modal_inner_cnt_row .series {
     width: 100%;
     max-width: 100%;
-    height: 140px;
+    height: 230px;
     margin-bottom: 12px;
   }
   .alphabetically_modal .modal_inner .modal_inner_cnt .alphabetical_holder .modal_inner_cnt_box .modal_inner_cnt_row .series:nth-child(8), .alphabetically_modal .modal_inner .modal_inner_cnt .alphabetical_holder .modal_inner_cnt_box .modal_inner_cnt_row .series:nth-child(7) {
@@ -1039,12 +1240,25 @@
   .alphabetically_modal .modal_inner .modal_inner_cnt .alphabetical_holder .modal_inner_cnt_box .modal_inner_cnt_row .series:last-child {
     margin-bottom: 0px;
   }
-  .alphabetically_modal .modal_inner .modal_inner_cnt .alphabetical_holder .modal_inner_cnt_box .modal_inner_cnt_row .series .series_inner button {
-    padding-left: 15px;
-    padding-bottom: 15px;
+  .alphabetically_modal .modal_inner .modal_inner_cnt .alphabetical_holder .modal_inner_cnt_box .modal_inner_cnt_row .series .series_inner .overlay {
+    opacity: 0 !important;
+    visibility: hidden !important;
   }
-  .alphabetically_modal .modal_inner .modal_inner_cnt .alphabetical_holder .modal_inner_cnt_box .modal_inner_cnt_row .series .series_inner button span {
+  .alphabetically_modal .modal_inner .modal_inner_cnt .alphabetical_holder .modal_inner_cnt_box .modal_inner_cnt_row .series .series_inner button {
+    opacity: 1 !important;
+    visibility: visible !important;
+    padding-left: 0;
+  }
+  .alphabetically_modal .modal_inner .modal_inner_cnt .alphabetical_holder .modal_inner_cnt_box .modal_inner_cnt_row .series .series_inner button .series_name {
     font-size: 20px;
+  }
+  .alphabetically_modal .modal_inner .modal_inner_cnt .alphabetical_holder .modal_inner_cnt_box .modal_inner_cnt_row .series .series_inner button p {
+    font-size: 14px;
+  }
+  .alphabetically_modal .modal_inner .modal_inner_cnt .alphabetical_holder .modal_inner_cnt_box .modal_inner_cnt_row .series .series_inner button div {
+    font-size: 15px;
+    max-width: 55px;
+    height: 35px;
   }
   .series_modal .series_modal_inner {
     max-width: 450px;
@@ -1179,13 +1393,31 @@
   .latest_modal .modal_inner .modal_inner_cnt .series_holder .modal_inner_cnt_box .modal_inner_cnt_row .series {
     width: 100%;
     max-width: 100%;
-    height: 130px;
+    height: 240px;
+  }
+  .popular_modal .modal_inner .modal_inner_cnt .series_holder .modal_inner_cnt_box .modal_inner_cnt_row .series .series_inner .overlay,
+  .latest_modal .modal_inner .modal_inner_cnt .series_holder .modal_inner_cnt_box .modal_inner_cnt_row .series .series_inner .overlay {
+    opacity: 0 !important;
+    visibility: hidden !important;
   }
   .popular_modal .modal_inner .modal_inner_cnt .series_holder .modal_inner_cnt_box .modal_inner_cnt_row .series .series_inner button,
   .latest_modal .modal_inner .modal_inner_cnt .series_holder .modal_inner_cnt_box .modal_inner_cnt_row .series .series_inner button {
-    padding-left: 12px;
-    padding-bottom: 12px;
-    font-size: 17px;
+    opacity: 1 !important;
+    visibility: visible !important;
+  }
+  .popular_modal .modal_inner .modal_inner_cnt .series_holder .modal_inner_cnt_box .modal_inner_cnt_row .series .series_inner button .series_name,
+  .latest_modal .modal_inner .modal_inner_cnt .series_holder .modal_inner_cnt_box .modal_inner_cnt_row .series .series_inner button .series_name {
+    font-size: 18px;
+  }
+  .popular_modal .modal_inner .modal_inner_cnt .series_holder .modal_inner_cnt_box .modal_inner_cnt_row .series .series_inner button p,
+  .latest_modal .modal_inner .modal_inner_cnt .series_holder .modal_inner_cnt_box .modal_inner_cnt_row .series .series_inner button p {
+    font-size: 14px;
+  }
+  .popular_modal .modal_inner .modal_inner_cnt .series_holder .modal_inner_cnt_box .modal_inner_cnt_row .series .series_inner button div,
+  .latest_modal .modal_inner .modal_inner_cnt .series_holder .modal_inner_cnt_box .modal_inner_cnt_row .series .series_inner button div {
+    font-size: 15px;
+    max-width: 55px;
+    height: 35px;
   }
   .genres_modal .modal_inner {
     max-width: 700px;
@@ -1223,17 +1455,29 @@
   .genres_modal .modal_inner .modal_inner_cnt .genres_holder .modal_inner_cnt_box .modal_inner_cnt_row .series {
     width: 100%;
     max-width: 100%;
-    height: 130px;
+    height: 250px;
   }
   .genres_modal .modal_inner .modal_inner_cnt .genres_holder .modal_inner_cnt_box .modal_inner_cnt_row .series:last-child {
     margin-bottom: 0;
   }
-  .genres_modal .modal_inner .modal_inner_cnt .genres_holder .modal_inner_cnt_box .modal_inner_cnt_row .series .series_inner button {
-    padding-left: 12px;
-    padding-bottom: 12px;
+  .genres_modal .modal_inner .modal_inner_cnt .genres_holder .modal_inner_cnt_box .modal_inner_cnt_row .series .series_inner .overlay {
+    opacity: 0 !important;
+    visibility: hidden !important;
   }
-  .genres_modal .modal_inner .modal_inner_cnt .genres_holder .modal_inner_cnt_box .modal_inner_cnt_row .series .series_inner button span {
-    font-size: 17px;
+  .genres_modal .modal_inner .modal_inner_cnt .genres_holder .modal_inner_cnt_box .modal_inner_cnt_row .series .series_inner button {
+    opacity: 1 !important;
+    visibility: visible !important;
+  }
+  .genres_modal .modal_inner .modal_inner_cnt .genres_holder .modal_inner_cnt_box .modal_inner_cnt_row .series .series_inner button .series_name {
+    font-size: 18px;
+  }
+  .genres_modal .modal_inner .modal_inner_cnt .genres_holder .modal_inner_cnt_box .modal_inner_cnt_row .series .series_inner button p {
+    font-size: 14px;
+  }
+  .genres_modal .modal_inner .modal_inner_cnt .genres_holder .modal_inner_cnt_box .modal_inner_cnt_row .series .series_inner button div {
+    font-size: 15px;
+    max-width: 55px;
+    height: 35px;
   }
   .alphabetically_modal .modal_inner {
     max-width: 700px;
@@ -1267,17 +1511,29 @@
   .alphabetically_modal .modal_inner .modal_inner_cnt .alphabetical_holder .modal_inner_cnt_box .modal_inner_cnt_row .series {
     width: 100%;
     max-width: 100%;
-    height: 130px;
+    height: 250px;
   }
   .alphabetically_modal .modal_inner .modal_inner_cnt .alphabetical_holder .modal_inner_cnt_box .modal_inner_cnt_row .series:last-child {
     margin-bottom: 0;
   }
-  .alphabetically_modal .modal_inner .modal_inner_cnt .alphabetical_holder .modal_inner_cnt_box .modal_inner_cnt_row .series .series_inner button {
-    padding-left: 12px;
-    padding-bottom: 12px;
+  .alphabetically_modal .modal_inner .modal_inner_cnt .alphabetical_holder .modal_inner_cnt_box .modal_inner_cnt_row .series .series_inner .overlay {
+    opacity: 0 !important;
+    visibility: hidden !important;
   }
-  .alphabetically_modal .modal_inner .modal_inner_cnt .alphabetical_holder .modal_inner_cnt_box .modal_inner_cnt_row .series .series_inner button span {
-    font-size: 17px;
+  .alphabetically_modal .modal_inner .modal_inner_cnt .alphabetical_holder .modal_inner_cnt_box .modal_inner_cnt_row .series .series_inner button {
+    opacity: 1 !important;
+    visibility: visible !important;
+  }
+  .alphabetically_modal .modal_inner .modal_inner_cnt .alphabetical_holder .modal_inner_cnt_box .modal_inner_cnt_row .series .series_inner button .series_name {
+    font-size: 18px;
+  }
+  .alphabetically_modal .modal_inner .modal_inner_cnt .alphabetical_holder .modal_inner_cnt_box .modal_inner_cnt_row .series .series_inner button p {
+    font-size: 14px;
+  }
+  .alphabetically_modal .modal_inner .modal_inner_cnt .alphabetical_holder .modal_inner_cnt_box .modal_inner_cnt_row .series .series_inner button div {
+    font-size: 15px;
+    max-width: 55px;
+    height: 35px;
   }
   .series_modal .series_modal_inner {
     max-width: 95%;
@@ -1422,13 +1678,31 @@
   .latest_modal .modal_inner .modal_inner_cnt .series_holder .modal_inner_cnt_box .modal_inner_cnt_row .series {
     width: 100%;
     max-width: 100%;
-    height: 130px;
+    height: 250px;
+  }
+  .popular_modal .modal_inner .modal_inner_cnt .series_holder .modal_inner_cnt_box .modal_inner_cnt_row .series .series_inner .overlay,
+  .latest_modal .modal_inner .modal_inner_cnt .series_holder .modal_inner_cnt_box .modal_inner_cnt_row .series .series_inner .overlay {
+    opacity: 0 !important;
+    visibility: hidden !important;
   }
   .popular_modal .modal_inner .modal_inner_cnt .series_holder .modal_inner_cnt_box .modal_inner_cnt_row .series .series_inner button,
   .latest_modal .modal_inner .modal_inner_cnt .series_holder .modal_inner_cnt_box .modal_inner_cnt_row .series .series_inner button {
-    padding-left: 12px;
-    padding-bottom: 12px;
-    font-size: 17px;
+    opacity: 1 !important;
+    visibility: visible !important;
+  }
+  .popular_modal .modal_inner .modal_inner_cnt .series_holder .modal_inner_cnt_box .modal_inner_cnt_row .series .series_inner button .series_name,
+  .latest_modal .modal_inner .modal_inner_cnt .series_holder .modal_inner_cnt_box .modal_inner_cnt_row .series .series_inner button .series_name {
+    font-size: 21px;
+  }
+  .popular_modal .modal_inner .modal_inner_cnt .series_holder .modal_inner_cnt_box .modal_inner_cnt_row .series .series_inner button p,
+  .latest_modal .modal_inner .modal_inner_cnt .series_holder .modal_inner_cnt_box .modal_inner_cnt_row .series .series_inner button p {
+    font-size: 14px;
+  }
+  .popular_modal .modal_inner .modal_inner_cnt .series_holder .modal_inner_cnt_box .modal_inner_cnt_row .series .series_inner button div,
+  .latest_modal .modal_inner .modal_inner_cnt .series_holder .modal_inner_cnt_box .modal_inner_cnt_row .series .series_inner button div {
+    font-size: 15px;
+    max-width: 55px;
+    height: 35px;
   }
   .genres_modal .modal_inner {
     max-width: 500px;
@@ -1468,17 +1742,29 @@
   .genres_modal .modal_inner .modal_inner_cnt .genres_holder .modal_inner_cnt_box .modal_inner_cnt_row .series {
     width: 100%;
     max-width: 100%;
-    height: 130px;
+    height: 250px;
   }
   .genres_modal .modal_inner .modal_inner_cnt .genres_holder .modal_inner_cnt_box .modal_inner_cnt_row .series:last-child {
     margin-bottom: 0;
   }
-  .genres_modal .modal_inner .modal_inner_cnt .genres_holder .modal_inner_cnt_box .modal_inner_cnt_row .series .series_inner button {
-    padding-left: 12px;
-    padding-bottom: 12px;
+  .genres_modal .modal_inner .modal_inner_cnt .genres_holder .modal_inner_cnt_box .modal_inner_cnt_row .series .series_inner .overlay {
+    opacity: 0 !important;
+    visibility: hidden !important;
   }
-  .genres_modal .modal_inner .modal_inner_cnt .genres_holder .modal_inner_cnt_box .modal_inner_cnt_row .series .series_inner button span {
-    font-size: 17px;
+  .genres_modal .modal_inner .modal_inner_cnt .genres_holder .modal_inner_cnt_box .modal_inner_cnt_row .series .series_inner button {
+    opacity: 1 !important;
+    visibility: visible !important;
+  }
+  .genres_modal .modal_inner .modal_inner_cnt .genres_holder .modal_inner_cnt_box .modal_inner_cnt_row .series .series_inner button .series_name {
+    font-size: 21px;
+  }
+  .genres_modal .modal_inner .modal_inner_cnt .genres_holder .modal_inner_cnt_box .modal_inner_cnt_row .series .series_inner button p {
+    font-size: 14px;
+  }
+  .genres_modal .modal_inner .modal_inner_cnt .genres_holder .modal_inner_cnt_box .modal_inner_cnt_row .series .series_inner button div {
+    font-size: 15px;
+    max-width: 55px;
+    height: 35px;
   }
   .alphabetically_modal .modal_inner {
     max-width: 500px;
@@ -1514,17 +1800,29 @@
   .alphabetically_modal .modal_inner .modal_inner_cnt .alphabetical_holder .modal_inner_cnt_box .modal_inner_cnt_row .series {
     width: 100%;
     max-width: 100%;
-    height: 130px;
+    height: 240px;
   }
   .alphabetically_modal .modal_inner .modal_inner_cnt .alphabetical_holder .modal_inner_cnt_box .modal_inner_cnt_row .series:last-child {
     margin-bottom: 0;
   }
-  .alphabetically_modal .modal_inner .modal_inner_cnt .alphabetical_holder .modal_inner_cnt_box .modal_inner_cnt_row .series .series_inner button {
-    padding-left: 12px;
-    padding-bottom: 12px;
+  .alphabetically_modal .modal_inner .modal_inner_cnt .alphabetical_holder .modal_inner_cnt_box .modal_inner_cnt_row .series .series_inner .overlay {
+    opacity: 0 !important;
+    visibility: hidden !important;
   }
-  .alphabetically_modal .modal_inner .modal_inner_cnt .alphabetical_holder .modal_inner_cnt_box .modal_inner_cnt_row .series .series_inner button span {
-    font-size: 17px;
+  .alphabetically_modal .modal_inner .modal_inner_cnt .alphabetical_holder .modal_inner_cnt_box .modal_inner_cnt_row .series .series_inner button {
+    opacity: 1 !important;
+    visibility: visible !important;
+  }
+  .alphabetically_modal .modal_inner .modal_inner_cnt .alphabetical_holder .modal_inner_cnt_box .modal_inner_cnt_row .series .series_inner button .series_name {
+    font-size: 21px;
+  }
+  .alphabetically_modal .modal_inner .modal_inner_cnt .alphabetical_holder .modal_inner_cnt_box .modal_inner_cnt_row .series .series_inner button p {
+    font-size: 14px;
+  }
+  .alphabetically_modal .modal_inner .modal_inner_cnt .alphabetical_holder .modal_inner_cnt_box .modal_inner_cnt_row .series .series_inner button div {
+    font-size: 15px;
+    max-width: 55px;
+    height: 35px;
   }
 }
 @media only screen and (min-device-width: 768px) and (max-device-width: 1024px) and (orientation: portrait) and (-webkit-min-device-pixel-ratio: 1) {
@@ -1663,17 +1961,31 @@
   .latest_modal .modal_inner .modal_inner_cnt .series_holder .modal_inner_cnt_box .modal_inner_cnt_row .series {
     width: 100%;
     max-width: 50%;
-    height: 170px;
+    height: 240px;
   }
-  .popular_modal .modal_inner .modal_inner_cnt .series_holder .modal_inner_cnt_box .modal_inner_cnt_row .series .series_inner,
-  .latest_modal .modal_inner .modal_inner_cnt .series_holder .modal_inner_cnt_box .modal_inner_cnt_row .series .series_inner {
-    max-width: 99.5%;
+  .popular_modal .modal_inner .modal_inner_cnt .series_holder .modal_inner_cnt_box .modal_inner_cnt_row .series .series_inner .overlay,
+  .latest_modal .modal_inner .modal_inner_cnt .series_holder .modal_inner_cnt_box .modal_inner_cnt_row .series .series_inner .overlay {
+    opacity: 0 !important;
+    visibility: hidden !important;
   }
   .popular_modal .modal_inner .modal_inner_cnt .series_holder .modal_inner_cnt_box .modal_inner_cnt_row .series .series_inner button,
   .latest_modal .modal_inner .modal_inner_cnt .series_holder .modal_inner_cnt_box .modal_inner_cnt_row .series .series_inner button {
-    padding-left: 12px;
-    padding-bottom: 12px;
-    font-size: 19px;
+    opacity: 1 !important;
+    visibility: visible !important;
+  }
+  .popular_modal .modal_inner .modal_inner_cnt .series_holder .modal_inner_cnt_box .modal_inner_cnt_row .series .series_inner button .series_name,
+  .latest_modal .modal_inner .modal_inner_cnt .series_holder .modal_inner_cnt_box .modal_inner_cnt_row .series .series_inner button .series_name {
+    font-size: 21px;
+  }
+  .popular_modal .modal_inner .modal_inner_cnt .series_holder .modal_inner_cnt_box .modal_inner_cnt_row .series .series_inner button p,
+  .latest_modal .modal_inner .modal_inner_cnt .series_holder .modal_inner_cnt_box .modal_inner_cnt_row .series .series_inner button p {
+    font-size: 14px;
+  }
+  .popular_modal .modal_inner .modal_inner_cnt .series_holder .modal_inner_cnt_box .modal_inner_cnt_row .series .series_inner button div,
+  .latest_modal .modal_inner .modal_inner_cnt .series_holder .modal_inner_cnt_box .modal_inner_cnt_row .series .series_inner button div {
+    font-size: 15px;
+    max-width: 55px;
+    height: 35px;
   }
   .genres_modal .modal_inner {
     max-width: 700px;
@@ -1706,14 +2018,26 @@
   .genres_modal .modal_inner .modal_inner_cnt .genres_holder .modal_inner_cnt_box .modal_inner_cnt_row .series {
     max-width: 50%;
     width: 100%;
-    height: 200px;
+    height: 250px;
+  }
+  .genres_modal .modal_inner .modal_inner_cnt .genres_holder .modal_inner_cnt_box .modal_inner_cnt_row .series .series_inner .overlay {
+    opacity: 0 !important;
+    visibility: hidden !important;
   }
   .genres_modal .modal_inner .modal_inner_cnt .genres_holder .modal_inner_cnt_box .modal_inner_cnt_row .series .series_inner button {
-    padding-left: 15px;
-    padding-bottom: 15px;
+    opacity: 1 !important;
+    visibility: visible !important;
   }
-  .genres_modal .modal_inner .modal_inner_cnt .genres_holder .modal_inner_cnt_box .modal_inner_cnt_row .series .series_inner button span {
+  .genres_modal .modal_inner .modal_inner_cnt .genres_holder .modal_inner_cnt_box .modal_inner_cnt_row .series .series_inner button .series_name {
     font-size: 21px;
+  }
+  .genres_modal .modal_inner .modal_inner_cnt .genres_holder .modal_inner_cnt_box .modal_inner_cnt_row .series .series_inner button p {
+    font-size: 14px;
+  }
+  .genres_modal .modal_inner .modal_inner_cnt .genres_holder .modal_inner_cnt_box .modal_inner_cnt_row .series .series_inner button div {
+    font-size: 15px;
+    max-width: 55px;
+    height: 35px;
   }
   .alphabetically_modal .modal_inner {
     max-width: 700px;
@@ -1743,14 +2067,26 @@
   .alphabetically_modal .modal_inner .modal_inner_cnt .alphabetical_holder .modal_inner_cnt_box .modal_inner_cnt_row .series {
     max-width: 50%;
     width: 100%;
-    height: 200px;
+    height: 250px;
+  }
+  .alphabetically_modal .modal_inner .modal_inner_cnt .alphabetical_holder .modal_inner_cnt_box .modal_inner_cnt_row .series .series_inner .overlay {
+    opacity: 0 !important;
+    visibility: hidden !important;
   }
   .alphabetically_modal .modal_inner .modal_inner_cnt .alphabetical_holder .modal_inner_cnt_box .modal_inner_cnt_row .series .series_inner button {
-    padding-left: 15px;
-    padding-bottom: 15px;
+    opacity: 1 !important;
+    visibility: visible !important;
   }
-  .alphabetically_modal .modal_inner .modal_inner_cnt .alphabetical_holder .modal_inner_cnt_box .modal_inner_cnt_row .series .series_inner button span {
+  .alphabetically_modal .modal_inner .modal_inner_cnt .alphabetical_holder .modal_inner_cnt_box .modal_inner_cnt_row .series .series_inner button .series_name {
     font-size: 21px;
+  }
+  .alphabetically_modal .modal_inner .modal_inner_cnt .alphabetical_holder .modal_inner_cnt_box .modal_inner_cnt_row .series .series_inner button p {
+    font-size: 14px;
+  }
+  .alphabetically_modal .modal_inner .modal_inner_cnt .alphabetical_holder .modal_inner_cnt_box .modal_inner_cnt_row .series .series_inner button div {
+    font-size: 15px;
+    max-width: 55px;
+    height: 35px;
   }
   .series_modal .series_modal_inner {
     max-width: 690px;
@@ -1895,17 +2231,35 @@
   .latest_modal .modal_inner .modal_inner_cnt .series_holder .modal_inner_cnt_box .modal_inner_cnt_row .series {
     width: 100%;
     max-width: 50%;
-    height: 130px;
+    height: 230px;
   }
   .popular_modal .modal_inner .modal_inner_cnt .series_holder .modal_inner_cnt_box .modal_inner_cnt_row .series .series_inner,
   .latest_modal .modal_inner .modal_inner_cnt .series_holder .modal_inner_cnt_box .modal_inner_cnt_row .series .series_inner {
     max-width: 99.5%;
   }
+  .popular_modal .modal_inner .modal_inner_cnt .series_holder .modal_inner_cnt_box .modal_inner_cnt_row .series .series_inner .overlay,
+  .latest_modal .modal_inner .modal_inner_cnt .series_holder .modal_inner_cnt_box .modal_inner_cnt_row .series .series_inner .overlay {
+    opacity: 0 !important;
+    visibility: hidden !important;
+  }
   .popular_modal .modal_inner .modal_inner_cnt .series_holder .modal_inner_cnt_box .modal_inner_cnt_row .series .series_inner button,
   .latest_modal .modal_inner .modal_inner_cnt .series_holder .modal_inner_cnt_box .modal_inner_cnt_row .series .series_inner button {
-    padding-left: 12px;
-    padding-bottom: 12px;
-    font-size: 17px;
+    opacity: 1 !important;
+    visibility: visible !important;
+  }
+  .popular_modal .modal_inner .modal_inner_cnt .series_holder .modal_inner_cnt_box .modal_inner_cnt_row .series .series_inner button .series_name,
+  .latest_modal .modal_inner .modal_inner_cnt .series_holder .modal_inner_cnt_box .modal_inner_cnt_row .series .series_inner button .series_name {
+    font-size: 19px;
+  }
+  .popular_modal .modal_inner .modal_inner_cnt .series_holder .modal_inner_cnt_box .modal_inner_cnt_row .series .series_inner button p,
+  .latest_modal .modal_inner .modal_inner_cnt .series_holder .modal_inner_cnt_box .modal_inner_cnt_row .series .series_inner button p {
+    font-size: 14px;
+  }
+  .popular_modal .modal_inner .modal_inner_cnt .series_holder .modal_inner_cnt_box .modal_inner_cnt_row .series .series_inner button div,
+  .latest_modal .modal_inner .modal_inner_cnt .series_holder .modal_inner_cnt_box .modal_inner_cnt_row .series .series_inner button div {
+    font-size: 15px;
+    max-width: 55px;
+    height: 35px;
   }
   .genres_modal .modal_inner {
     max-width: 700px;
@@ -1938,14 +2292,26 @@
   .genres_modal .modal_inner .modal_inner_cnt .genres_holder .modal_inner_cnt_box .modal_inner_cnt_row .series {
     max-width: 50%;
     width: 100%;
-    height: 140px;
+    height: 230px;
+  }
+  .genres_modal .modal_inner .modal_inner_cnt .genres_holder .modal_inner_cnt_box .modal_inner_cnt_row .series .series_inner .overlay {
+    opacity: 0 !important;
+    visibility: hidden !important;
   }
   .genres_modal .modal_inner .modal_inner_cnt .genres_holder .modal_inner_cnt_box .modal_inner_cnt_row .series .series_inner button {
-    padding-left: 15px;
-    padding-bottom: 15px;
+    opacity: 1 !important;
+    visibility: visible !important;
   }
-  .genres_modal .modal_inner .modal_inner_cnt .genres_holder .modal_inner_cnt_box .modal_inner_cnt_row .series .series_inner button span {
-    font-size: 18px;
+  .genres_modal .modal_inner .modal_inner_cnt .genres_holder .modal_inner_cnt_box .modal_inner_cnt_row .series .series_inner button .series_name {
+    font-size: 19px;
+  }
+  .genres_modal .modal_inner .modal_inner_cnt .genres_holder .modal_inner_cnt_box .modal_inner_cnt_row .series .series_inner button p {
+    font-size: 14px;
+  }
+  .genres_modal .modal_inner .modal_inner_cnt .genres_holder .modal_inner_cnt_box .modal_inner_cnt_row .series .series_inner button div {
+    font-size: 15px;
+    max-width: 55px;
+    height: 35px;
   }
   .alphabetically_modal .modal_inner {
     max-width: 700px;
@@ -1975,14 +2341,26 @@
   .alphabetically_modal .modal_inner .modal_inner_cnt .alphabetical_holder .modal_inner_cnt_box .modal_inner_cnt_row .series {
     max-width: 50%;
     width: 100%;
-    height: 140px;
+    height: 230px;
+  }
+  .alphabetically_modal .modal_inner .modal_inner_cnt .alphabetical_holder .modal_inner_cnt_box .modal_inner_cnt_row .series .series_inner .overlay {
+    opacity: 0 !important;
+    visibility: hidden !important;
   }
   .alphabetically_modal .modal_inner .modal_inner_cnt .alphabetical_holder .modal_inner_cnt_box .modal_inner_cnt_row .series .series_inner button {
-    padding-left: 15px;
-    padding-bottom: 15px;
+    opacity: 1 !important;
+    visibility: visible !important;
   }
-  .alphabetically_modal .modal_inner .modal_inner_cnt .alphabetical_holder .modal_inner_cnt_box .modal_inner_cnt_row .series .series_inner button span {
-    font-size: 18px;
+  .alphabetically_modal .modal_inner .modal_inner_cnt .alphabetical_holder .modal_inner_cnt_box .modal_inner_cnt_row .series .series_inner button .series_name {
+    font-size: 19px;
+  }
+  .alphabetically_modal .modal_inner .modal_inner_cnt .alphabetical_holder .modal_inner_cnt_box .modal_inner_cnt_row .series .series_inner button p {
+    font-size: 14px;
+  }
+  .alphabetically_modal .modal_inner .modal_inner_cnt .alphabetical_holder .modal_inner_cnt_box .modal_inner_cnt_row .series .series_inner button div {
+    font-size: 15px;
+    max-width: 55px;
+    height: 35px;
   }
   .series_modal .series_modal_inner {
     max-width: 590px;
@@ -2127,17 +2505,35 @@
   .latest_modal .modal_inner .modal_inner_cnt .series_holder .modal_inner_cnt_box .modal_inner_cnt_row .series {
     width: 100%;
     max-width: 50%;
-    height: 200px;
+    height: 240px;
   }
   .popular_modal .modal_inner .modal_inner_cnt .series_holder .modal_inner_cnt_box .modal_inner_cnt_row .series .series_inner,
   .latest_modal .modal_inner .modal_inner_cnt .series_holder .modal_inner_cnt_box .modal_inner_cnt_row .series .series_inner {
     max-width: 99.5%;
   }
+  .popular_modal .modal_inner .modal_inner_cnt .series_holder .modal_inner_cnt_box .modal_inner_cnt_row .series .series_inner .overlay,
+  .latest_modal .modal_inner .modal_inner_cnt .series_holder .modal_inner_cnt_box .modal_inner_cnt_row .series .series_inner .overlay {
+    opacity: 0 !important;
+    visibility: hidden !important;
+  }
   .popular_modal .modal_inner .modal_inner_cnt .series_holder .modal_inner_cnt_box .modal_inner_cnt_row .series .series_inner button,
   .latest_modal .modal_inner .modal_inner_cnt .series_holder .modal_inner_cnt_box .modal_inner_cnt_row .series .series_inner button {
-    padding-left: 12px;
-    padding-bottom: 12px;
-    font-size: 19px;
+    opacity: 1 !important;
+    visibility: visible !important;
+  }
+  .popular_modal .modal_inner .modal_inner_cnt .series_holder .modal_inner_cnt_box .modal_inner_cnt_row .series .series_inner button .series_name,
+  .latest_modal .modal_inner .modal_inner_cnt .series_holder .modal_inner_cnt_box .modal_inner_cnt_row .series .series_inner button .series_name {
+    font-size: 21px;
+  }
+  .popular_modal .modal_inner .modal_inner_cnt .series_holder .modal_inner_cnt_box .modal_inner_cnt_row .series .series_inner button p,
+  .latest_modal .modal_inner .modal_inner_cnt .series_holder .modal_inner_cnt_box .modal_inner_cnt_row .series .series_inner button p {
+    font-size: 14px;
+  }
+  .popular_modal .modal_inner .modal_inner_cnt .series_holder .modal_inner_cnt_box .modal_inner_cnt_row .series .series_inner button div,
+  .latest_modal .modal_inner .modal_inner_cnt .series_holder .modal_inner_cnt_box .modal_inner_cnt_row .series .series_inner button div {
+    font-size: 15px;
+    max-width: 55px;
+    height: 35px;
   }
   .genres_modal .modal_inner {
     max-width: 900px;
@@ -2170,14 +2566,26 @@
   .genres_modal .modal_inner .modal_inner_cnt .genres_holder .modal_inner_cnt_box .modal_inner_cnt_row .series {
     max-width: 50%;
     width: 100%;
-    height: 200px;
+    height: 240px;
+  }
+  .genres_modal .modal_inner .modal_inner_cnt .genres_holder .modal_inner_cnt_box .modal_inner_cnt_row .series .series_inner .overlay {
+    opacity: 0 !important;
+    visibility: hidden !important;
   }
   .genres_modal .modal_inner .modal_inner_cnt .genres_holder .modal_inner_cnt_box .modal_inner_cnt_row .series .series_inner button {
-    padding-left: 15px;
-    padding-bottom: 15px;
+    opacity: 1 !important;
+    visibility: visible !important;
   }
-  .genres_modal .modal_inner .modal_inner_cnt .genres_holder .modal_inner_cnt_box .modal_inner_cnt_row .series .series_inner button span {
+  .genres_modal .modal_inner .modal_inner_cnt .genres_holder .modal_inner_cnt_box .modal_inner_cnt_row .series .series_inner button .series_name {
     font-size: 21px;
+  }
+  .genres_modal .modal_inner .modal_inner_cnt .genres_holder .modal_inner_cnt_box .modal_inner_cnt_row .series .series_inner button p {
+    font-size: 14px;
+  }
+  .genres_modal .modal_inner .modal_inner_cnt .genres_holder .modal_inner_cnt_box .modal_inner_cnt_row .series .series_inner button div {
+    font-size: 15px;
+    max-width: 55px;
+    height: 35px;
   }
   .alphabetically_modal .modal_inner {
     max-width: 900px;
@@ -2207,14 +2615,26 @@
   .alphabetically_modal .modal_inner .modal_inner_cnt .alphabetical_holder .modal_inner_cnt_box .modal_inner_cnt_row .series {
     max-width: 50%;
     width: 100%;
-    height: 200px;
+    height: 240px;
+  }
+  .alphabetically_modal .modal_inner .modal_inner_cnt .alphabetical_holder .modal_inner_cnt_box .modal_inner_cnt_row .series .series_inner .overlay {
+    opacity: 0 !important;
+    visibility: hidden !important;
   }
   .alphabetically_modal .modal_inner .modal_inner_cnt .alphabetical_holder .modal_inner_cnt_box .modal_inner_cnt_row .series .series_inner button {
-    padding-left: 15px;
-    padding-bottom: 15px;
+    opacity: 1 !important;
+    visibility: visible !important;
   }
-  .alphabetically_modal .modal_inner .modal_inner_cnt .alphabetical_holder .modal_inner_cnt_box .modal_inner_cnt_row .series .series_inner button span {
+  .alphabetically_modal .modal_inner .modal_inner_cnt .alphabetical_holder .modal_inner_cnt_box .modal_inner_cnt_row .series .series_inner button .series_name {
     font-size: 21px;
+  }
+  .alphabetically_modal .modal_inner .modal_inner_cnt .alphabetical_holder .modal_inner_cnt_box .modal_inner_cnt_row .series .series_inner button p {
+    font-size: 14px;
+  }
+  .alphabetically_modal .modal_inner .modal_inner_cnt .alphabetical_holder .modal_inner_cnt_box .modal_inner_cnt_row .series .series_inner button div {
+    font-size: 15px;
+    max-width: 55px;
+    height: 35px;
   }
   .series_modal .series_modal_inner {
     max-width: 900px;
@@ -2356,17 +2776,35 @@
   .latest_modal .modal_inner .modal_inner_cnt .series_holder .modal_inner_cnt_box .modal_inner_cnt_row .series {
     width: 100%;
     max-width: 50%;
-    height: 200px;
+    height: 230px;
   }
   .popular_modal .modal_inner .modal_inner_cnt .series_holder .modal_inner_cnt_box .modal_inner_cnt_row .series .series_inner,
   .latest_modal .modal_inner .modal_inner_cnt .series_holder .modal_inner_cnt_box .modal_inner_cnt_row .series .series_inner {
     max-width: 99.5%;
   }
+  .popular_modal .modal_inner .modal_inner_cnt .series_holder .modal_inner_cnt_box .modal_inner_cnt_row .series .series_inner .overlay,
+  .latest_modal .modal_inner .modal_inner_cnt .series_holder .modal_inner_cnt_box .modal_inner_cnt_row .series .series_inner .overlay {
+    opacity: 0 !important;
+    visibility: hidden !important;
+  }
   .popular_modal .modal_inner .modal_inner_cnt .series_holder .modal_inner_cnt_box .modal_inner_cnt_row .series .series_inner button,
   .latest_modal .modal_inner .modal_inner_cnt .series_holder .modal_inner_cnt_box .modal_inner_cnt_row .series .series_inner button {
-    padding-left: 12px;
-    padding-bottom: 12px;
-    font-size: 19px;
+    opacity: 1 !important;
+    visibility: visible !important;
+  }
+  .popular_modal .modal_inner .modal_inner_cnt .series_holder .modal_inner_cnt_box .modal_inner_cnt_row .series .series_inner button .series_name,
+  .latest_modal .modal_inner .modal_inner_cnt .series_holder .modal_inner_cnt_box .modal_inner_cnt_row .series .series_inner button .series_name {
+    font-size: 21px;
+  }
+  .popular_modal .modal_inner .modal_inner_cnt .series_holder .modal_inner_cnt_box .modal_inner_cnt_row .series .series_inner button p,
+  .latest_modal .modal_inner .modal_inner_cnt .series_holder .modal_inner_cnt_box .modal_inner_cnt_row .series .series_inner button p {
+    font-size: 14px;
+  }
+  .popular_modal .modal_inner .modal_inner_cnt .series_holder .modal_inner_cnt_box .modal_inner_cnt_row .series .series_inner button div,
+  .latest_modal .modal_inner .modal_inner_cnt .series_holder .modal_inner_cnt_box .modal_inner_cnt_row .series .series_inner button div {
+    font-size: 15px;
+    max-width: 55px;
+    height: 35px;
   }
   .genres_modal .modal_inner {
     max-width: 900px;
@@ -2399,14 +2837,26 @@
   .genres_modal .modal_inner .modal_inner_cnt .genres_holder .modal_inner_cnt_box .modal_inner_cnt_row .series {
     max-width: 50%;
     width: 100%;
-    height: 200px;
+    height: 230px;
+  }
+  .genres_modal .modal_inner .modal_inner_cnt .genres_holder .modal_inner_cnt_box .modal_inner_cnt_row .series .series_inner .overlay {
+    opacity: 0 !important;
+    visibility: hidden !important;
   }
   .genres_modal .modal_inner .modal_inner_cnt .genres_holder .modal_inner_cnt_box .modal_inner_cnt_row .series .series_inner button {
-    padding-left: 15px;
-    padding-bottom: 15px;
+    opacity: 1 !important;
+    visibility: visible !important;
   }
-  .genres_modal .modal_inner .modal_inner_cnt .genres_holder .modal_inner_cnt_box .modal_inner_cnt_row .series .series_inner button span {
+  .genres_modal .modal_inner .modal_inner_cnt .genres_holder .modal_inner_cnt_box .modal_inner_cnt_row .series .series_inner button .series_name {
     font-size: 21px;
+  }
+  .genres_modal .modal_inner .modal_inner_cnt .genres_holder .modal_inner_cnt_box .modal_inner_cnt_row .series .series_inner button p {
+    font-size: 14px;
+  }
+  .genres_modal .modal_inner .modal_inner_cnt .genres_holder .modal_inner_cnt_box .modal_inner_cnt_row .series .series_inner button div {
+    font-size: 15px;
+    max-width: 55px;
+    height: 35px;
   }
   .alphabetically_modal .modal_inner {
     max-width: 900px;
@@ -2436,14 +2886,26 @@
   .alphabetically_modal .modal_inner .modal_inner_cnt .alphabetical_holder .modal_inner_cnt_box .modal_inner_cnt_row .series {
     max-width: 50%;
     width: 100%;
-    height: 200px;
+    height: 230px;
+  }
+  .alphabetically_modal .modal_inner .modal_inner_cnt .alphabetical_holder .modal_inner_cnt_box .modal_inner_cnt_row .series .series_inner .overlay {
+    opacity: 0 !important;
+    visibility: hidden !important;
   }
   .alphabetically_modal .modal_inner .modal_inner_cnt .alphabetical_holder .modal_inner_cnt_box .modal_inner_cnt_row .series .series_inner button {
-    padding-left: 15px;
-    padding-bottom: 15px;
+    opacity: 1 !important;
+    visibility: visible !important;
   }
-  .alphabetically_modal .modal_inner .modal_inner_cnt .alphabetical_holder .modal_inner_cnt_box .modal_inner_cnt_row .series .series_inner button span {
+  .alphabetically_modal .modal_inner .modal_inner_cnt .alphabetical_holder .modal_inner_cnt_box .modal_inner_cnt_row .series .series_inner button .series_name {
     font-size: 21px;
+  }
+  .alphabetically_modal .modal_inner .modal_inner_cnt .alphabetical_holder .modal_inner_cnt_box .modal_inner_cnt_row .series .series_inner button p {
+    font-size: 14px;
+  }
+  .alphabetically_modal .modal_inner .modal_inner_cnt .alphabetical_holder .modal_inner_cnt_box .modal_inner_cnt_row .series .series_inner button div {
+    font-size: 15px;
+    max-width: 55px;
+    height: 35px;
   }
   .series_modal .series_modal_inner {
     max-width: 900px;
@@ -2592,11 +3054,20 @@
   .latest_modal .modal_inner .modal_inner_cnt .series_holder .modal_inner_cnt_box .modal_inner_cnt_row .series .series_inner {
     max-width: 99.5%;
   }
-  .popular_modal .modal_inner .modal_inner_cnt .series_holder .modal_inner_cnt_box .modal_inner_cnt_row .series .series_inner button,
-  .latest_modal .modal_inner .modal_inner_cnt .series_holder .modal_inner_cnt_box .modal_inner_cnt_row .series .series_inner button {
-    padding-left: 12px;
-    padding-bottom: 12px;
-    font-size: 24px;
+  .popular_modal .modal_inner .modal_inner_cnt .series_holder .modal_inner_cnt_box .modal_inner_cnt_row .series .series_inner button .series_name,
+  .latest_modal .modal_inner .modal_inner_cnt .series_holder .modal_inner_cnt_box .modal_inner_cnt_row .series .series_inner button .series_name {
+    font-size: 21px;
+  }
+  .popular_modal .modal_inner .modal_inner_cnt .series_holder .modal_inner_cnt_box .modal_inner_cnt_row .series .series_inner button p,
+  .latest_modal .modal_inner .modal_inner_cnt .series_holder .modal_inner_cnt_box .modal_inner_cnt_row .series .series_inner button p {
+    font-size: 16px;
+    max-width: 400px;
+  }
+  .popular_modal .modal_inner .modal_inner_cnt .series_holder .modal_inner_cnt_box .modal_inner_cnt_row .series .series_inner button div,
+  .latest_modal .modal_inner .modal_inner_cnt .series_holder .modal_inner_cnt_box .modal_inner_cnt_row .series .series_inner button div {
+    font-size: 16px;
+    max-width: 60px;
+    height: 40px;
   }
   .genres_modal .modal_inner {
     max-width: 1100px;
@@ -2635,14 +3106,19 @@
   .genres_modal .modal_inner .modal_inner_cnt .genres_holder .modal_inner_cnt_box .modal_inner_cnt_row .series {
     max-width: 50%;
     width: 100%;
-    height: 200px;
+    height: 250px;
   }
-  .genres_modal .modal_inner .modal_inner_cnt .genres_holder .modal_inner_cnt_box .modal_inner_cnt_row .series .series_inner button {
-    padding-left: 15px;
-    padding-bottom: 15px;
+  .genres_modal .modal_inner .modal_inner_cnt .genres_holder .modal_inner_cnt_box .modal_inner_cnt_row .series .series_inner button .series_name {
+    font-size: 21px;
   }
-  .genres_modal .modal_inner .modal_inner_cnt .genres_holder .modal_inner_cnt_box .modal_inner_cnt_row .series .series_inner button span {
-    font-size: 24px;
+  .genres_modal .modal_inner .modal_inner_cnt .genres_holder .modal_inner_cnt_box .modal_inner_cnt_row .series .series_inner button p {
+    font-size: 16px;
+    max-width: 400px;
+  }
+  .genres_modal .modal_inner .modal_inner_cnt .genres_holder .modal_inner_cnt_box .modal_inner_cnt_row .series .series_inner button div {
+    font-size: 16px;
+    max-width: 60px;
+    height: 40px;
   }
   .alphabetically_modal .modal_inner {
     max-width: 1100px;
@@ -2678,14 +3154,19 @@
   .alphabetically_modal .modal_inner .modal_inner_cnt .alphabetical_holder .modal_inner_cnt_box .modal_inner_cnt_row .series {
     max-width: 50%;
     width: 100%;
-    height: 200px;
+    height: 250px;
   }
-  .alphabetically_modal .modal_inner .modal_inner_cnt .alphabetical_holder .modal_inner_cnt_box .modal_inner_cnt_row .series .series_inner button {
-    padding-left: 15px;
-    padding-bottom: 15px;
+  .alphabetically_modal .modal_inner .modal_inner_cnt .alphabetical_holder .modal_inner_cnt_box .modal_inner_cnt_row .series .series_inner button .series_name {
+    font-size: 21px;
   }
-  .alphabetically_modal .modal_inner .modal_inner_cnt .alphabetical_holder .modal_inner_cnt_box .modal_inner_cnt_row .series .series_inner button span {
-    font-size: 24px;
+  .alphabetically_modal .modal_inner .modal_inner_cnt .alphabetical_holder .modal_inner_cnt_box .modal_inner_cnt_row .series .series_inner button p {
+    font-size: 16px;
+    max-width: 400px;
+  }
+  .alphabetically_modal .modal_inner .modal_inner_cnt .alphabetical_holder .modal_inner_cnt_box .modal_inner_cnt_row .series .series_inner button div {
+    font-size: 16px;
+    max-width: 60px;
+    height: 40px;
   }
   .series_modal .series_modal_inner {
     max-width: 900px;

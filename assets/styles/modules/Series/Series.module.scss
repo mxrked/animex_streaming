@@ -316,6 +316,7 @@
                 border-radius: 10px;
                 overflow: hidden;
                 position: relative;
+                white-space: pre-wrap;
                 border: 2px solid $Alabaster;
 
                 &:hover {
@@ -328,7 +329,7 @@
                   @include bGSU(cover, center);
                 }
 
-                button {
+                .overlay {
                   background-color: rgba(0, 0, 0, 0.6);
                   position: absolute;
                   width: 100%;
@@ -341,6 +342,48 @@
                   font-family: "Lato Semibold";
                   color: $Alabaster;
                   font-size: 28px;
+                }
+
+                button {
+                  background-color: rgba(0, 0, 0, 0.6);
+                  position: absolute;
+                  width: 100%;
+                  height: 100%;
+                  top: 0;
+                  left: 0;
+                  text-align: center;
+                  padding-top: 20px;
+                  padding-bottom: 20px;
+                  color: $Alabaster;
+                  opacity: 0;
+                  visibility: hidden;
+
+                  .series_name {
+                    font-family: "Lato Semibold";
+                    font-size: 28px;
+                  }
+
+                  p {
+                    font-family: "Lato Regular";
+                    font-size: 17px;
+                    line-height: 24px;
+                    display: block;
+                    max-width: 370px;
+                    word-wrap: pre-wrap;
+                    @include quickCenter("relative");
+                    margin-top: 20px;
+                  }
+
+                  div {
+                    height: 40px;
+                    @include quickCenter("relative");
+                    margin-top: 20px;
+                    @include displayElement(flex, center, center);
+                    border: 2px solid $Alabaster;
+                    max-width: 60px;
+                    font-family: "Lato Semibold";
+                    font-size: 17px;
+                  }
                 }
               }
             }
@@ -428,6 +471,7 @@
                 border-radius: 10px;
                 overflow: hidden;
                 position: relative;
+                white-space: pre-wrap;
                 border: 2px solid $Alabaster;
 
                 &:hover {
@@ -440,7 +484,7 @@
                   @include bGSU(cover, center);
                 }
 
-                button {
+                .overlay {
                   background-color: rgba(0, 0, 0, 0.6);
                   position: absolute;
                   width: 100%;
@@ -453,6 +497,48 @@
                   font-family: "Lato Semibold";
                   color: $Alabaster;
                   font-size: 28px;
+                }
+
+                button {
+                  background-color: rgba(0, 0, 0, 0.6);
+                  position: absolute;
+                  width: 100%;
+                  height: 100%;
+                  top: 0;
+                  left: 0;
+                  text-align: center;
+                  padding-top: 20px;
+                  padding-bottom: 20px;
+                  color: $Alabaster;
+                  opacity: 0;
+                  visibility: hidden;
+
+                  .series_name {
+                    font-family: "Lato Semibold";
+                    font-size: 28px;
+                  }
+
+                  p {
+                    font-family: "Lato Regular";
+                    font-size: 17px;
+                    line-height: 24px;
+                    display: block;
+                    max-width: 370px;
+                    word-wrap: pre-wrap;
+                    @include quickCenter("relative");
+                    margin-top: 20px;
+                  }
+
+                  div {
+                    height: 40px;
+                    @include quickCenter("relative");
+                    margin-top: 20px;
+                    @include displayElement(flex, center, center);
+                    border: 2px solid $Alabaster;
+                    max-width: 60px;
+                    font-family: "Lato Semibold";
+                    font-size: 17px;
+                  }
                 }
               }
             }
@@ -531,6 +617,7 @@
                 border-radius: 10px;
                 overflow: hidden;
                 position: relative;
+                white-space: pre-wrap;
                 border: 2px solid $Alabaster;
 
                 &:hover {
@@ -543,7 +630,7 @@
                   @include bGSU(cover, center);
                 }
 
-                button {
+                .overlay {
                   background-color: rgba(0, 0, 0, 0.6);
                   position: absolute;
                   width: 100%;
@@ -556,6 +643,48 @@
                   font-family: "Lato Semibold";
                   color: $Alabaster;
                   font-size: 28px;
+                }
+
+                button {
+                  background-color: rgba(0, 0, 0, 0.6);
+                  position: absolute;
+                  width: 100%;
+                  height: 100%;
+                  top: 0;
+                  left: 0;
+                  text-align: center;
+                  padding-top: 20px;
+                  padding-bottom: 20px;
+                  color: $Alabaster;
+                  opacity: 0;
+                  visibility: hidden;
+
+                  .series_name {
+                    font-family: "Lato Semibold";
+                    font-size: 28px;
+                  }
+
+                  p {
+                    font-family: "Lato Regular";
+                    font-size: 17px;
+                    line-height: 24px;
+                    display: block;
+                    max-width: 370px;
+                    word-wrap: pre-wrap;
+                    @include quickCenter("relative");
+                    margin-top: 20px;
+                  }
+
+                  div {
+                    height: 40px;
+                    @include quickCenter("relative");
+                    margin-top: 20px;
+                    @include displayElement(flex, center, center);
+                    border: 2px solid $Alabaster;
+                    max-width: 60px;
+                    font-family: "Lato Semibold";
+                    font-size: 17px;
+                  }
                 }
               }
             }
@@ -687,7 +816,14 @@
 
                 .series_inner {
                   button {
-                    font-size: 23px;
+                    .series_name {
+                      font-size: 23px;
+                    }
+
+                    p {
+                      padding-left: 20px;
+                      padding-right: 20px;
+                    }
                   }
                 }
               }
@@ -717,8 +853,14 @@
                     padding-left: 15px;
                     padding-bottom: 15px;
 
-                    span {
+                    .series_name {
                       font-size: 23px;
+                    }
+
+                    p {
+                      padding-left: 20px;
+                      padding-right: 20px;
+                      max-width: 440px;
                     }
                   }
                 }
@@ -751,7 +893,14 @@
 
                 .series_inner {
                   button {
-                    font-size: 23px;
+                    .series_name {
+                      font-size: 23px;
+                    }
+
+                    p {
+                      padding-left: 20px;
+                      padding-right: 20px;
+                    }
                   }
                 }
               }
@@ -906,6 +1055,22 @@
                 width: 100%;
                 max-width: 100%;
                 height: 300px;
+
+                .series_inner {
+                  .overlay {
+                    opacity: 0 !important;
+                    visibility: hidden !important;
+                  }
+
+                  button {
+                    opacity: 1 !important;
+                    visibility: visible !important;
+
+                    p {
+                      max-width: 400px;
+                    }
+                  }
+                }
               }
             }
           }
@@ -938,16 +1103,17 @@
               .series {
                 max-width: 100%;
                 width: 100%;
-                height: 200px;
+                height: 220px;
 
                 .series_inner {
-                  button {
-                    padding-left: 15px;
-                    padding-bottom: 15px;
+                  .overlay {
+                    opacity: 0 !important;
+                    visibility: hidden !important;
+                  }
 
-                    span {
-                      font-size: 24px;
-                    }
+                  button {
+                    opacity: 1 !important;
+                    visibility: visible !important;
                   }
                 }
               }
@@ -960,7 +1126,7 @@
   .alphabetically_modal {
     .modal_inner {
       max-width: 700px;
-      height: 900px;
+      height: 730px;
 
       .modal_inner_cnt {
         .modal_inner_cnt_top {
@@ -987,6 +1153,18 @@
                 &:nth-child(8),
                 &:nth-child(7) {
                   margin-bottom: 30px;
+                }
+
+                .series_inner {
+                  .overlay {
+                    opacity: 0 !important;
+                    visibility: hidden !important;
+                  }
+
+                  button {
+                    opacity: 1 !important;
+                    visibility: visible !important;
+                  }
                 }
               }
             }
@@ -1174,13 +1352,31 @@
               .series {
                 width: 100%;
                 max-width: 100%;
-                height: 170px;
+                height: 230px;
 
                 .series_inner {
+                  .overlay {
+                    opacity: 0 !important;
+                    visibility: hidden !important;
+                  }
+
                   button {
-                    padding-left: 12px;
-                    padding-bottom: 12px;
-                    font-size: 20px;
+                    opacity: 1 !important;
+                    visibility: visible !important;
+
+                    .series_name {
+                      font-size: 20px;
+                    }
+
+                    p {
+                      font-size: 14px;
+                    }
+
+                    div {
+                      font-size: 15px;
+                      max-width: 55px;
+                      height: 35px;
+                    }
                   }
                 }
               }
@@ -1230,7 +1426,7 @@
               .series {
                 width: 100%;
                 max-width: 100%;
-                height: 140px;
+                height: 230px;
                 margin-bottom: 12px;
 
                 &:last-child {
@@ -1238,12 +1434,28 @@
                 }
 
                 .series_inner {
-                  button {
-                    padding-left: 15px;
-                    padding-bottom: 15px;
+                  .overlay {
+                    opacity: 0 !important;
+                    visibility: hidden !important;
+                  }
 
-                    span {
+                  button {
+                    opacity: 1 !important;
+                    visibility: visible !important;
+                    padding-left: 0;
+
+                    .series_name {
                       font-size: 20px;
+                    }
+
+                    p {
+                      font-size: 14px;
+                    }
+
+                    div {
+                      font-size: 15px;
+                      max-width: 55px;
+                      height: 35px;
                     }
                   }
                 }
@@ -1290,7 +1502,7 @@
               .series {
                 width: 100%;
                 max-width: 100%;
-                height: 140px;
+                height: 230px;
                 margin-bottom: 12px;
 
                 &:nth-child(8),
@@ -1303,12 +1515,28 @@
                 }
 
                 .series_inner {
-                  button {
-                    padding-left: 15px;
-                    padding-bottom: 15px;
+                  .overlay {
+                    opacity: 0 !important;
+                    visibility: hidden !important;
+                  }
 
-                    span {
+                  button {
+                    opacity: 1 !important;
+                    visibility: visible !important;
+                    padding-left: 0;
+
+                    .series_name {
                       font-size: 20px;
+                    }
+
+                    p {
+                      font-size: 14px;
+                    }
+
+                    div {
+                      font-size: 15px;
+                      max-width: 55px;
+                      height: 35px;
                     }
                   }
                 }
@@ -1510,13 +1738,31 @@
               .series {
                 width: 100%;
                 max-width: 100%;
-                height: 130px;
+                height: 240px;
 
                 .series_inner {
+                  .overlay {
+                    opacity: 0 !important;
+                    visibility: hidden !important;
+                  }
+
                   button {
-                    padding-left: 12px;
-                    padding-bottom: 12px;
-                    font-size: 17px;
+                    opacity: 1 !important;
+                    visibility: visible !important;
+
+                    .series_name {
+                      font-size: 18px;
+                    }
+
+                    p {
+                      font-size: 14px;
+                    }
+
+                    div {
+                      font-size: 15px;
+                      max-width: 55px;
+                      height: 35px;
+                    }
                   }
                 }
               }
@@ -1568,19 +1814,34 @@
               .series {
                 width: 100%;
                 max-width: 100%;
-                height: 130px;
+                height: 250px;
 
                 &:last-child {
                   margin-bottom: 0;
                 }
 
                 .series_inner {
-                  button {
-                    padding-left: 12px;
-                    padding-bottom: 12px;
+                  .overlay {
+                    opacity: 0 !important;
+                    visibility: hidden !important;
+                  }
 
-                    span {
-                      font-size: 17px;
+                  button {
+                    opacity: 1 !important;
+                    visibility: visible !important;
+
+                    .series_name {
+                      font-size: 18px;
+                    }
+
+                    p {
+                      font-size: 14px;
+                    }
+
+                    div {
+                      font-size: 15px;
+                      max-width: 55px;
+                      height: 35px;
                     }
                   }
                 }
@@ -1629,19 +1890,34 @@
               .series {
                 width: 100%;
                 max-width: 100%;
-                height: 130px;
+                height: 250px;
 
                 &:last-child {
                   margin-bottom: 0;
                 }
 
                 .series_inner {
-                  button {
-                    padding-left: 12px;
-                    padding-bottom: 12px;
+                  .overlay {
+                    opacity: 0 !important;
+                    visibility: hidden !important;
+                  }
 
-                    span {
-                      font-size: 17px;
+                  button {
+                    opacity: 1 !important;
+                    visibility: visible !important;
+
+                    .series_name {
+                      font-size: 18px;
+                    }
+
+                    p {
+                      font-size: 14px;
+                    }
+
+                    div {
+                      font-size: 15px;
+                      max-width: 55px;
+                      height: 35px;
                     }
                   }
                 }
@@ -1851,13 +2127,31 @@
               .series {
                 width: 100%;
                 max-width: 100%;
-                height: 130px;
+                height: 250px;
 
                 .series_inner {
+                  .overlay {
+                    opacity: 0 !important;
+                    visibility: hidden !important;
+                  }
+
                   button {
-                    padding-left: 12px;
-                    padding-bottom: 12px;
-                    font-size: 17px;
+                    opacity: 1 !important;
+                    visibility: visible !important;
+
+                    .series_name {
+                      font-size: 21px;
+                    }
+
+                    p {
+                      font-size: 14px;
+                    }
+
+                    div {
+                      font-size: 15px;
+                      max-width: 55px;
+                      height: 35px;
+                    }
                   }
                 }
               }
@@ -1912,19 +2206,34 @@
               .series {
                 width: 100%;
                 max-width: 100%;
-                height: 130px;
+                height: 250px;
 
                 &:last-child {
                   margin-bottom: 0;
                 }
 
                 .series_inner {
-                  button {
-                    padding-left: 12px;
-                    padding-bottom: 12px;
+                  .overlay {
+                    opacity: 0 !important;
+                    visibility: hidden !important;
+                  }
 
-                    span {
-                      font-size: 17px;
+                  button {
+                    opacity: 1 !important;
+                    visibility: visible !important;
+
+                    .series_name {
+                      font-size: 21px;
+                    }
+
+                    p {
+                      font-size: 14px;
+                    }
+
+                    div {
+                      font-size: 15px;
+                      max-width: 55px;
+                      height: 35px;
                     }
                   }
                 }
@@ -1975,19 +2284,34 @@
               .series {
                 width: 100%;
                 max-width: 100%;
-                height: 130px;
+                height: 240px;
 
                 &:last-child {
                   margin-bottom: 0;
                 }
 
                 .series_inner {
-                  button {
-                    padding-left: 12px;
-                    padding-bottom: 12px;
+                  .overlay {
+                    opacity: 0 !important;
+                    visibility: hidden !important;
+                  }
 
-                    span {
-                      font-size: 17px;
+                  button {
+                    opacity: 1 !important;
+                    visibility: visible !important;
+
+                    .series_name {
+                      font-size: 21px;
+                    }
+
+                    p {
+                      font-size: 14px;
+                    }
+
+                    div {
+                      font-size: 15px;
+                      max-width: 55px;
+                      height: 35px;
                     }
                   }
                 }
@@ -2186,15 +2510,31 @@
               .series {
                 width: 100%;
                 max-width: 50%;
-                height: 170px;
+                height: 240px;
 
                 .series_inner {
-                  max-width: 99.5%;
+                  .overlay {
+                    opacity: 0 !important;
+                    visibility: hidden !important;
+                  }
 
                   button {
-                    padding-left: 12px;
-                    padding-bottom: 12px;
-                    font-size: 19px;
+                    opacity: 1 !important;
+                    visibility: visible !important;
+
+                    .series_name {
+                      font-size: 21px;
+                    }
+
+                    p {
+                      font-size: 14px;
+                    }
+
+                    div {
+                      font-size: 15px;
+                      max-width: 55px;
+                      height: 35px;
+                    }
                   }
                 }
               }
@@ -2243,15 +2583,30 @@
               .series {
                 max-width: 50%;
                 width: 100%;
-                height: 200px;
+                height: 250px;
 
                 .series_inner {
-                  button {
-                    padding-left: 15px;
-                    padding-bottom: 15px;
+                  .overlay {
+                    opacity: 0 !important;
+                    visibility: hidden !important;
+                  }
 
-                    span {
+                  button {
+                    opacity: 1 !important;
+                    visibility: visible !important;
+
+                    .series_name {
                       font-size: 21px;
+                    }
+
+                    p {
+                      font-size: 14px;
+                    }
+
+                    div {
+                      font-size: 15px;
+                      max-width: 55px;
+                      height: 35px;
                     }
                   }
                 }
@@ -2297,15 +2652,30 @@
               .series {
                 max-width: 50%;
                 width: 100%;
-                height: 200px;
+                height: 250px;
 
                 .series_inner {
-                  button {
-                    padding-left: 15px;
-                    padding-bottom: 15px;
+                  .overlay {
+                    opacity: 0 !important;
+                    visibility: hidden !important;
+                  }
 
-                    span {
+                  button {
+                    opacity: 1 !important;
+                    visibility: visible !important;
+
+                    .series_name {
                       font-size: 21px;
+                    }
+
+                    p {
+                      font-size: 14px;
+                    }
+
+                    div {
+                      font-size: 15px;
+                      max-width: 55px;
+                      height: 35px;
                     }
                   }
                 }
@@ -2514,15 +2884,33 @@
               .series {
                 width: 100%;
                 max-width: 50%;
-                height: 130px;
+                height: 230px;
 
                 .series_inner {
                   max-width: 99.5%;
 
+                  .overlay {
+                    opacity: 0 !important;
+                    visibility: hidden !important;
+                  }
+
                   button {
-                    padding-left: 12px;
-                    padding-bottom: 12px;
-                    font-size: 17px;
+                    opacity: 1 !important;
+                    visibility: visible !important;
+
+                    .series_name {
+                      font-size: 19px;
+                    }
+
+                    p {
+                      font-size: 14px;
+                    }
+
+                    div {
+                      font-size: 15px;
+                      max-width: 55px;
+                      height: 35px;
+                    }
                   }
                 }
               }
@@ -2571,15 +2959,30 @@
               .series {
                 max-width: 50%;
                 width: 100%;
-                height: 140px;
+                height: 230px;
 
                 .series_inner {
-                  button {
-                    padding-left: 15px;
-                    padding-bottom: 15px;
+                  .overlay {
+                    opacity: 0 !important;
+                    visibility: hidden !important;
+                  }
 
-                    span {
-                      font-size: 18px;
+                  button {
+                    opacity: 1 !important;
+                    visibility: visible !important;
+
+                    .series_name {
+                      font-size: 19px;
+                    }
+
+                    p {
+                      font-size: 14px;
+                    }
+
+                    div {
+                      font-size: 15px;
+                      max-width: 55px;
+                      height: 35px;
                     }
                   }
                 }
@@ -2625,15 +3028,30 @@
               .series {
                 max-width: 50%;
                 width: 100%;
-                height: 140px;
+                height: 230px;
 
                 .series_inner {
-                  button {
-                    padding-left: 15px;
-                    padding-bottom: 15px;
+                  .overlay {
+                    opacity: 0 !important;
+                    visibility: hidden !important;
+                  }
 
-                    span {
-                      font-size: 18px;
+                  button {
+                    opacity: 1 !important;
+                    visibility: visible !important;
+
+                    .series_name {
+                      font-size: 19px;
+                    }
+
+                    p {
+                      font-size: 14px;
+                    }
+
+                    div {
+                      font-size: 15px;
+                      max-width: 55px;
+                      height: 35px;
                     }
                   }
                 }
@@ -2843,15 +3261,33 @@
               .series {
                 width: 100%;
                 max-width: 50%;
-                height: 200px;
+                height: 240px;
 
                 .series_inner {
                   max-width: 99.5%;
 
+                  .overlay {
+                    opacity: 0 !important;
+                    visibility: hidden !important;
+                  }
+
                   button {
-                    padding-left: 12px;
-                    padding-bottom: 12px;
-                    font-size: 19px;
+                    opacity: 1 !important;
+                    visibility: visible !important;
+
+                    .series_name {
+                      font-size: 21px;
+                    }
+
+                    p {
+                      font-size: 14px;
+                    }
+
+                    div {
+                      font-size: 15px;
+                      max-width: 55px;
+                      height: 35px;
+                    }
                   }
                 }
               }
@@ -2900,15 +3336,30 @@
               .series {
                 max-width: 50%;
                 width: 100%;
-                height: 200px;
+                height: 240px;
 
                 .series_inner {
-                  button {
-                    padding-left: 15px;
-                    padding-bottom: 15px;
+                  .overlay {
+                    opacity: 0 !important;
+                    visibility: hidden !important;
+                  }
 
-                    span {
+                  button {
+                    opacity: 1 !important;
+                    visibility: visible !important;
+
+                    .series_name {
                       font-size: 21px;
+                    }
+
+                    p {
+                      font-size: 14px;
+                    }
+
+                    div {
+                      font-size: 15px;
+                      max-width: 55px;
+                      height: 35px;
                     }
                   }
                 }
@@ -2954,15 +3405,30 @@
               .series {
                 max-width: 50%;
                 width: 100%;
-                height: 200px;
+                height: 240px;
 
                 .series_inner {
-                  button {
-                    padding-left: 15px;
-                    padding-bottom: 15px;
+                  .overlay {
+                    opacity: 0 !important;
+                    visibility: hidden !important;
+                  }
 
-                    span {
+                  button {
+                    opacity: 1 !important;
+                    visibility: visible !important;
+
+                    .series_name {
                       font-size: 21px;
+                    }
+
+                    p {
+                      font-size: 14px;
+                    }
+
+                    div {
+                      font-size: 15px;
+                      max-width: 55px;
+                      height: 35px;
                     }
                   }
                 }
@@ -3165,15 +3631,33 @@
               .series {
                 width: 100%;
                 max-width: 50%;
-                height: 200px;
+                height: 230px;
 
                 .series_inner {
                   max-width: 99.5%;
 
+                  .overlay {
+                    opacity: 0 !important;
+                    visibility: hidden !important;
+                  }
+
                   button {
-                    padding-left: 12px;
-                    padding-bottom: 12px;
-                    font-size: 19px;
+                    opacity: 1 !important;
+                    visibility: visible !important;
+
+                    .series_name {
+                      font-size: 21px;
+                    }
+
+                    p {
+                      font-size: 14px;
+                    }
+
+                    div {
+                      font-size: 15px;
+                      max-width: 55px;
+                      height: 35px;
+                    }
                   }
                 }
               }
@@ -3222,15 +3706,30 @@
               .series {
                 max-width: 50%;
                 width: 100%;
-                height: 200px;
+                height: 230px;
 
                 .series_inner {
-                  button {
-                    padding-left: 15px;
-                    padding-bottom: 15px;
+                  .overlay {
+                    opacity: 0 !important;
+                    visibility: hidden !important;
+                  }
 
-                    span {
+                  button {
+                    opacity: 1 !important;
+                    visibility: visible !important;
+
+                    .series_name {
                       font-size: 21px;
+                    }
+
+                    p {
+                      font-size: 14px;
+                    }
+
+                    div {
+                      font-size: 15px;
+                      max-width: 55px;
+                      height: 35px;
                     }
                   }
                 }
@@ -3276,15 +3775,30 @@
               .series {
                 max-width: 50%;
                 width: 100%;
-                height: 200px;
+                height: 230px;
 
                 .series_inner {
-                  button {
-                    padding-left: 15px;
-                    padding-bottom: 15px;
+                  .overlay {
+                    opacity: 0 !important;
+                    visibility: hidden !important;
+                  }
 
-                    span {
+                  button {
+                    opacity: 1 !important;
+                    visibility: visible !important;
+
+                    .series_name {
                       font-size: 21px;
+                    }
+
+                    p {
+                      font-size: 14px;
+                    }
+
+                    div {
+                      font-size: 15px;
+                      max-width: 55px;
+                      height: 35px;
                     }
                   }
                 }
@@ -3495,9 +4009,20 @@
                   max-width: 99.5%;
 
                   button {
-                    padding-left: 12px;
-                    padding-bottom: 12px;
-                    font-size: 24px;
+                    .series_name {
+                      font-size: 21px;
+                    }
+
+                    p {
+                      font-size: 16px;
+                      max-width: 400px;
+                    }
+
+                    div {
+                      font-size: 16px;
+                      max-width: 60px;
+                      height: 40px;
+                    }
                   }
                 }
               }
@@ -3551,15 +4076,23 @@
               .series {
                 max-width: 50%;
                 width: 100%;
-                height: 200px;
+                height: 250px;
 
                 .series_inner {
                   button {
-                    padding-left: 15px;
-                    padding-bottom: 15px;
+                    .series_name {
+                      font-size: 21px;
+                    }
 
-                    span {
-                      font-size: 24px;
+                    p {
+                      font-size: 16px;
+                      max-width: 400px;
+                    }
+
+                    div {
+                      font-size: 16px;
+                      max-width: 60px;
+                      height: 40px;
                     }
                   }
                 }
@@ -3610,15 +4143,23 @@
               .series {
                 max-width: 50%;
                 width: 100%;
-                height: 200px;
+                height: 250px;
 
                 .series_inner {
                   button {
-                    padding-left: 15px;
-                    padding-bottom: 15px;
+                    .series_name {
+                      font-size: 21px;
+                    }
 
-                    span {
-                      font-size: 24px;
+                    p {
+                      font-size: 16px;
+                      max-width: 400px;
+                    }
+
+                    div {
+                      font-size: 16px;
+                      max-width: 60px;
+                      height: 40px;
                     }
                   }
                 }
