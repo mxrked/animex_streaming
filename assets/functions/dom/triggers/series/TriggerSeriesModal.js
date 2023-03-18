@@ -47,14 +47,18 @@ export default function TriggerSeriesModal() {
   const SERIES_MODAL = document.getElementById("seriesModal");
   const SERIES_MODAL_VIDEO = document.getElementById("seriesModalVideo");
 
+  SERIES_MODAL.style.display = "block";
+
   for (let i = 0; i < ALL_SERIES.length; i++) {
     // Checking if CURRENT_SERIES matches a series object
     if (CURRENT_SERIES == ALL_SERIES[i].getLink) {
       document.body.style.overflowY = "hidden";
       document.body.style.pointerEvents = "none";
 
-      SERIES_MODAL.style.opacity = 1;
-      SERIES_MODAL.style.visibility = "visible";
+      setTimeout(() => {
+        SERIES_MODAL.style.opacity = 1;
+        SERIES_MODAL.style.visibility = "visible";
+      }, 500);
 
       // Changing the video source
       SERIES_MODAL_VIDEO.src = ALL_SERIES[i].getVideo;
