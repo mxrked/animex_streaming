@@ -23,24 +23,36 @@ import { Search } from "@/assets/components/global/Nav/Both/Search";
 import { ScrollIndicator } from "@/assets/components/global/ScrollIndicator";
 import { Footer } from "@/assets/components/global/Footer/Footer";
 
+import { NewsTop } from "@/assets/components/pages/News/NewsTop";
+
 // Style Imports
 import "../assets/styles/modules/News/News.module.css";
+import { NewsArticles } from "@/assets/components/pages/News/NewsArticles";
 
 // Adding some json data to be used later
 export const getStaticProps = async () => {
   const SEARCH_RES = await fetch(
     "https://raw.githubusercontent.com/mxrked/animex_streaming_CDN/master/files/data/SEARCH.json"
   );
+  const NEWS_ARTICLES_RES = await fetch(
+    "https://raw.githubusercontent.com/mxrked/animex_streaming_CDN/master/files/data/NEWS_ARTICLES.json"
+  );
+
   const SEARCH_RES_DATA = await SEARCH_RES.json();
+  const NEWS_ARTICLES_RES_DATA = await NEWS_ARTICLES_RES.json();
 
   return {
     props: {
       display_search_data: SEARCH_RES_DATA,
+      display_news_articles_data: NEWS_ARTICLES_RES_DATA,
     },
   };
 };
 
-export default function News({ display_search_data }) {
+export default function News({
+  display_search_data,
+  display_news_articles_data,
+}) {
   const router = useRouter();
 
   // Disabling Page Links
@@ -71,6 +83,10 @@ export default function News({ display_search_data }) {
         <DesktopNavMegaMenu />
         <MobileNav />
         <MobileNavMenu />
+
+        <NewsTop />
+        <NewsArticles newsArticlesData={display_news_articles_data} />
+
         <Footer />
       </main>
     </div>
