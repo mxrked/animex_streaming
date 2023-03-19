@@ -9,30 +9,34 @@ import CheckSeriesPreference from "../../checkers/series/CheckSeriesPreference";
 import DeclareStorageVariable from "@/assets/functions/data/storage/DeclareStorageVariable";
 
 function DisplayPreferenceModal(modalId) {
-  if (document.getElementById(modalId)) {
-    // Displaying the modal
-    // console.log(document.getElementById(modalId).innerHTML);
+  document.getElementById(modalId).style.display = "block";
 
-    document.body.style.overflowY = "hidden";
-    document.body.style.pointerEvents = "none";
+  setTimeout(() => {
+    if (document.getElementById(modalId)) {
+      // Displaying the modal
+      // console.log(document.getElementById(modalId).innerHTML);
 
-    // Hiding all other modals
-    document.querySelectorAll("._modal").forEach((modal) => {
-      modal.style.opacity = 0;
-      modal.style.visibility = "hidden";
-    });
+      document.body.style.overflowY = "hidden";
+      document.body.style.pointerEvents = "none";
 
-    // Showing the modal
-    DeclareStorageVariable("session", "Modal Opened", true);
+      // Hiding all other modals
+      document.querySelectorAll("._modal").forEach((modal) => {
+        modal.style.opacity = 0;
+        modal.style.visibility = "hidden";
+      });
 
-    document.getElementById(modalId).style.opacity = 1;
-    document.getElementById(modalId).style.visibility = "visible";
+      // Showing the modal
+      DeclareStorageVariable("session", "Modal Opened", true);
 
-    setTimeout(() => {
-      document.getElementById(modalId).style.overflowY = "auto";
-      document.getElementById(modalId).style.pointerEvents = "auto";
-    }, 700);
-  }
+      document.getElementById(modalId).style.opacity = 1;
+      document.getElementById(modalId).style.visibility = "visible";
+
+      setTimeout(() => {
+        document.getElementById(modalId).style.overflowY = "auto";
+        document.getElementById(modalId).style.pointerEvents = "auto";
+      }, 700);
+    }
+  }, 500);
 }
 
 export default function TriggerSeriesPreferenceModal() {

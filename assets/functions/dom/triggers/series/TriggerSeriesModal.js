@@ -68,6 +68,9 @@ export default function TriggerSeriesModal() {
         SERIES_MODAL.style.overflowY = "auto";
 
         DeclareStorageVariable("session", "Modal Opened", true); // Indicates a modal is opened
+
+        document.body.style.overflowY = "hidden";
+        // document.body.style.pointerEvents = "none";
       }, 800);
     }
   }
