@@ -2,6 +2,12 @@
 
 // Responsive
 @media all and (max-width: 1995px) {
+  .fade-left-fix {
+    transform: translateX(0) !important;
+  }
+  .fade-right-fix {
+    transform: translateX(0) !important;
+  }
 }
 
 @media all and (max-width: 991px) {

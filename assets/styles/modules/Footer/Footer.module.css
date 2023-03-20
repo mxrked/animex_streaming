@@ -148,6 +148,7 @@
 @media all and (max-width: 991px) {
   .footer {
     height: 500px;
+    margin-top: 50px;
   }
   .footer .footer_inner {
     height: 450px;
