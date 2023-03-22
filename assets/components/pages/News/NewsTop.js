@@ -53,7 +53,7 @@ export const NewsTop = () => {
       <div className={`${styles.hover_trigger}`}>
         <motion.div
           id="newsTopFM"
-          className={`fm-motion full-second ${styles.fm_motion}`}
+          className={`fm-motion full-second fade-up-fix ${styles.fm_motion}`}
           ref={REF}
           animate={CONTROLS}
           initial="hidden"
