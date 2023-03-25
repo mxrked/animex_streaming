@@ -723,7 +723,7 @@
     height: 520px;
   }
   .series_top .hover_trigger .series_top_inner {
-    max-width: 1250px;
+    max-width: 1150px;
     padding-left: 50px;
     padding-right: 20px;
   }
@@ -739,7 +739,7 @@
     line-height: 50px;
   }
   .series_top .hover_trigger .series_top_inner .series_top_inner_box .series_top_inner_row .series_top_inner_L .series_top_inner_side_cnt p {
-    font-size: 17px;
+    font-size: 20px;
   }
   .series_top .hover_trigger .series_top_inner .series_top_inner_box .series_top_inner_row .series_top_inner_R .series_top_inner_side_cnt img {
     max-width: 440px;
