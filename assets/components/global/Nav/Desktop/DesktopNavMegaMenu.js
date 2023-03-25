@@ -79,6 +79,15 @@ export const DesktopNavMegaMenu = () => {
             >
               <span>One Punch Man</span>
             </li>
+            <li className={`${styles.empty} half-second`}>&nbsp;</li>
+            <li
+              className="half-second"
+              onClick={() => {
+                ExitAndRoute(router, "/series", seriesRouted);
+              }}
+            >
+              <span>View All</span>
+            </li>
           </ul>
         </div>
         <div className={`${styles.desktop_nav_mega_menu_inner_set}`}>
@@ -130,6 +139,14 @@ export const DesktopNavMegaMenu = () => {
             </li>
             <li className={`${styles.empty} half-second`}>&nbsp;</li>
             <li className={`${styles.empty} half-second`}>&nbsp;</li>
+            <li
+              className="half-second"
+              onClick={() => {
+                ExitAndRoute(router, "/series", seriesRouted);
+              }}
+            >
+              <span>View All</span>
+            </li>
           </ul>
         </div>
         <div className={`${styles.desktop_nav_mega_menu_inner_set}`}>
@@ -195,7 +212,16 @@ export const DesktopNavMegaMenu = () => {
             >
               <span>Horror</span>
             </li>
-            <li className="half-second">&nbsp;</li>
+            <li className={`${styles.empty} half-second`}>&nbsp;</li>
+            <li className={`${styles.empty} half-second`}>&nbsp;</li>
+            <li
+              className="half-second"
+              onClick={() => {
+                ExitAndRoute(router, "/series", seriesRouted);
+              }}
+            >
+              <span>View All</span>
+            </li>
           </ul>
         </div>
       </div>
