@@ -23,6 +23,9 @@ import { Search } from "@/assets/components/global/Nav/Both/Search";
 import { ScrollIndicator } from "@/assets/components/global/ScrollIndicator";
 import { Footer } from "@/assets/components/global/Footer/Footer";
 
+import { ContactTop } from "@/assets/components/pages/Contact/ContactTop";
+import { ContactForm } from "@/assets/components/pages/Contact/ContactForm";
+
 // Style Imports
 import "../assets/styles/modules/Contact/Contact.module.css";
 
@@ -71,6 +74,10 @@ export default function Contact({ display_search_data }) {
         <DesktopNavMegaMenu />
         <MobileNav />
         <MobileNavMenu />
+
+        <ContactTop />
+        <ContactForm />
+
         <Footer />
       </main>
     </div>
