@@ -89,6 +89,7 @@ function MyApp({ Component, pageProps }) {
       RemoveStorageVariable("local", "ally-supports-cache");
       RemoveStorageVariable("session", "Search Opened");
       RemoveStorageVariable("session", "Mobile Nav Opened");
+      RemoveStorageVariable("session", "Country Code");
 
       // This will allow the modal to stay opened and prevents user from interacting
       if (!window.location.hash) {
