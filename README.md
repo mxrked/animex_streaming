@@ -22,7 +22,7 @@ Demo: https://sparkling-dragon-f3af91.netlify.app/
 
 ## Started Developement - 2/13/2023
 
-## Ended Development - In Progress
+## Ended Development - 3/29/2023
 
 ## Status
 
